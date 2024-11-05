@@ -3,37 +3,41 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     private bool inRange = false;
-    public abstract void Interact();
+    private Collider2D collider;
+    public abstract void Interact(Collider2D other);
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inRange = true;
+            collider = other;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            inRange = false;
+            collider = null;
+        }
+    }
+
+    public void OnTriggerStay2D(Collider2D other)
+    {
+        if (inRange && Input.GetKeyDown(KeyCode.E))
+        {
+            collider = other;
+            Interact(other);
+        }
+    }
 
     public void Update()
     {
         if (inRange && Input.GetKeyDown(KeyCode.E))
         {
-            Interact();
-        }
-    }
-
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            inRange = true;
-        }
-    }
-
-    public void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            inRange = false;
-        }
-    }
-
-    public void OnCollisionStay2D(Collision2D other)
-    {
-        if (inRange && Input.GetKeyDown(KeyCode.E))
-        {
-            Interact();
+            Interact(collider);
         }
     }
 }
