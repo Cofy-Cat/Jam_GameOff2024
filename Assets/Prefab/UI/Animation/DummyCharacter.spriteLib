@@ -1,0 +1,137 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: IdleRight
+    m_Hash: 664738502
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template_0
+      m_Hash: 161536200
+      m_Sprite: {fileID: -297386584, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -297386584, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_1
+      m_Hash: 1051191390
+      m_Sprite: {fileID: 872954666, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 872954666, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_2
+      m_Hash: 665762276
+      m_Sprite: {fileID: -1261422440, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1261422440, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_3
+      m_Hash: 279546226
+      m_Sprite: {fileID: 238492182, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 238492182, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: WalkRight
+    m_Hash: 829942833
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template_4
+      m_Hash: 248323281
+      m_Sprite: {fileID: -1517556083, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1517556083, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_5
+      m_Hash: 969550919
+      m_Sprite: {fileID: 1750909491, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1750909491, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_6
+      m_Hash: 549682685
+      m_Sprite: {fileID: 1996137321, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1996137321, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_7
+      m_Hash: 398740843
+      m_Sprite: {fileID: -333718014, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -333718014, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_8
+      m_Hash: 125522170
+      m_Sprite: {fileID: -1885433636, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1885433636, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_9
+      m_Hash: 813457516
+      m_Sprite: {fileID: 1528190105, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1528190105, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: RunRight
+    m_Hash: 228988793
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template_10
+      m_Hash: 951452730
+      m_Sprite: {fileID: -1323081355, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1323081355, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_11
+      m_Hash: 263271596
+      m_Sprite: {fileID: -685706913, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -685706913, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_12
+      m_Hash: 381183254
+      m_Sprite: {fileID: 674697156, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 674697156, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_13
+      m_Hash: 566187392
+      m_Sprite: {fileID: 1464956358, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1464956358, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_14
+      m_Hash: 1071366179
+      m_Sprite: {fileID: -1814591849, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1814591849, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_15
+      m_Hash: 148697269
+      m_Sprite: {fileID: 449230603, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 449230603, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: HurtRight
+    m_Hash: 1067321757
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template_22
+      m_Hash: 1033189077
+      m_Sprite: {fileID: -1047375040, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1047375040, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_23
+      m_Hash: 177342019
+      m_Sprite: {fileID: 1521911697, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1521911697, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_24
+      m_Hash: 351704032
+      m_Sprite: {fileID: 1260755726, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1260755726, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638663778927812788
+  m_Version: 1

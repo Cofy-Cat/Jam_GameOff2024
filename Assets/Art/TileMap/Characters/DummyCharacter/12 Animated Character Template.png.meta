@@ -1,0 +1,1857 @@
+fileFormatVersion: 2
+guid: ab21fdfefce32f441895a2c00aa84e06
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 385757631839082918
+    second: 12 Animated Character Template_0
+  - first:
+      213: 7855229769793854823
+    second: 12 Animated Character Template_1
+  - first:
+      213: 6872719645944160532
+    second: 12 Animated Character Template_2
+  - first:
+      213: -2217385434460789008
+    second: 12 Animated Character Template_3
+  - first:
+      213: 4311466480667890904
+    second: 12 Animated Character Template_4
+  - first:
+      213: 2205338856132260853
+    second: 12 Animated Character Template_5
+  - first:
+      213: 2737033849440210893
+    second: 12 Animated Character Template_6
+  - first:
+      213: 5471049624315748918
+    second: 12 Animated Character Template_7
+  - first:
+      213: 1172774700409574857
+    second: 12 Animated Character Template_8
+  - first:
+      213: 6318698247649787902
+    second: 12 Animated Character Template_9
+  - first:
+      213: 7262493820115455738
+    second: 12 Animated Character Template_10
+  - first:
+      213: 4250199074353329402
+    second: 12 Animated Character Template_11
+  - first:
+      213: 4010162506238463355
+    second: 12 Animated Character Template_12
+  - first:
+      213: 2197981545075061149
+    second: 12 Animated Character Template_13
+  - first:
+      213: 5220323665777369658
+    second: 12 Animated Character Template_14
+  - first:
+      213: 9172682330589444469
+    second: 12 Animated Character Template_15
+  - first:
+      213: 6997186321018150547
+    second: 12 Animated Character Template_16
+  - first:
+      213: -2577631834919009111
+    second: 12 Animated Character Template_17
+  - first:
+      213: 6166571014795936172
+    second: 12 Animated Character Template_18
+  - first:
+      213: -8653286837083694054
+    second: 12 Animated Character Template_19
+  - first:
+      213: 6098766723362814520
+    second: 12 Animated Character Template_20
+  - first:
+      213: 3168388613109373191
+    second: 12 Animated Character Template_21
+  - first:
+      213: -6026382826509845221
+    second: 12 Animated Character Template_22
+  - first:
+      213: 2160234497403579256
+    second: 12 Animated Character Template_23
+  - first:
+      213: 6365484491556796748
+    second: 12 Animated Character Template_24
+  - first:
+      213: -5559761306960988162
+    second: 12 Animated Character Template_25
+  - first:
+      213: -6431394004752910022
+    second: 12 Animated Character Template_26
+  - first:
+      213: -8872536657353808478
+    second: 12 Animated Character Template_27
+  - first:
+      213: 6307511246149791009
+    second: 12 Animated Character Template_28
+  - first:
+      213: -4443182460416095642
+    second: 12 Animated Character Template_29
+  - first:
+      213: 4292719773591690613
+    second: 12 Animated Character Template_30
+  - first:
+      213: 1591957457110815236
+    second: 12 Animated Character Template_31
+  - first:
+      213: -2916604402172292201
+    second: 12 Animated Character Template_32
+  - first:
+      213: 169866812913381833
+    second: 12 Animated Character Template_33
+  - first:
+      213: 617206511293339588
+    second: 12 Animated Character Template_34
+  - first:
+      213: -8497235167415251924
+    second: 12 Animated Character Template_35
+  - first:
+      213: 4004117794091994597
+    second: 12 Animated Character Template_36
+  - first:
+      213: 6232768499383925551
+    second: 12 Animated Character Template_37
+  - first:
+      213: -3712996916893481552
+    second: 12 Animated Character Template_38
+  - first:
+      213: 61364220960421475
+    second: 12 Animated Character Template_39
+  - first:
+      213: -1912480863897480137
+    second: 12 Animated Character Template_40
+  - first:
+      213: 979230462097248481
+    second: 12 Animated Character Template_41
+  - first:
+      213: 7392860962333889034
+    second: 12 Animated Character Template_42
+  - first:
+      213: 7888799566374193413
+    second: 12 Animated Character Template_43
+  - first:
+      213: 6364601235252649043
+    second: 12 Animated Character Template_44
+  - first:
+      213: -8383410868291038836
+    second: 12 Animated Character Template_45
+  - first:
+      213: 1175920961239869217
+    second: 12 Animated Character Template_46
+  - first:
+      213: -763719185106763133
+    second: 12 Animated Character Template_47
+  - first:
+      213: -399445660709291141
+    second: 12 Animated Character Template_48
+  - first:
+      213: 332458234041975431
+    second: 12 Animated Character Template_49
+  - first:
+      213: 3136638026250907001
+    second: 12 Animated Character Template_50
+  - first:
+      213: 6751303134493803847
+    second: 12 Animated Character Template_51
+  - first:
+      213: 139263354150472404
+    second: 12 Animated Character Template_52
+  - first:
+      213: -4665448615937594020
+    second: 12 Animated Character Template_53
+  - first:
+      213: -4851865659535296069
+    second: 12 Animated Character Template_54
+  - first:
+      213: 3514469347487803301
+    second: 12 Animated Character Template_55
+  - first:
+      213: 1472194157280088997
+    second: 12 Animated Character Template_56
+  - first:
+      213: 133701613463243565
+    second: 12 Animated Character Template_57
+  - first:
+      213: 2166429904930024951
+    second: 12 Animated Character Template_58
+  - first:
+      213: 2242191286208093385
+    second: 12 Animated Character Template_59
+  - first:
+      213: 2761940933828785602
+    second: 12 Animated Character Template_60
+  - first:
+      213: -3723255114268608260
+    second: 12 Animated Character Template_61
+  - first:
+      213: 7692117730543230551
+    second: 12 Animated Character Template_62
+  - first:
+      213: 2142409099389940681
+    second: 12 Animated Character Template_63
+  - first:
+      213: 1731505878348170244
+    second: 12 Animated Character Template_64
+  - first:
+      213: -2027430154214594678
+    second: 12 Animated Character Template_65
+  - first:
+      213: -9108640551685766331
+    second: 12 Animated Character Template_66
+  - first:
+      213: 7529028809981729064
+    second: 12 Animated Character Template_67
+  - first:
+      213: -3408973509159833884
+    second: 12 Animated Character Template_68
+  - first:
+      213: 8169786679998492679
+    second: 12 Animated Character Template_69
+  - first:
+      213: -4993151173500122770
+    second: 12 Animated Character Template_70
+  - first:
+      213: -1277743918633944295
+    second: 12 Animated Character Template_71
+  - first:
+      213: 1164735084538180519
+    second: 12 Animated Character Template_72
+  - first:
+      213: -4171235170770985417
+    second: 12 Animated Character Template_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 12 Animated Character Template_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961556f6c31c94448907dffd14dc02ea
+      internalID: -297386584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 019f9939395fdad4bb394253681cfbf6
+      internalID: 872954666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd21c78a726283b41b1d505fe393ac4e
+      internalID: -1261422440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6931b1c1e24d5449ff960956cf731f
+      internalID: 238492182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5e101a3527d094b861e676fd364696
+      internalID: -1517556083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747e8220c8fa0d346bdd3baca46d7587
+      internalID: 1750909491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffe0688d0fd04a4d985a4089fc546dd
+      internalID: 1996137321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_7
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2620a8ba9c5cd4e4b87765bceebb7ff1
+      internalID: -333718014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadb7cc08db2ba54294f0a4b21a4c11a
+      internalID: -1885433636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_9
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea097e63b95df34cbaea8ca74bad40b
+      internalID: 1528190105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa61e6be01d66b4f9610268c5bfa318
+      internalID: -1323081355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd90c0ed6b8c0d4ab42fdcc93a85c6c
+      internalID: -685706913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7eac564a9bb895469214da09f322089
+      internalID: 674697156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_13
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e9dcdf63021d64ea2e0e8ff9bae0cf
+      internalID: 1464956358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb6d29998a601b439a54f224795c268
+      internalID: -1814591849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7509d5602ece4e4c9d449391e51949d
+      internalID: 449230603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85142134ed1d8684e973ff3eb41078c7
+      internalID: 1125191547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_17
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc37d131fa7c454b819c64e045af1bd
+      internalID: -788219549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_18
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548610a393f276b4989bd135c19d793a
+      internalID: 2061526401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728d0f6bfa528124b8490217a38fbf1d
+      internalID: -1758359623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1570d1052e2eefc44b6a3f0ec1c4921a
+      internalID: -27856377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_21
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553816145908e8d4a9d97faacae83932
+      internalID: -1214774854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ff55482290f8c449266c09d91e74ed
+      internalID: -1047375040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9231e1346b59b7742990fa6e0c9a4710
+      internalID: 1521911697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_24
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721f708e5a78202458f25c1296094b40
+      internalID: 1260755726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ffda5ec8ede7045827d15af1d042d8
+      internalID: -2058949266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e0e36b0ae27dbb44abf096b9030b9f9
+      internalID: 2075736429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c44dd4c4fe0b6648a32a9a3d1230e94
+      internalID: 1479085714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_28
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f39bcbdd7de212846953d96126ab1530
+      internalID: 488840696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b5a83b96f502e44b51b57f3af3efe9
+      internalID: 907119263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_30
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2552ca7cf709f93468faac5b73ea425d
+      internalID: -736043812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21fe99bd9d2d9147845ed809a0ffa88
+      internalID: 1631411851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374acde90be810f40b1968edec729230
+      internalID: -568095423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_33
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821b14768bb7d8e4d90881d96912eb1d
+      internalID: -723085153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c4a41581c03ec54185b25c1cc58c4f5
+      internalID: -1839402387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_35
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dba711ff1ddc844db5d7ed968c6f543
+      internalID: -133666395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_36
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a4c0b9ad2c1e4546a058aff3e3a3572
+      internalID: 919504023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_37
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b617b4294e31f024dab438aa41c788f4
+      internalID: -2017181650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_38
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7da9c28f750e02449ff9b2e06ff4805
+      internalID: -1221725916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_39
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a015c54551282c646975bdb361a62f87
+      internalID: 1297267215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_40
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3824cd2f61631414ca20b3b0c702c1f3
+      internalID: 954867169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc84398bfddffff4ebac3a63778d267a
+      internalID: 62564146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_42
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922474906a9ecdc4bb90635440c96693
+      internalID: 996676792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4405acbeaf1d43e42aa5448ef34da006
+      internalID: 289595323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_44
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba99fd43892d0a146a6a60f9c05552f6
+      internalID: 520946437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_45
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ab615cbbedf644db643760a56dcf7e
+      internalID: 1280249953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_46
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dd9d57dc5abffd489f400444e7f9ddc
+      internalID: 341117456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_47
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a602681208f3e7419a2b295bdfe4c70
+      internalID: 1951422719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_48
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67c9fb90d4bb3648a12545ff4044625
+      internalID: -960990133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_49
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665503d6412600d42b0530f05ccd8a4a
+      internalID: -1481780859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_50
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf469e11c926fa47a059c488220ecaa
+      internalID: 479512142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_51
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f50584fb73023144baf0afec80ededa3
+      internalID: -119156933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_52
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18458c3f9d4abd4fbb2b9a409239af4
+      internalID: -6902301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b89c05bf1a79564bb7083b041f7ddb7
+      internalID: -1618106060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_54
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88226b65d57343419981ad92645cff4
+      internalID: 417618172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_55
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d36823fdb3f11146965cafc6fbc8879
+      internalID: -1834867768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_56
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada34b9a60bfd0a47bf065dee384c519
+      internalID: 431556265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_57
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0774e954ff567ff43b14fda063347468
+      internalID: -343759034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_58
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143fce98d0f65cb4eb65f6885fa971a4
+      internalID: -1109403501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff33e93533fc6844a966c232a325ddf9
+      internalID: -1216575960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_60
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe090bec1a298354cbc4bf73bf3aed62
+      internalID: -1088817259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_61
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e564da15538916b47a244761059b1b33
+      internalID: -1951976480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ed8bc20a1d1404ab18ab1ee341f8e3
+      internalID: -1366926176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_63
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0149397d8d5b004bb91d94d02cd4b14
+      internalID: -1970835058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_64
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6204b30254b8649aa1511aa06db155
+      internalID: -373797967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template_65
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156de8befcd23944fbb2d625192e8ef6
+      internalID: -1228691584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8bfbbe53d1b109141a6a7d7ea50da19b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      12 Animated Character Template_0: -297386584
+      12 Animated Character Template_1: 872954666
+      12 Animated Character Template_10: -1323081355
+      12 Animated Character Template_11: -685706913
+      12 Animated Character Template_12: 674697156
+      12 Animated Character Template_13: 1464956358
+      12 Animated Character Template_14: -1814591849
+      12 Animated Character Template_15: 449230603
+      12 Animated Character Template_16: 1125191547
+      12 Animated Character Template_17: -788219549
+      12 Animated Character Template_18: 2061526401
+      12 Animated Character Template_19: -1758359623
+      12 Animated Character Template_2: -1261422440
+      12 Animated Character Template_20: -27856377
+      12 Animated Character Template_21: -1214774854
+      12 Animated Character Template_22: -1047375040
+      12 Animated Character Template_23: 1521911697
+      12 Animated Character Template_24: 1260755726
+      12 Animated Character Template_25: -2058949266
+      12 Animated Character Template_26: 2075736429
+      12 Animated Character Template_27: 1479085714
+      12 Animated Character Template_28: 488840696
+      12 Animated Character Template_29: 907119263
+      12 Animated Character Template_3: 238492182
+      12 Animated Character Template_30: -736043812
+      12 Animated Character Template_31: 1631411851
+      12 Animated Character Template_32: -568095423
+      12 Animated Character Template_33: -723085153
+      12 Animated Character Template_34: -1839402387
+      12 Animated Character Template_35: -133666395
+      12 Animated Character Template_36: 919504023
+      12 Animated Character Template_37: -2017181650
+      12 Animated Character Template_38: -1221725916
+      12 Animated Character Template_39: 1297267215
+      12 Animated Character Template_4: -1517556083
+      12 Animated Character Template_40: 954867169
+      12 Animated Character Template_41: 62564146
+      12 Animated Character Template_42: 996676792
+      12 Animated Character Template_43: 289595323
+      12 Animated Character Template_44: 520946437
+      12 Animated Character Template_45: 1280249953
+      12 Animated Character Template_46: 341117456
+      12 Animated Character Template_47: 1951422719
+      12 Animated Character Template_48: -960990133
+      12 Animated Character Template_49: -1481780859
+      12 Animated Character Template_5: 1750909491
+      12 Animated Character Template_50: 479512142
+      12 Animated Character Template_51: -119156933
+      12 Animated Character Template_52: -6902301
+      12 Animated Character Template_53: -1618106060
+      12 Animated Character Template_54: 417618172
+      12 Animated Character Template_55: -1834867768
+      12 Animated Character Template_56: 431556265
+      12 Animated Character Template_57: -343759034
+      12 Animated Character Template_58: -1109403501
+      12 Animated Character Template_59: -1216575960
+      12 Animated Character Template_6: 1996137321
+      12 Animated Character Template_60: -1088817259
+      12 Animated Character Template_61: -1951976480
+      12 Animated Character Template_62: -1366926176
+      12 Animated Character Template_63: -1970835058
+      12 Animated Character Template_64: -373797967
+      12 Animated Character Template_65: -1228691584
+      12 Animated Character Template_7: -333718014
+      12 Animated Character Template_8: -1885433636
+      12 Animated Character Template_9: 1528190105
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
