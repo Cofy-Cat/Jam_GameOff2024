@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using cfEngine.Util;
 
 public class PlayerController : Controller
 {
@@ -11,5 +12,52 @@ public class PlayerController : Controller
 
     private Vector2 _lastMoveInput = Vector2.zero;
     public Vector2 LastMoveInput => _lastMoveInput;
-   
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        _input.onActionTriggered += OnActionTriggered;
+        _sm.OnAfterStateChange += OnStateChanged;
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        _input.onActionTriggered -= OnActionTriggered;
+        _sm.OnAfterStateChange -= OnStateChanged;
+    }
+
+    private void OnActionTriggered(InputAction.CallbackContext context)
+    {
+        switch (context.action.name)
+        {
+            // case "Move":
+            //     OnMove(context);
+        }
+    }
+
+    private void OnMove(InputAction.CallbackContext context)
+    {
+        _lastMoveInput = context.ReadValue<Vector2>();
+
+        if (_lastMoveInput != Vector2.zero)
+        {
+            // _sm.TryGoToState();
+        }
+        else
+        {
+            // _sm.TryGoToState();
+        }
+    }
+
+    private void OnStateChanged(StateChangeRecord<CharacterStateId> stateChange)
+    {
+        // if (stateChange.LastState == CharacterStateId)
+        // {
+        //     if (_lastMoveInput != Vector2.zero)
+        //     {
+        //         // _command.ExecuteCommand(new (_lastMoveInput));
+        //     }
+        // }
+    }
 }

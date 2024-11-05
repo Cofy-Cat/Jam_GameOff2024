@@ -6,12 +6,6 @@ public enum CharacterStateId
     Move,
     Hurt,
     Dash,
-    Attack,
-    AttackEnd,
-    KnockBack,
-    Carry,
-    Throw,
-    ThrowEnd,
     Dead
 }
 

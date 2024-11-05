@@ -2,7 +2,6 @@ using UnityEngine;
 
 public partial class AnimationName
 {
-    //Make sure your animation name follow this
     public const string Idle = nameof(Idle);
     public const string Walk = nameof(Walk);
     public const string HurtLeft = nameof(HurtLeft);
@@ -26,10 +25,9 @@ public abstract class Controller : MonoBehaviour
 {
     [SerializeField] protected Transform _mainCharacter;
     [SerializeField] protected SpriteAnimation _anim;
-
     [SerializeField] protected Rigidbody2D _rb;
     [SerializeField] protected CharacterStateMachine _sm;
-    [SerializeField] protected ActionCommandController _command;
+    // [SerializeField] protected ActionCommandController _command;
     private Animation shadowAnimation;
 
 
@@ -43,5 +41,13 @@ public abstract class Controller : MonoBehaviour
 
     private Vector2 _lastMoveDirection = Vector2.zero;
     public Vector2 LastMoveDirection => _lastMoveDirection;
+
+    protected virtual void OnEnable()
+    {
+    }
+
+    protected virtual void OnDisable()
+    {
+    }
 }
 
