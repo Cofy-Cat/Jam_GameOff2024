@@ -1,0 +1,1857 @@
+fileFormatVersion: 2
+guid: 75c97c5eb4e69834681a2d3d084ba7a1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8269693000386175458
+    second: 12 Animated Character Template Left_0
+  - first:
+      213: -8662233181520271369
+    second: 12 Animated Character Template Left_1
+  - first:
+      213: -4358387904074949560
+    second: 12 Animated Character Template Left_2
+  - first:
+      213: -7012667907561298521
+    second: 12 Animated Character Template Left_3
+  - first:
+      213: 5318563549633322221
+    second: 12 Animated Character Template Left_4
+  - first:
+      213: -561464034740126791
+    second: 12 Animated Character Template Left_5
+  - first:
+      213: -6703911395509155208
+    second: 12 Animated Character Template Left_6
+  - first:
+      213: -8285409312946214396
+    second: 12 Animated Character Template Left_7
+  - first:
+      213: 7697795673970049753
+    second: 12 Animated Character Template Left_8
+  - first:
+      213: 9163391308459244728
+    second: 12 Animated Character Template Left_9
+  - first:
+      213: 4024720561655177738
+    second: 12 Animated Character Template Left_10
+  - first:
+      213: 1138813196435598969
+    second: 12 Animated Character Template Left_11
+  - first:
+      213: -8296005147352283149
+    second: 12 Animated Character Template Left_12
+  - first:
+      213: 4049980906697709706
+    second: 12 Animated Character Template Left_13
+  - first:
+      213: -6906526281711193793
+    second: 12 Animated Character Template Left_14
+  - first:
+      213: -1603902489699606462
+    second: 12 Animated Character Template Left_15
+  - first:
+      213: -5205188728341636534
+    second: 12 Animated Character Template Left_16
+  - first:
+      213: -7691460999518998812
+    second: 12 Animated Character Template Left_17
+  - first:
+      213: -713318303445856733
+    second: 12 Animated Character Template Left_18
+  - first:
+      213: 2973628527833633064
+    second: 12 Animated Character Template Left_19
+  - first:
+      213: -4022685528694746825
+    second: 12 Animated Character Template Left_20
+  - first:
+      213: 6880200095950903510
+    second: 12 Animated Character Template Left_21
+  - first:
+      213: 8935830414259147728
+    second: 12 Animated Character Template Left_22
+  - first:
+      213: 9201850902273401235
+    second: 12 Animated Character Template Left_23
+  - first:
+      213: 8673951729404409564
+    second: 12 Animated Character Template Left_24
+  - first:
+      213: 5865426267250068625
+    second: 12 Animated Character Template Left_25
+  - first:
+      213: 5024553075286003167
+    second: 12 Animated Character Template Left_26
+  - first:
+      213: 4600867635208261096
+    second: 12 Animated Character Template Left_27
+  - first:
+      213: 9180101187152559457
+    second: 12 Animated Character Template Left_28
+  - first:
+      213: -3355634533217446476
+    second: 12 Animated Character Template Left_29
+  - first:
+      213: -2253025086406749245
+    second: 12 Animated Character Template Left_30
+  - first:
+      213: 895834832948775072
+    second: 12 Animated Character Template Left_31
+  - first:
+      213: -6964247885944292269
+    second: 12 Animated Character Template Left_32
+  - first:
+      213: 5258867831391429491
+    second: 12 Animated Character Template Left_33
+  - first:
+      213: -1647871118225969800
+    second: 12 Animated Character Template Left_34
+  - first:
+      213: 5640951024200310186
+    second: 12 Animated Character Template Left_35
+  - first:
+      213: 3596421257634370321
+    second: 12 Animated Character Template Left_36
+  - first:
+      213: -438044727900833088
+    second: 12 Animated Character Template Left_37
+  - first:
+      213: -24052644816009716
+    second: 12 Animated Character Template Left_38
+  - first:
+      213: -6378994812996628542
+    second: 12 Animated Character Template Left_39
+  - first:
+      213: -5765174418776592329
+    second: 12 Animated Character Template Left_40
+  - first:
+      213: -7460926169422180057
+    second: 12 Animated Character Template Left_41
+  - first:
+      213: -1774039335411220371
+    second: 12 Animated Character Template Left_42
+  - first:
+      213: 922118009452765048
+    second: 12 Animated Character Template Left_43
+  - first:
+      213: -1589894194346870371
+    second: 12 Animated Character Template Left_44
+  - first:
+      213: 5803828153380678801
+    second: 12 Animated Character Template Left_45
+  - first:
+      213: 8495811261600593596
+    second: 12 Animated Character Template Left_46
+  - first:
+      213: 1924243311501615948
+    second: 12 Animated Character Template Left_47
+  - first:
+      213: 3864813866102933133
+    second: 12 Animated Character Template Left_48
+  - first:
+      213: -1691680125568681735
+    second: 12 Animated Character Template Left_49
+  - first:
+      213: 127974542680253325
+    second: 12 Animated Character Template Left_50
+  - first:
+      213: 4122731729776445743
+    second: 12 Animated Character Template Left_51
+  - first:
+      213: 8188523591070179455
+    second: 12 Animated Character Template Left_52
+  - first:
+      213: -1494465002331344136
+    second: 12 Animated Character Template Left_53
+  - first:
+      213: 218704943088419387
+    second: 12 Animated Character Template Left_54
+  - first:
+      213: -3736339415994807486
+    second: 12 Animated Character Template Left_55
+  - first:
+      213: 8050086003094136280
+    second: 12 Animated Character Template Left_56
+  - first:
+      213: -7670182730318506109
+    second: 12 Animated Character Template Left_57
+  - first:
+      213: -5101830450631621334
+    second: 12 Animated Character Template Left_58
+  - first:
+      213: 687801688735619497
+    second: 12 Animated Character Template Left_59
+  - first:
+      213: 4576793038832645428
+    second: 12 Animated Character Template Left_60
+  - first:
+      213: 732464935007337710
+    second: 12 Animated Character Template Left_61
+  - first:
+      213: -2662570306745903939
+    second: 12 Animated Character Template Left_62
+  - first:
+      213: -4980977885459382251
+    second: 12 Animated Character Template Left_63
+  - first:
+      213: 2650318960891756609
+    second: 12 Animated Character Template Left_64
+  - first:
+      213: 1754456822334748416
+    second: 12 Animated Character Template Left_65
+  - first:
+      213: -4338931438937258789
+    second: 12 Animated Character Template Left_66
+  - first:
+      213: 461385672178131757
+    second: 12 Animated Character Template Left_67
+  - first:
+      213: -6345117236462636657
+    second: 12 Animated Character Template Left_68
+  - first:
+      213: 7658045584453684201
+    second: 12 Animated Character Template Left_69
+  - first:
+      213: -6823027581114586307
+    second: 12 Animated Character Template Left_70
+  - first:
+      213: -5510453665188757525
+    second: 12 Animated Character Template Left_71
+  - first:
+      213: -3828650323484803469
+    second: 12 Animated Character Template Left_72
+  - first:
+      213: 8392545916185154684
+    second: 12 Animated Character Template Left_73
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d8c4a0048f927f4facfbdb789057d68
+      internalID: 1737964670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd00a659d56f4d4caa230ea2e04ddde
+      internalID: -1341543303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d639794fef0b13b4db8acac896e0b58f
+      internalID: 1597528919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 528
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0a5cadf07bc784bbc352feea8da84b
+      internalID: 259794166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d88c84a2861c0a49af76242d732981e
+      internalID: -1993692495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e272e17410446d47989bd418f9be199
+      internalID: -2127691559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1caf10754ce8eae438e7ff798ce44822
+      internalID: 1783111862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d57d3e842a79db41a6d55753ff7018c
+      internalID: 567887748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0578521f76f82c149aaa2756dd803450
+      internalID: -1543696793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 480
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9695f751a9ac9f6459118fc4d5408ab0
+      internalID: 376145987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758beb763584a3344ab7cee07cd2e62c
+      internalID: 1204513547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa87102fe29b7204c834d95be5e96638
+      internalID: 1782156558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505c5fb7610390f4e97c0da5e0747cf0
+      internalID: -497732865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfe9aa3032d1131488c52b14ee6921c5
+      internalID: -133419199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_14
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dc292572e2582b4e8cb264c684948d0
+      internalID: -762700615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_15
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 432
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7361503f80cf24cb6b8d0878181c12
+      internalID: -798656946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eacaecf719497240a57c8355b8a6363
+      internalID: -1140154598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_17
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3875833a21acf40ae791092b7a6b4e
+      internalID: -2052343247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_18
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8860da00088c94a9560a9dfbb1754d
+      internalID: 1145602015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83c07dc054781194794223b9469717ed
+      internalID: 1763035250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5eb0a39af867446982b8dbc065b498
+      internalID: -374980260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 384
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e530094b7a41e64cabaf00c4b908730
+      internalID: 945862356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_22
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1542421ba284334c839ee4ca94cf473
+      internalID: -35083215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_23
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9ea4b659254844e949b73b24c901be
+      internalID: -872880752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_24
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 336
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5550298a6899f0b41b9eeca86fbb995e
+      internalID: 1487655524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d1b5288c6cf8b41ad8efdfcbe08a30
+      internalID: 1714031964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ac6bb1576b2e54b85761c0b89eabf5
+      internalID: -954384815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8f6b2a3bc585143b9f2aacc5134e02
+      internalID: 817718763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_28
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed40103b2edd97145b9b29c50b6368c2
+      internalID: -792649635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e622bbe6ef8474babc66ac28152903
+      internalID: -15465162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_30
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3519d153ebdee5d41b52ef0a84544baa
+      internalID: 1173693500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_31
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 288
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e234b3363adcedf4998956558b39bf6e
+      internalID: -518758160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_32
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a04a3c72212e5044ad53dc0a36cc250
+      internalID: 440081817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_33
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea95d5e95f3b304ab6d30ceaf795bb3
+      internalID: 1029947295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_34
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efb31a4b7f0dce4fb352217aca95437
+      internalID: 2069131549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_35
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2991010e739f8cc449960ee0dfaf9737
+      internalID: 456803764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_36
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 240
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c41ddceee6e638c4faf9bbd0746722ea
+      internalID: 1146193062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_37
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a951247cfb1e5b4c9c67a8610270adf
+      internalID: 696656288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_38
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a2d1d8073867848becb8107ecc147d
+      internalID: -773283821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74574367c1ce76e499a69537a8ee594f
+      internalID: -1104847920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_40
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366d25f4c9cbea74abe56a613164d172
+      internalID: -1214559054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_41
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 608448d3eb919984f9075a0dba5bd6c0
+      internalID: 1307156168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_42
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 192
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ada94b82d628a64e9b08b76bf91b7b7
+      internalID: 1689516530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_43
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0565dc98f2bd2fc4e9f73dbbd604b8ba
+      internalID: -1618189660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0bab8bd14c9ee43adfb2e97ac21953
+      internalID: 2111950270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_45
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55590e2db2b96904a801114d81c57229
+      internalID: 352807104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_46
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 144
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9d35c61a40c484ead00143858a3355
+      internalID: 770280160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_47
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add3d72a4afb4b842af53af9b1e0dcf2
+      internalID: 2026074359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_48
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cece835f8a073e47a4190274937110a
+      internalID: -1260471702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_49
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ce413b861c9864caa4791c93d04e7c
+      internalID: -1415619433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_50
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83bbb9f561c7df944bac8a013cb75758
+      internalID: -663303911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_51
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bce54979f6cf754ca59d725e4136e70
+      internalID: 497627790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_52
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 96
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6204cab94bddd1f4e9fb10c97a072688
+      internalID: -660207813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_53
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a95e66cc8cb7b34daa775dd6511dd98
+      internalID: -1954909685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_54
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bf557f6d333f3c4b9e4b8dec19ad1e4
+      internalID: 209538375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_55
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa3cfe962a1ba6438131e9413eb2f2e
+      internalID: 48087989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_56
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fef4bbc1325952479fe9b168b437bee
+      internalID: -2110923437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_57
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a165b36a09211049a4d40ad25169018
+      internalID: -941620923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_58
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 48
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e6849980b132845aaf4b867717ea12
+      internalID: 23619401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_59
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82589f45d0b5a9d4a95b44d48dbb499d
+      internalID: -1161324345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_60
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d92741c0ae150e0409366e6a0788aa5c
+      internalID: -1912364085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_61
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ec837b37e072894386bd2dc4d56f7e0
+      internalID: 495305143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_62
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac723a85a8112c4284cd835257243d1
+      internalID: -1146231793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_63
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532e4586bdbdbda41b88089d0105d2a9
+      internalID: 1251518887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_64
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c85a155d90f7d4ba76e672b4837094
+      internalID: -1898884230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12 Animated Character Template Left_65
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d23089f97df8540bb19a4f3d35c204
+      internalID: -2110798492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 269d317120553bd44829788e7c8c3188
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      12 Animated Character Template Left_0: 1737964670
+      12 Animated Character Template Left_1: -1341543303
+      12 Animated Character Template Left_10: 1204513547
+      12 Animated Character Template Left_11: 1782156558
+      12 Animated Character Template Left_12: -497732865
+      12 Animated Character Template Left_13: -133419199
+      12 Animated Character Template Left_14: -762700615
+      12 Animated Character Template Left_15: -798656946
+      12 Animated Character Template Left_16: -1140154598
+      12 Animated Character Template Left_17: -2052343247
+      12 Animated Character Template Left_18: 1145602015
+      12 Animated Character Template Left_19: 1763035250
+      12 Animated Character Template Left_2: 1597528919
+      12 Animated Character Template Left_20: -374980260
+      12 Animated Character Template Left_21: 945862356
+      12 Animated Character Template Left_22: -35083215
+      12 Animated Character Template Left_23: -872880752
+      12 Animated Character Template Left_24: 1487655524
+      12 Animated Character Template Left_25: 1714031964
+      12 Animated Character Template Left_26: -954384815
+      12 Animated Character Template Left_27: 817718763
+      12 Animated Character Template Left_28: -792649635
+      12 Animated Character Template Left_29: -15465162
+      12 Animated Character Template Left_3: 259794166
+      12 Animated Character Template Left_30: 1173693500
+      12 Animated Character Template Left_31: -518758160
+      12 Animated Character Template Left_32: 440081817
+      12 Animated Character Template Left_33: 1029947295
+      12 Animated Character Template Left_34: 2069131549
+      12 Animated Character Template Left_35: 456803764
+      12 Animated Character Template Left_36: 1146193062
+      12 Animated Character Template Left_37: 696656288
+      12 Animated Character Template Left_38: -773283821
+      12 Animated Character Template Left_39: -1104847920
+      12 Animated Character Template Left_4: -1993692495
+      12 Animated Character Template Left_40: -1214559054
+      12 Animated Character Template Left_41: 1307156168
+      12 Animated Character Template Left_42: 1689516530
+      12 Animated Character Template Left_43: -1618189660
+      12 Animated Character Template Left_44: 2111950270
+      12 Animated Character Template Left_45: 352807104
+      12 Animated Character Template Left_46: 770280160
+      12 Animated Character Template Left_47: 2026074359
+      12 Animated Character Template Left_48: -1260471702
+      12 Animated Character Template Left_49: -1415619433
+      12 Animated Character Template Left_5: -2127691559
+      12 Animated Character Template Left_50: -663303911
+      12 Animated Character Template Left_51: 497627790
+      12 Animated Character Template Left_52: -660207813
+      12 Animated Character Template Left_53: -1954909685
+      12 Animated Character Template Left_54: 209538375
+      12 Animated Character Template Left_55: 48087989
+      12 Animated Character Template Left_56: -2110923437
+      12 Animated Character Template Left_57: -941620923
+      12 Animated Character Template Left_58: 23619401
+      12 Animated Character Template Left_59: -1161324345
+      12 Animated Character Template Left_6: 1783111862
+      12 Animated Character Template Left_60: -1912364085
+      12 Animated Character Template Left_61: 495305143
+      12 Animated Character Template Left_62: -1146231793
+      12 Animated Character Template Left_63: 1251518887
+      12 Animated Character Template Left_64: -1898884230
+      12 Animated Character Template Left_65: -2110798492
+      12 Animated Character Template Left_7: 567887748
+      12 Animated Character Template Left_8: -1543696793
+      12 Animated Character Template Left_9: 376145987
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

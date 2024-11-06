@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 5390031616048241874}
-  _anim: {fileID: 0}
+  _anim: {fileID: 5390031616048241876}
   _sm: {fileID: 5390031616048241875}
   _mainCharacter: {fileID: 1089295446}
   moveSpeed: {x: 1, y: 1}

@@ -39,8 +39,8 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 238492182, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 4
-  - m_Name: WalkRight
-    m_Hash: 829942833
+  - m_Name: MoveRight
+    m_Hash: 616010780
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: 12 Animated Character Template_4
@@ -75,8 +75,8 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 1528190105, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 6
-  - m_Name: RunRight
-    m_Hash: 228988793
+  - m_Name: DashRight
+    m_Hash: 859311116
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: 12 Animated Character Template_10
@@ -132,6 +132,125 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: 1260755726, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 3
+  - m_Name: IdleLeft
+    m_Hash: 972869135
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template Left_0
+      m_Hash: 515536951
+      m_Sprite: {fileID: 1737964670, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1737964670, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_1
+      m_Hash: 700270753
+      m_Sprite: {fileID: -1341543303, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1341543303, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_2
+      m_Hash: 817109275
+      m_Sprite: {fileID: 1597528919, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1597528919, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_3
+      m_Hash: 129182093
+      m_Sprite: {fileID: 259794166, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 259794166, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: MoveLeft
+    m_Hash: 503100914
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template Left_4
+      m_Hash: 433568814
+      m_Sprite: {fileID: -1993692495, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1993692495, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_5
+      m_Hash: 785419448
+      m_Sprite: {fileID: -2127691559, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2127691559, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_6
+      m_Hash: 937024770
+      m_Sprite: {fileID: 1783111862, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1783111862, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_7
+      m_Hash: 14609812
+      m_Sprite: {fileID: 567887748, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 567887748, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_8
+      m_Hash: 274853893
+      m_Sprite: {fileID: -1543696793, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1543696793, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_9
+      m_Hash: 661045395
+      m_Sprite: {fileID: 376145987, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 376145987, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: DashLeft
+    m_Hash: 986808454
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template Left_10
+      m_Hash: 354677015
+      m_Sprite: {fileID: 1204513547, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1204513547, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_11
+      m_Hash: 572834177
+      m_Sprite: {fileID: 1782156558, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1782156558, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_12
+      m_Hash: 992841787
+      m_Sprite: {fileID: -497732865, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -497732865, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_13
+      m_Hash: 204120237
+      m_Sprite: {fileID: -133419199, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -133419199, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_14
+      m_Hash: 307115278
+      m_Sprite: {fileID: -762700615, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -762700615, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_15
+      m_Hash: 625542552
+      m_Sprite: {fileID: -798656946, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -798656946, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  - m_Name: HurtLeft
+    m_Hash: 279151666
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template Left_22
+      m_Hash: 268485624
+      m_Sprite: {fileID: -35083215, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -35083215, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_23
+      m_Hash: 654832494
+      m_Sprite: {fileID: -872880752, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -872880752, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_24
+      m_Hash: 962815693
+      m_Sprite: {fileID: 1487655524, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1487655524, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638663778927812788
+  m_ModificationHash: 638665472885883939
   m_Version: 1
