@@ -1,12 +1,15 @@
 using cfEngine.Util;
+using UnityEngine;
 
 public class IdleState : CharacterState
 {
-    public override CharacterStateId Id => throw new System.NotImplementedException();
-
+    public override CharacterStateId Id => CharacterStateId.Idle;
     protected internal override void StartContext(CharacterStateMachine sm, StateParam param)
     {
-        throw new System.NotImplementedException();
+        string animationName;
+        animationName = AnimationName.GetDirectional(AnimationName.Idle, sm.Controller.LastFaceDirection);
+        Debug.Log($"Current Playing Animation: {animationName}");
+        sm.Controller.Animation.Play(animationName, true);
+        sm.Controller.Rigidbody.linearVelocity = Vector2.zero;
     }
-    
 } 

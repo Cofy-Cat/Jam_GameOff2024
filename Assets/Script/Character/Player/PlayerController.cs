@@ -31,8 +31,9 @@ public class PlayerController : Controller
     {
         switch (context.action.name)
         {
-            // case "Move":
-            //     OnMove(context);
+            case "Move":
+                OnMove(context);
+                break;
         }
     }
 
@@ -42,22 +43,19 @@ public class PlayerController : Controller
 
         if (_lastMoveInput != Vector2.zero)
         {
-            // _sm.TryGoToState();
+            _sm.TryGoToState(CharacterStateId.Move);
         }
         else
         {
-            // _sm.TryGoToState();
+            _sm.TryGoToState(CharacterStateId.Idle);
         }
     }
 
     private void OnStateChanged(StateChangeRecord<CharacterStateId> stateChange)
     {
-        // if (stateChange.LastState == CharacterStateId)
+        // if (_lastMoveInput != Vector2.zero)
         // {
-        //     if (_lastMoveInput != Vector2.zero)
-        //     {
-        //         // _command.ExecuteCommand(new (_lastMoveInput));
-        //     }
+        //     _command.ExecuteCommand(new (_lastMoveInput));
         // }
     }
 }
