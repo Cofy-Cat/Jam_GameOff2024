@@ -1,6 +1,6 @@
 using cfEngine.Util;
 
-public class HurtState : CharacterState()
+public class HurtState : CharacterState
 {
     public override CharacterStateId Id => CharacterStateId.Hurt;
 
