@@ -7,7 +7,7 @@ public partial class AnimationName
 {
     //Make sure your animation name follow this
     public const string Idle = nameof(Idle);
-    public const string Walk = nameof(Walk);
+    public const string Move = nameof(Move);
     public const string HurtLeft = nameof(HurtLeft);
     public const string HurtRight = nameof(HurtRight);
     public const string Dash = nameof(Dash);

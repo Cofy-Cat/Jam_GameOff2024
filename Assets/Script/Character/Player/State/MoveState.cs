@@ -8,7 +8,7 @@ public class MoveState : CharacterState
         public Vector2 direction;
     }
 
-    public override CharacterStateId Id => throw new System.NotImplementedException();
+    public override CharacterStateId Id => CharacterStateId.Move;
 
     protected internal override void StartContext(CharacterStateMachine sm, StateParam param)
     {
@@ -27,11 +27,12 @@ public class MoveState : CharacterState
         }
 
         string animationName;
-        animationName = AnimationName.GetDirectional(AnimationName.Walk, faceDirection);
+        animationName = AnimationName.GetDirectional(AnimationName.Move, faceDirection);
         sm.Controller.SetVelocity(direction * sm.Controller.moveSpeed);
 
         sm.Controller.Animation.Play(animationName, true, onPlayFrame: frame =>
         {
+            Debug.Log($"Current Playing Animation: {animationName}");
             // if (sm.Controller is PlayerController player && player.moveClip != null)
             // {
             //     AudioManager.Instance.PlaySoundFXClip(player.moveClip, 1);
