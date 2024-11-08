@@ -19,6 +19,13 @@ public class PlayerController : Controller
         _sm.ForceGoToState(CharacterStateId.Idle);
     }
 
+    private bool _interacting = false;
+    public bool Interacting
+    {
+        get => _interacting;
+        set => _interacting = value;
+    }
+
 
     protected override void OnEnable()
     {

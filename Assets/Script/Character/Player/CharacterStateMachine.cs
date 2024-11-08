@@ -4,9 +4,7 @@ public enum CharacterStateId
 {
     Idle,
     Move,
-    Hurt,
-    Dash,
-    Dead
+    Interact
 }
 
 
