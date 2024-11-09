@@ -8,12 +8,11 @@ public class InteractState : CharacterState
     protected internal override void StartContext(CharacterStateMachine sm, StateParam param)
     {
         sm.Controller.Rigidbody.linearVelocity = Vector2.zero;
-        sm.Controller.Interacting = true;
-        // Also run the user animation here
+        // sm.Controller.Interacting = true;
     }
 
     protected internal override void OnEndContext()
     {
-        sm.Controller.Interacting = false;
+        // sm.Controller.Interacting = false;
     }
 }
