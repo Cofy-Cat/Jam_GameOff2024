@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using cfEngine.Util;
 using DocumentFormat.OpenXml.Drawing.Diagrams;
+using DocumentFormat.OpenXml.Wordprocessing;
 
 public class PlayerController : Controller
 {
@@ -16,14 +17,12 @@ public class PlayerController : Controller
 
     private void Start()
     {
-        // Create a empty param
         var param = new StateParam();
         _sm.ForceGoToState(CharacterStateId.Idle, param);
-        Debug.Log($"Rigidbody Drag: {_rb.linearDamping} and Angular Drag: {_rb.angularDamping}");
+        // Try to set the rigidbody drag to 0
         _rb.linearDamping = 0f;
         _rb.angularDamping = 0f;
         Debug.Log($"Rigidbody Drag: {_rb.linearDamping} and Angular Drag: {_rb.angularDamping}");
-
     }
 
     private void Update()
@@ -49,17 +48,18 @@ public class PlayerController : Controller
         switch (context.action.name)
         {
             case "Move":
+                if(Interacting) return;     
                 OnMove(context);
+                break;
+            case "Interact": 
+                OnInteract(context);
                 break;
         }
     }
 
     private void OnMove(InputAction.CallbackContext context)
     {
-        //Debug Log the input value
         Debug.Log($"Input Value of OnMove {context.ReadValue<Vector2>()}");
-
-        // Ignore up and down arrow inputs
         if (context.ReadValue<Vector2>().y != 0)
         {
             return;
@@ -69,28 +69,33 @@ public class PlayerController : Controller
 
         if (_lastMoveInput != Vector2.zero)
         {
-            // Create the parameter for the MoveState
             var directionParam = new MoveState.Param
             {
                 direction = _lastMoveInput
             };
             _sm.TryGoToState(CharacterStateId.Move, directionParam);
-            // _sm.ForceGoToState(CharacterStateId.Move, directionParam);
         }
         else
         {
-            var param = new StateParam();
-            _sm.TryGoToState(CharacterStateId.Idle, param);
-            // _sm.ForceGoToState(CharacterStateId.Idle, param);
+            _sm.TryGoToState(CharacterStateId.Idle, new StateParam());
         }
+    }
+
+    private void OnInteract(InputAction.CallbackContext context)
+    {
+        _sm.TryGoToState(CharacterStateId.Interact, new StateParam());
     }
 
     private void OnStateChanged(StateChangeRecord<CharacterStateId> stateChange)
     {
         if (_lastMoveInput != Vector2.zero)
         {
-            // Print cuurent state
             Debug.Log($"Changed to state: {stateChange.LastState} to {stateChange.NewState}");
         }
+    }
+
+    public void DisableInteracting()
+    {
+        Interacting = false;
     }
 }

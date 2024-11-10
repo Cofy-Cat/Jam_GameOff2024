@@ -35,10 +35,6 @@ public class MoveState : CharacterState
         sm.Controller.Animation.Play(animationName, true, onPlayFrame: frame =>
         {
             Debug.Log($"Current Playing Animation: {animationName}");
-            // if (sm.Controller is PlayerController player && player.moveClip != null)
-            // {
-            //     AudioManager.Instance.PlaySoundFXClip(player.moveClip, 1);
-            // }
         });
     }
 }

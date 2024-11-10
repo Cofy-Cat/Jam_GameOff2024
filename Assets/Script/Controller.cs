@@ -8,6 +8,7 @@ public partial class AnimationName
     //Make sure your animation name follow this
     public const string Idle = nameof(Idle);
     public const string Move = nameof(Move);
+    public const string Interact = nameof(Interact);
     public const string HurtLeft = nameof(HurtLeft);
     public const string HurtRight = nameof(HurtRight);
     public const string Dash = nameof(Dash);
@@ -84,7 +85,7 @@ public abstract class Controller : MonoBehaviour
 
     public bool isDead => _health.current <= 0;
 
-    public bool Interacting { get; set; }
+    public bool Interacting = false;
 
     #endregion
 
@@ -165,11 +166,7 @@ public abstract class Controller : MonoBehaviour
         if (!Mathf.Approximately(velocity.x, 0f))
         {
             _lastFaceDirection = Mathf.Sign(velocity.x) * velocity.x / velocity.x;
+            Debug.Log($"Last Face Direction: {_lastFaceDirection}");
         }
-
-        // foreach (AnimationState state in shadowAnimation)
-        // {
-        //     state.speed = velocity.magnitude / moveSpeed.magnitude;
-        // }
     }
 }
