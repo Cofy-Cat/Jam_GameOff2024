@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scene/GameEntry.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scene/CharacterTest.unity
+    guid: 3b8dc85e1d03c174caf3213823012ac4
+  - enabled: 1
+    path: Assets/Scene/CameraTestScene.unity
+    guid: ffd3dab2d6f494ee7be671c3b182ba71
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: dbe37abcf102a8b4c90954a6cc110888, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
