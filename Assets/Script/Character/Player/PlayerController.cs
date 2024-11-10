@@ -16,16 +16,19 @@ public class PlayerController : Controller
 
     private void Start()
     {
-        _sm.ForceGoToState(CharacterStateId.Idle);
+        // Create a empty param
+        var param = new StateParam();
+        _sm.ForceGoToState(CharacterStateId.Idle, param);
+        Debug.Log($"Rigidbody Drag: {_rb.linearDamping} and Angular Drag: {_rb.angularDamping}");
+        _rb.linearDamping = 0f;
+        _rb.angularDamping = 0f;
+        Debug.Log($"Rigidbody Drag: {_rb.linearDamping} and Angular Drag: {_rb.angularDamping}");
+
     }
 
-    private bool _interacting = false;
-    public bool Interacting
+    private void Update()
     {
-        get => _interacting;
-        set => _interacting = value;
     }
-
 
     protected override void OnEnable()
     {
@@ -53,6 +56,15 @@ public class PlayerController : Controller
 
     private void OnMove(InputAction.CallbackContext context)
     {
+        //Debug Log the input value
+        Debug.Log($"Input Value of OnMove {context.ReadValue<Vector2>()}");
+
+        // Ignore up and down arrow inputs
+        if (context.ReadValue<Vector2>().y != 0)
+        {
+            return;
+        }
+
         _lastMoveInput = context.ReadValue<Vector2>();
 
         if (_lastMoveInput != Vector2.zero)
@@ -62,13 +74,14 @@ public class PlayerController : Controller
             {
                 direction = _lastMoveInput
             };
-            // _sm.TryGoToState(CharacterStateId.Move);
-            _sm.ForceGoToState(CharacterStateId.Move, directionParam);
+            _sm.TryGoToState(CharacterStateId.Move, directionParam);
+            // _sm.ForceGoToState(CharacterStateId.Move, directionParam);
         }
         else
         {
-            // _sm.TryGoToState(CharacterStateId.Idle);
-            _sm.ForceGoToState(CharacterStateId.Idle);
+            var param = new StateParam();
+            _sm.TryGoToState(CharacterStateId.Idle, param);
+            // _sm.ForceGoToState(CharacterStateId.Idle, param);
         }
     }
 
@@ -76,7 +89,8 @@ public class PlayerController : Controller
     {
         if (_lastMoveInput != Vector2.zero)
         {
-            // _command.ExecuteCommand(new (_lastMoveInput));
+            // Print cuurent state
+            Debug.Log($"Changed to state: {stateChange.LastState} to {stateChange.NewState}");
         }
     }
 }

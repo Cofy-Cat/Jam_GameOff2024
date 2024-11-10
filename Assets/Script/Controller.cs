@@ -52,8 +52,6 @@ public abstract class Controller : MonoBehaviour
     [SerializeField] protected SpriteAnimation _anim;
     [SerializeField] protected CharacterStateMachine _sm;
     [SerializeField] protected Transform _mainCharacter;
-    // private Animation shadowAnimation;
-
 
     [Header("Stat")]
     public Vector2 moveSpeed = Vector2.one;
@@ -86,6 +84,8 @@ public abstract class Controller : MonoBehaviour
 
     public bool isDead => _health.current <= 0;
 
+    public bool Interacting { get; set; }
+
     #endregion
 
     protected virtual void Awake()
@@ -103,9 +103,6 @@ public abstract class Controller : MonoBehaviour
     private void Start()
     {
         StartCoroutine(BodyValidation());
-        // _sm.RegisterState(new IdleState());
-        // _sm.RegisterState(new MoveState());
-        _anim.Play("IdleRight");
     }
 
     protected virtual void OnEnable()
