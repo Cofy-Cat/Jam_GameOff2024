@@ -1,10 +1,12 @@
 using UnityEngine;
 
-public abstract class Interactable : MonoBehaviour
+public class Interactable : MonoBehaviour
 {
     private bool inRange = false;
     private Collider2D collider;
-    public abstract void Interact(Collider2D other);
+    public virtual void Interact(Collider2D other) {
+        Debug.Log("Interacting with " + other.name);
+    }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
