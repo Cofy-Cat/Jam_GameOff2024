@@ -4,11 +4,12 @@ public class Interactable : MonoBehaviour
 {
     private bool inRange = false;
     private Collider2D collider;
-    public virtual void Interact(Collider2D other) {
+    public virtual void Interact(Collider2D other)
+    {
         Debug.Log("Interacting with " + other.name);
     }
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -17,7 +18,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void OnTriggerExit2D(Collider2D other)
+    public virtual void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -26,7 +27,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void OnTriggerStay2D(Collider2D other)
+    public virtual void OnTriggerStay2D(Collider2D other)
     {
         if (inRange && Input.GetKeyDown(KeyCode.E))
         {
@@ -35,7 +36,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void Update()
+    public virtual void Update()
     {
         if (inRange && Input.GetKeyDown(KeyCode.E))
         {
