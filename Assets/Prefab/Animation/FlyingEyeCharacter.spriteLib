@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: IdleRight
+    m_Hash: 664738502
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: deathBall_0_0
+      m_Hash: 838794763
+      m_Sprite: {fileID: -1917358114922047249, guid: 25e13087bac33914a8bed56afca53ad8, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1917358114922047249, guid: 25e13087bac33914a8bed56afca53ad8, type: 3}
+    - m_Name: deathBall_1_0
+      m_Hash: 809276476
+      m_Sprite: {fileID: -4869221768255139919, guid: c897edef505a2f744ae64d7af4b015fb, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4869221768255139919, guid: c897edef505a2f744ae64d7af4b015fb, type: 3}
+    - m_Name: deathBall_2_0
+      m_Hash: 846867045
+      m_Sprite: {fileID: -5983011827141069566, guid: aab7191c9b1cdd442a21bc2a35f1ad95, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5983011827141069566, guid: aab7191c9b1cdd442a21bc2a35f1ad95, type: 3}
+    - m_Name: deathBall_3_0
+      m_Hash: 867713106
+      m_Sprite: {fileID: -3826658015215464436, guid: 4617f08e8422c46459353bacebd4a299, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -3826658015215464436, guid: 4617f08e8422c46459353bacebd4a299, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 4
+  - m_Name: IdleLeft
+    m_Hash: 972869135
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: AttackRight
+    m_Hash: 430531633
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: AttackLeft
+    m_Hash: 569762536
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: InteractLeft
+    m_Hash: 125594164
+    m_CategoryList: []
+    m_OverrideEntries: []
+    m_FromMain: 0
+    m_EntryOverrideCount: 0
+  - m_Name: InteractRight
+    m_Hash: 384463686
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: deathBallClose_00_0
+      m_Hash: 453710855
+      m_Sprite: {fileID: -6435999935633789382, guid: ea7a97f4394e2b7458302c3a031d8453, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6435999935633789382, guid: ea7a97f4394e2b7458302c3a031d8453, type: 3}
+    - m_Name: deathBallClose_01_0
+      m_Hash: 449412656
+      m_Sprite: {fileID: -5475969363628484029, guid: 830f4c5cd50080c4ea50254bf84d2ee3, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5475969363628484029, guid: 830f4c5cd50080c4ea50254bf84d2ee3, type: 3}
+    - m_Name: deathBallClose_02_0
+      m_Hash: 412074089
+      m_Sprite: {fileID: 4764074678415096549, guid: 8cad82c1cebf9cd40add02e3cc2adf46, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4764074678415096549, guid: 8cad82c1cebf9cd40add02e3cc2adf46, type: 3}
+    - m_Name: deathBallClose_03_0
+      m_Hash: 424520286
+      m_Sprite: {fileID: -8673839018080655736, guid: debe6310b7c2f0f48824dbe93f019eda, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8673839018080655736, guid: debe6310b7c2f0f48824dbe93f019eda, type: 3}
+    - m_Name: deathBallClose_04_0
+      m_Hash: 469941467
+      m_Sprite: {fileID: -1925450918103988001, guid: 17dd37eb8c8ceaf40a967952f5339c5d, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1925450918103988001, guid: 17dd37eb8c8ceaf40a967952f5339c5d, type: 3}
+    - m_Name: deathBallClose_05_0
+      m_Hash: 499177196
+      m_Sprite: {fileID: 1654947322130339763, guid: 94c8e924cdcc0d147b59b634bbe25dae, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1654947322130339763, guid: 94c8e924cdcc0d147b59b634bbe25dae, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 6
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638670166530614348
+  m_Version: 1
