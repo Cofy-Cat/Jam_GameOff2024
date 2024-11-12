@@ -8,7 +8,7 @@ public class EnemyController : Controller
     private Controller playerController;
     private Vector3 direction;
     private Vector2 input;
-    private bool isTriggered = false;
+    // private bool isTriggered = false;
     // private Vector2 patrolStartPos;
     // private Vector2 patrolEndPos;
     [SerializeField] float chaseRange = 5f;
@@ -31,7 +31,6 @@ public class EnemyController : Controller
         // patrolStartPos = transform.position;
         // patrolEndPos = transform.position + new Vector3(patrolRange, 0, 0);
         // nextAttackTime = 0f;
-        // isTriggered = false;
 
         // _command.RegisterPattern(new ComboAttackPattern(new[] { "A" }, 0, maxComboAttackGap));
         // _command.RegisterPattern(new ComboAttackPattern(new[] { "A", "A" }, 1, maxComboAttackGap));
@@ -41,45 +40,29 @@ public class EnemyController : Controller
         // _command.RegisterPattern(new ComboAttackPattern(new[] { "C" }, 0, maxComboAttackGap));
     }
 
-    // protected override void OnShadowTriggerEnter(Collider2D other)
-    // {
-    //     base.OnShadowTriggerEnter(other);
-    //     Debug.Log($"OnShadowTriggerEnter: " + other.name);
-    //     Controller controller = other.GetComponentInParent<PlayerController>();
-    //     if (controller != null) isTriggered = true;
-    // }
-
-    // protected override void OnShadowTriggerExit(Collider2D other)
-    // {
-    //     base.OnShadowTriggerExit(other);
-    //     Debug.Log($"OnShadowTriggerExit: " + other.name);
-    //     PlayerController controller = other.GetComponentInParent<PlayerController>();
-    //     if (controller != null) isTriggered = false;
-    //     // _command.ExecuteCommand(new MoveCommand(input));
-    // }
-
     private void Start()
     {
         // _command.ExecuteCommand(new IdleCommand());
         var param = new StateParam();
-        // _sm.ForceGoToState(CharacterStateId.Idle, param);
+        _sm.ForceGoToState(CharacterStateId.Idle, param);
     }
 
-    // private void FixedUpdate()
-    // {
-    //     if (isTriggered && !playerController.isDead)
-    //     {
-    //         if (Time.time > nextAttackTime)
-    //         {
-    //             PrepareAttack();
-    //         }
-    //     }
-    //     else if (ifPlayerIsNear())
-    //     {
-    //         ChasePlayer();
-    //     }
-    //     else Patrol();
-    // }
+    private void FixedUpdate()
+    {
+        if(ifPlayerIsNear())
+        {
+            if (isTriggered)
+            {
+                _sm.ForceGoToState(CharacterStateId.Chase, new StateParam());
+            }
+            else
+            {
+                _sm.TryGoToState(CharacterStateId.TriggerOn, new StateParam());
+            }
+        } else {
+            _sm.TryGoToState(CharacterStateId.Idle, new StateParam());
+        }
+    }
 
     // private void PrepareAttack()
     // {
@@ -102,17 +85,18 @@ public class EnemyController : Controller
     //     return newPool[UnityEngine.Random.Range(0, newPool.Count)];
     // }
 
-    // private bool ifPlayerIsNear()
-    // {
-    //     if (Vector3.Distance(player.transform.position, transform.position) < chaseRange)
-    //     {
-    //         return true;
-    //     }
-    //     else
-    //     {
-    //         return false;
-    //     }
-    // }
+    private bool ifPlayerIsNear()
+    {
+        if (Vector3.Distance(player.transform.position, transform.position) < chaseRange)
+        {
+            return true;
+        }
+        else
+        {
+            isTriggered = false;
+            return false;
+        }
+    }
 
     // private void ChasePlayer()
     // {

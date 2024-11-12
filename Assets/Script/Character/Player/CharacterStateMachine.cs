@@ -4,7 +4,11 @@ public enum CharacterStateId
 {
     Idle,
     Move,
-    Interact
+    Interact,
+    TriggerOn,
+    TriggerOff,
+    Chase,
+    Attack
 }
 
 

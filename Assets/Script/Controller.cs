@@ -13,6 +13,10 @@ public partial class AnimationName
     public const string HurtRight = nameof(HurtRight);
     public const string Dash = nameof(Dash);
     public const string Death = nameof(Death);
+    public const string TriggerOn = nameof(TriggerOn);
+    public const string TriggerOff = nameof(TriggerOff);
+    public const string Chase = nameof(Chase);
+    public const string Attack = nameof(Attack);
 
     public static string GetDirectional(string animationName, float horizontalDirection)
     {
@@ -86,6 +90,9 @@ public abstract class Controller : MonoBehaviour
     public bool isDead => _health.current <= 0;
 
     public bool Interacting = false;
+
+    public bool isTriggered = false;
+
 
     #endregion
 
