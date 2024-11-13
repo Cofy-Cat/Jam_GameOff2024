@@ -12,7 +12,7 @@ public class MoveState : CharacterState
 
     public override CharacterStateId Id => CharacterStateId.Move;
 
-    protected internal override void StartContext(CharacterStateMachine sm, StateParam param)
+    protected internal override void StartContext(StateParam param)
     {
         float faceDirection = 0f;
         Vector2 direction = Vector2.zero;
@@ -24,15 +24,15 @@ public class MoveState : CharacterState
         }
         else
         {
-            faceDirection = sm.Controller.LastFaceDirection;
-            direction = sm.Controller.LastMoveDirection;
+            faceDirection = StateMachine.Controller.LastFaceDirection;
+            direction = StateMachine.Controller.LastMoveDirection;
         }
 
         string animationName;
         animationName = AnimationName.GetDirectional(AnimationName.Move, faceDirection);
-        sm.Controller.SetVelocity(direction * sm.Controller.moveSpeed);
+        StateMachine.Controller.SetVelocity(direction * StateMachine.Controller.moveSpeed);
 
-        sm.Controller.Animation.Play(animationName, true, onPlayFrame: frame =>
+        StateMachine.Controller.Animation.Play(animationName, true, onPlayFrame: frame =>
         {
             Debug.Log($"Current Playing Animation: {animationName}");
         });

@@ -6,11 +6,11 @@ public class ChaseState : CharacterState
 {
     public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Chase, CharacterStateId.Attack };
     public override CharacterStateId Id => CharacterStateId.Chase;
-    protected internal override void StartContext(CharacterStateMachine sm, StateParam param)
+    protected internal override void StartContext(StateParam stateParam)
     {
-        sm.Controller.SetVelocity(Vector2.zero);
+        StateMachine.Controller.SetVelocity(Vector2.zero);
         string animationName;
-        animationName = AnimationName.GetDirectional(AnimationName.TriggerOn, sm.Controller.LastFaceDirection);
-        sm.Controller.Animation.Play(animationName, true);
+        animationName = AnimationName.GetDirectional(AnimationName.TriggerOn, StateMachine.Controller.LastFaceDirection);
+        StateMachine.Controller.Animation.Play(animationName, true);
     }
 }

@@ -8,17 +8,17 @@ public class InteractState : CharacterState
 
     public override CharacterStateId Id => CharacterStateId.Interact;
     
-    protected internal override void StartContext(CharacterStateMachine sm, StateParam param)
+    protected internal override void StartContext(StateParam stateParam)
     {
-        sm.Controller.Interacting = true;
-        var animationName = AnimationName.GetDirectional(AnimationName.Interact, sm.Controller.LastFaceDirection);
+        StateMachine.Controller.Interacting = true;
+        var animationName = AnimationName.GetDirectional(AnimationName.Interact, StateMachine.Controller.LastFaceDirection);
         Debug.Log($"Current Playing Animation: {animationName}");
-        sm.Controller.SetVelocity(Vector2.zero);
+        StateMachine.Controller.SetVelocity(Vector2.zero);
 
         // Play the interact animation and set up the onAnimationEnd callback
-        sm.Controller.Animation.Play(animationName, false, onAnimationEnd: () =>
+        StateMachine.Controller.Animation.Play(animationName, false, onAnimationEnd: () =>
         {
-            sm.Controller.Interacting = false;
+            StateMachine.Controller.Interacting = false;
 
             // Play the next animation here
             // var nextAnimationName = AnimationName.GetDirectional(AnimationName.Idle, sm.Controller.LastFaceDirection);

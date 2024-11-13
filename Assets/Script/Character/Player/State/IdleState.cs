@@ -6,11 +6,11 @@ public class IdleState : CharacterState
 {
     public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Interact, CharacterStateId.TriggerOn };
     public override CharacterStateId Id => CharacterStateId.Idle;
-    protected internal override void StartContext(CharacterStateMachine sm, StateParam param)
+    protected internal override void StartContext(StateParam stateParam)
     {
         string animationName;
-        animationName = AnimationName.GetDirectional(AnimationName.Idle, sm.Controller.LastFaceDirection);
-        sm.Controller.Animation.Play(animationName, true);
-        sm.Controller.SetVelocity(Vector2.zero);
+        animationName = AnimationName.GetDirectional(AnimationName.Idle, StateMachine.Controller.LastFaceDirection);
+        StateMachine.Controller.Animation.Play(animationName, true);
+        StateMachine.Controller.SetVelocity(Vector2.zero);
     }
 } 
