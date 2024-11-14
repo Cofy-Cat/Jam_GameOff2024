@@ -49,20 +49,21 @@ public class EnemyController : Controller
 
     private void FixedUpdate()
     {
-        if(ifPlayerIsNear())
-        {
-            if (isTriggered)
-            {
-                _sm.ForceGoToState(CharacterStateId.Chase, new StateParam());
-            }
-            else
-            {
-                _sm.TryGoToState(CharacterStateId.TriggerOn, new StateParam());
-            }
-        } else {
-            _sm.TryGoToState(CharacterStateId.Idle, new StateParam());
-        }
+        // if(ifPlayerIsNear())
+        // {
+        //     if (isTriggered)
+        //     {
+        //         _sm.ForceGoToState(CharacterStateId.Chase, new StateParam());
+        //     }
+        //     else
+        //     {
+        //         _sm.TryGoToState(CharacterStateId.TriggerOn, new StateParam());
+        //     }
+        // } else {
+        //     _sm.TryGoToState(CharacterStateId.Idle, new StateParam());
+        // }
     }
+
 
     // private void PrepareAttack()
     // {

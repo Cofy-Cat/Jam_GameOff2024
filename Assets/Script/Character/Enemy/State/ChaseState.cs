@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using cfEngine.Util;
 using UnityEngine;
 
-public class ChaseState : CharacterState
+public class ChaseState : EnemyState
 {
-    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Chase, CharacterStateId.Attack };
-    public override CharacterStateId Id => CharacterStateId.Chase;
-    protected internal override void StartContext(StateParam stateParam)
+    public override HashSet<EnemyStateId> Whitelist { get; } = new() { EnemyStateId.Chase, EnemyStateStateId.Attack };
+    public override EnemyStateId Id => EnemyStateId.Chase;
+    protected internal override void StartContext(EnemyStateMachine sm, StateParam param)
     {
-        StateMachine.Controller.SetVelocity(Vector2.zero);
+        sm.Controller.SetVelocity(Vector2.zero);
         string animationName;
-        animationName = AnimationName.GetDirectional(AnimationName.TriggerOn, StateMachine.Controller.LastFaceDirection);
-        StateMachine.Controller.Animation.Play(animationName, true);
+        animationName = AnimationName.GetDirectional(AnimationName.TriggerOn, sm.Controller.LastFaceDirection);
+        sm.Controller.Animation.Play(animationName, true);
     }
 }

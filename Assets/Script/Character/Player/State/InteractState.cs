@@ -27,8 +27,8 @@ public class InteractState : CharacterState
         });
     }
 
-    protected internal override void OnEndContext()
-    {
-        // Reset interacting flag when the state ends
-    }
+//     protected internal override void OnEndContext(CharacterStateMachine sm)
+//     {
+//         sm.Controller.Interacting = false;
+//     }
 }

@@ -5,10 +5,7 @@ public enum CharacterStateId
     Idle,
     Move,
     Interact,
-    TriggerOn,
-    TriggerOff,
-    Chase,
-    Attack
+    Emo
 }
 
 
