@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      deathBallCloseSpace_10_0: 5329154324158158411
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
