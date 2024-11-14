@@ -2,7 +2,7 @@ using cfUnityEngine.Util;
 
 public enum EnemyStateId
 {
-    Idle,
+    EnemyIdle,
     Move,
     Interact,
     TriggerOn,

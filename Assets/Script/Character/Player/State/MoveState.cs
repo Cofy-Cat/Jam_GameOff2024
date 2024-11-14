@@ -30,8 +30,7 @@ public class MoveState : CharacterState
 
         string animationName;
         animationName = AnimationName.GetDirectional(AnimationName.Move, faceDirection);
-        StateMachine.Controller.SetVelocity(direction * StateMachine.Controller.moveSpeed);
-
+        StateMachine.Controller.SetVelocity(direction * StateMachine.Controller.GetMoveSpeed());
         StateMachine.Controller.Animation.Play(animationName, true, onPlayFrame: frame =>
         {
             Debug.Log($"Current Playing Animation: {animationName}");

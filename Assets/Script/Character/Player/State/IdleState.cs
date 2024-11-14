@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IdleState : CharacterState
 {
-    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Interact, CharacterStateId.TriggerOn };
+    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Interact};
     public override CharacterStateId Id => CharacterStateId.Idle;
     protected internal override void StartContext(StateParam stateParam)
     {

@@ -2,161 +2,59 @@ using cfEngine.Util;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-public class EnemyController : Controller
+public class EnemyController : MonoBehaviour
 {
+    [SerializeField] protected Rigidbody2D _rb;
     [SerializeField] private GameObject player;
+    [SerializeField] public EnemyStateMachine _sm;
     private Controller playerController;
+    [SerializeField] public SpriteAnimation Animation;
+
+    public float LastFaceDirection => _lastFaceDirection;
+    private float _lastFaceDirection = 0f;
+    public Vector2 LastMoveDirection => _lastMoveDirection;
+    private Vector2 _lastMoveDirection = Vector2.zero;
     private Vector3 direction;
     private Vector2 input;
-    // private bool isTriggered = false;
-    // private Vector2 patrolStartPos;
-    // private Vector2 patrolEndPos;
     [SerializeField] float chaseRange = 5f;
-    // [SerializeField] int patrolRange = 10;
-    [SerializeField] float attackCooldown = 0.5f;
-    [SerializeField] float maxComboAttackGap = 2.5f;
-    private float nextAttackTime;
-    [SerializeField] float hurtDuration = 1.5f;
-    string[] attackPool = { "A", "B", "C" };
-    string comboSequence = "";
-    protected override void Awake()
+
+    protected void Awake()
     {
-        base.Awake();
         player = GameObject.FindWithTag("Player");
         playerController = player.GetComponent<Controller>();
         Assert.IsNotNull(player);
         Assert.IsNotNull(playerController);
         input = Vector2.zero;
         direction = Vector3.zero;
-        // patrolStartPos = transform.position;
-        // patrolEndPos = transform.position + new Vector3(patrolRange, 0, 0);
-        // nextAttackTime = 0f;
-
-        // _command.RegisterPattern(new ComboAttackPattern(new[] { "A" }, 0, maxComboAttackGap));
-        // _command.RegisterPattern(new ComboAttackPattern(new[] { "A", "A" }, 1, maxComboAttackGap));
-        // _command.RegisterPattern(new ComboAttackPattern(new[] { "A", "A", "A" }, 2, maxComboAttackGap));
-        // _command.RegisterPattern(new ComboAttackPattern(new[] { "B" }, 0, maxComboAttackGap));
-        // _command.RegisterPattern(new ComboAttackPattern(new[] { "B", "B" }, 1, maxComboAttackGap));
-        // _command.RegisterPattern(new ComboAttackPattern(new[] { "C" }, 0, maxComboAttackGap));
     }
 
     private void Start()
     {
-        // _command.ExecuteCommand(new IdleCommand());
-        var param = new StateParam();
-        _sm.ForceGoToState(CharacterStateId.Idle, param);
+        _sm.ForceGoToState(EnemyStateId.EnemyIdle);
     }
 
     private void FixedUpdate()
     {
-        // if(ifPlayerIsNear())
-        // {
-        //     if (isTriggered)
-        //     {
-        //         _sm.ForceGoToState(CharacterStateId.Chase, new StateParam());
-        //     }
-        //     else
-        //     {
-        //         _sm.TryGoToState(CharacterStateId.TriggerOn, new StateParam());
-        //     }
-        // } else {
-        //     _sm.TryGoToState(CharacterStateId.Idle, new StateParam());
-        // }
     }
 
-
-    // private void PrepareAttack()
-    // {
-
-    //     if (comboSequence.Contains("A") && comboSequence.Length < 3) PerformAttack("A");
-    //     else if (comboSequence.Contains("B") && comboSequence.Length < 2) PerformAttack("B");
-    //     else PerformAttack(DrawAttack());
-
-    // }
-
-    // private string DrawAttack()
-    // {
-    //     string avoid = comboSequence.Substring(0);
-    //     comboSequence = "";
-    //     List<string> newPool = new List<string>();
-
-    //     foreach (var attack in attackPool)
-    //         if (!avoid.Contains(attack)) newPool.Add(attack);
-
-    //     return newPool[UnityEngine.Random.Range(0, newPool.Count)];
-    // }
-
-    private bool ifPlayerIsNear()
+    public void SetVelocity(Vector2 velocity)
     {
-        if (Vector3.Distance(player.transform.position, transform.position) < chaseRange)
+        _rb.linearVelocity = velocity;
+
+        if (velocity != Vector2.zero)
         {
-            return true;
+            _lastMoveDirection = velocity.normalized;
         }
-        else
+
+        if (!Mathf.Approximately(velocity.x, 0f))
         {
-            isTriggered = false;
-            return false;
+            _lastFaceDirection = Mathf.Sign(velocity.x) * velocity.x / velocity.x;
+            Debug.Log($"Last Face Direction: {_lastFaceDirection}");
         }
     }
 
-    // private void ChasePlayer()
-    // {
-    //     direction = player.transform.position - transform.position;
-    //     direction.Normalize();
-    //     if (input != new Vector2(direction.x, direction.y) && !isTriggered)
-    //     {
-    //         input = new Vector2(direction.x, direction.y);
-    //         _command.ExecuteCommand(new MoveCommand(input));
-    //     }
-    //     else
-    //     {
-    //         _command.ExecuteCommand(new MoveCommand(input));
-    //     }
-    // }
-
-    // private void Patrol()
-    // {
-    //     if (transform.position.x <= patrolStartPos.x)
-    //     {
-    //         input = new Vector2(1, 0);
-    //         _command.ExecuteCommand(new MoveCommand(input));
-    //     }
-    //     else if (transform.position.x >= patrolEndPos.x)
-    //     {
-    //         input = new Vector2(-1, 0);
-    //         _command.ExecuteCommand(new MoveCommand(input));
-    //     }
-    // }
-
-    public void PerformAttack(string pattern)
+    public bool ifPlayerIsNear()
     {
-        // comboSequence += pattern;
-        // _command.ExecuteCommand(new AttackCommand(pattern));
-        // nextAttackTime = Time.time + attackCooldown;
+        return Vector2.Distance(player.transform.position, transform.position) < chaseRange;
     }
-
-    // public override bool Attack(AttackConfig config)
-    // {
-    // var triggers = _shadow.Triggers;
-    // var targetHitCommand = config?.targetHitAction.GetCommand();
-
-    // for (var i = 0; i < triggers.Count; i++)
-    // {
-    //     var player = triggers[i].GetComponentInParent<PlayerController>();
-    //     if (player == null)
-    //         continue;
-
-    //     if (Math.Sign(LastFaceDirection) == Math.Sign(player.transform.position.x - transform.position.x))
-    //     {
-    //         player.Hurt(attackDamage);
-    //         if (targetHitCommand != null)
-    //         {
-    //             player.Command.ExecuteCommand(targetHitCommand);
-    //         }
-    //         return true;
-    //     }
-    // }
-
-    // return false;
-    // }
 }

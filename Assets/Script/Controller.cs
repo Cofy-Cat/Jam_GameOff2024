@@ -59,9 +59,9 @@ public abstract class Controller : MonoBehaviour
     [SerializeField] protected Transform _mainCharacter;
 
     [Header("Stat")]
-    public Vector2 moveSpeed = Vector2.one;
+    protected Vector2 moveSpeed = Vector2.one;
 
-    public Vector2 dashSpeed = Vector2.one;
+    protected Vector2 dashSpeed = Vector2.one;
 
     private float _lastFaceDirection = 0f;
     public float LastFaceDirection => _lastFaceDirection;
@@ -175,5 +175,10 @@ public abstract class Controller : MonoBehaviour
             _lastFaceDirection = Mathf.Sign(velocity.x) * velocity.x / velocity.x;
             Debug.Log($"Last Face Direction: {_lastFaceDirection}");
         }
+    }
+
+    public Vector2 GetMoveSpeed()
+    {
+        return moveSpeed;
     }
 }

@@ -19,7 +19,9 @@ public class PlayerController : Controller
         // Try to set the rigidbody drag to 0
         _rb.linearDamping = 0f;
         _rb.angularDamping = 0f;
-        Debug.Log($"Rigidbody Drag: {_rb.linearDamping} and Angular Drag: {_rb.angularDamping}");
+        moveSpeed = new Vector2(5, 0);
+        dashSpeed = new Vector2(10, 0);
+        Debug.Log("PlayerController Start - moveSpeed: " + moveSpeed + " dashSpeed: " + dashSpeed);
     }
 
     private void Update()
