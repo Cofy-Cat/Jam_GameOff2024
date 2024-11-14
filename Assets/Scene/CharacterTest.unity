@@ -133,9 +133,9 @@ GameObject:
   - component: {fileID: 441624939}
   - component: {fileID: 441624938}
   - component: {fileID: 441624937}
-  - component: {fileID: 441624940}
   - component: {fileID: 441624941}
   - component: {fileID: 441624942}
+  - component: {fileID: 441624943}
   m_Layer: 0
   m_Name: FlyingEye
   m_TagString: Untagged
@@ -260,8 +260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 441624935}
-  player: {fileID: 0}
-  Animation: {fileID: 0}
+  player: {fileID: 1485841292}
+  _sm: {fileID: 441624939}
+  Animation: {fileID: 441624937}
   chaseRange: 5
 --- !u!114 &441624939
 MonoBehaviour:
@@ -276,18 +277,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controller: {fileID: 441624938}
---- !u!114 &441624940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441624933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b0786757014284bad7314fb6673e4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &441624941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +299,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3fe9ab627c5a7d4d9afd825faadb607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &441624943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441624933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4e2bd6ecc33f6419ac203644fd4a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &565877323 stripped
@@ -477,7 +478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6404119820370551054, guid: 5e3a6696e09a84232bc31dfda99b0c6e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1917337
+      value: -1.7826024
       objectReference: {fileID: 0}
     - target: {fileID: 6404119820370551054, guid: 5e3a6696e09a84232bc31dfda99b0c6e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -610,7 +611,7 @@ Transform:
   m_GameObject: {fileID: 933269793}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.1917337, y: 0.6634016, z: -10}
+  m_LocalPosition: {x: -1.7826024, y: 0.6634016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1572,11 +1573,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2101678494736092746, guid: e645dc0922a7bee448bce5d3dbbdafd6, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 1.9688842
       objectReference: {fileID: 0}
     - target: {fileID: 2101678494736092746, guid: e645dc0922a7bee448bce5d3dbbdafd6, type: 3}
       propertyPath: m_BodyType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2101678494736092746, guid: e645dc0922a7bee448bce5d3dbbdafd6, type: 3}
       propertyPath: m_UseAutoMass
