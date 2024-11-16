@@ -9,7 +9,8 @@ namespace cfUnityEngine.GameState
         Login,
         UserDataLoad,
         Initialization,
-        BootstrapEnd
+        UILoad,
+        BootstrapEnd,
     }
 
     public abstract class GameState : State<GameStateId, GameState, GameStateMachine>
@@ -24,6 +25,7 @@ namespace cfUnityEngine.GameState
             RegisterState(new LoginState());
             RegisterState(new UserDataLoadState());
             RegisterState(new InitializationState());
+            RegisterState(new UILoadState());
             RegisterState(new BootstrapEndState());
         }
     }
