@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using cfEngine.Logging;
 using UnityEngine.UIElements;
 
@@ -27,7 +28,7 @@ public abstract class UIPanel<TPanel>: IUIPanel where TPanel : IUIPanel
                     
                     Init(task.Result);
                     _ShowPanel();
-                });
+                }, Game.TaskToken, TaskContinuationOptions.None, TaskScheduler.FromCurrentSynchronizationContext());
         }
         else
         {
@@ -52,10 +53,19 @@ public abstract class UIPanel<TPanel>: IUIPanel where TPanel : IUIPanel
         }
         
         template.enabledSelf = true;
+        template.RemoveFromClassList("hide");
+        template.AddToClassList("show");
         OnPanelShown();
     }
 
     protected virtual void OnPanelShown() { }
+
+    public virtual void HidePanel()
+    {
+        template.RemoveFromClassList("show");
+        template.AddToClassList("hide");
+        template.enabledSelf = false;
+    }
     
     public abstract void Dispose();
 }

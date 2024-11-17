@@ -7,6 +7,7 @@ namespace cfUnityEngine.GameState.Bootstrap
         public override GameStateId Id => GameStateId.BootstrapEnd;
         protected internal override void StartContext(StateParam stateParam)
         {
+            UI.GetPanel<LoadingPanel>().HidePanel();
         }
     }
 }

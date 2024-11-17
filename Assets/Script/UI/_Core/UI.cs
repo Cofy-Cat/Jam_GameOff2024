@@ -6,18 +6,16 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UIDocument))]
-public class UI: MonoInstance<UI>, IDisposable
+public class UI: MonoBehaviour, IDisposable
 {
+    public static UI Instance { get; private set; }
+    
     public class PanelConfig
     {
         public string path;
         public IUIPanel panel;
     }
-    
-    public new static Func<UI> createMethod => () => Game.Asset.Load<UI>("UIRoot");
 
-    public override bool persistent => true;
-    
     [SerializeField] private UIDocument uiRootDocument;
     
     private Dictionary<Type, PanelConfig> _registeredPanelMap = new();
@@ -32,7 +30,13 @@ public class UI: MonoInstance<UI>, IDisposable
         }
     }
 #endif
-    
+
+    public void Awake()
+    {
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
     public void Register<T>(string panelPath, T panel) where T : IUIPanel
     {
         var type = typeof(T);
@@ -88,7 +92,6 @@ public class UI: MonoInstance<UI>, IDisposable
 
     public void AttachTemplate(TemplateContainer template)
     {
-        template.enabledSelf = false;
         uiRootDocument.rootVisualElement.Add(template);
         template.StretchToParentSize();
     }

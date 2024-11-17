@@ -22,6 +22,7 @@ namespace cfUnityEngine.GameState
     {
         public GameStateMachine() : base()
         {
+            RegisterState(new LocalLoadState());
             RegisterState(new InfoLoadState());
             RegisterState(new LoginState());
             RegisterState(new UserDataLoadState());
