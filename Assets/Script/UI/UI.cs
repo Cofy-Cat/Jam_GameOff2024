@@ -20,8 +20,8 @@ public class UI: MonoInstance<UI>, IDisposable
     
     [SerializeField] private UIDocument uiRootDocument;
     
-    private Dictionary<Type, PanelConfig> _registeredPanelMap = new();
-    private Dictionary<Type, Task<TemplateContainer>> _panelLoadMap = new();
+    private Dictionary<string, PanelConfig> _registeredPanelMap = new();
+    private Dictionary<string, Task<TemplateContainer>> _panelLoadMap = new();
 
 #if UNITY_EDITOR
     private void OnValidate()
@@ -33,32 +33,32 @@ public class UI: MonoInstance<UI>, IDisposable
     }
 #endif
     
-    public void Register<T>(string panelPath, T panel) where T : UIPanel
+    public void Register<T>(string key, string panelPath, T panel) where T : UIPanel
     {
         var type = typeof(T);
-        if (_registeredPanelMap.ContainsKey(type))
+        if (_registeredPanelMap.ContainsKey(key))
         {
-            Log.LogException(new ArgumentException($"UI.Register: panel type already registered: {type}"));
+            Log.LogException(new ArgumentException($"UI.Register: panel key already registered: {key}"));
             return;
         }
         
-        _registeredPanelMap.Add(type, new PanelConfig
+        _registeredPanelMap.Add(key, new PanelConfig
         {
             path = panelPath,
             panel = panel
         });
     }
 
-    public Task<TemplateContainer> LoadTemplate<T>() where T: UIPanel
+    public Task<TemplateContainer> LoadTemplate(string key)
     {
-        if (!_registeredPanelMap.TryGetValue(typeof(T), out var config))
+        if (!_registeredPanelMap.TryGetValue(key, out var config))
         {
-            var ex = new KeyNotFoundException($"UI.LoadPanel: panel type not registered: {typeof(T)}");
+            var ex = new KeyNotFoundException($"UI.LoadPanel: panel key not registered: {key}");
             Log.LogException(ex);
             return Task.FromException<TemplateContainer>(ex);
         }
         
-        if (_panelLoadMap.TryGetValue(typeof(T), out var loadTask))
+        if (_panelLoadMap.TryGetValue(key, out var loadTask))
         {
             return Task.FromResult(loadTask.Result);
         }
@@ -75,13 +75,19 @@ public class UI: MonoInstance<UI>, IDisposable
                 }
 
                 var template = t.Result.Instantiate();
-                template.dataSource = config.panel;
-                _panelLoadMap[typeof(T)] = loadTaskSource.Task;
+                template.enabledSelf = false;
+                
+                _panelLoadMap[key] = loadTaskSource.Task;
                 
                 loadTaskSource.SetResult(template);
             }, Game.TaskToken);
 
         return loadTaskSource.Task;
+    }
+
+    public void AttachTemplate(TemplateContainer template)
+    {
+        uiRootDocument.rootVisualElement.Add(template);
     }
 
     public void Dispose()
