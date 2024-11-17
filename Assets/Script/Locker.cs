@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Locker : Interactable
 {
@@ -10,7 +11,10 @@ public class Locker : Interactable
         player = other.gameObject;
         // Disable player
         player.transform.position = new Vector3(transform.position.x, transform.position.y, player.transform.position.z);
-        player.SetActive(false);
+        // Disable player sprite and collider
+        player.GetComponentInChildren<SpriteRenderer>().enabled = false;
+        player.GetComponent<BoxCollider2D>().enabled = false;
+        player.GetComponent<PlayerInput>().enabled = false;
         isInLocker = true;
     }
 
@@ -18,7 +22,9 @@ public class Locker : Interactable
     {
         if (isInLocker && Input.GetKeyDown(KeyCode.E))
         {
-            player.SetActive(true);
+            player.GetComponentInChildren<SpriteRenderer>().enabled = true;
+            player.GetComponent<BoxCollider2D>().enabled = true;
+            player.GetComponent<PlayerInput>().enabled = true;
             isInLocker = false;
         }
         else
