@@ -93,10 +93,10 @@ public class UI: MonoInstance<UI>, IDisposable
         template.StretchToParentSize();
     }
     
-    public T GetPanel<T>() where T : IUIPanel
+    public static T GetPanel<T>() where T : IUIPanel
     {
         var type = typeof(T);
-        if (!_registeredPanelMap.TryGetValue(type, out var config))
+        if (!Instance._registeredPanelMap.TryGetValue(type, out var config))
         {
             Log.LogException(new KeyNotFoundException($"UI.GetPanel: panel type not registered: {type}"));
             return default;
@@ -110,7 +110,7 @@ public class UI: MonoInstance<UI>, IDisposable
         Log.LogException(new InvalidCastException($"UI.GetPanel: panel type mismatch: {type}"));
         return default;
     }
-
+    
     public void Dispose()
     {
         foreach (var config in _registeredPanelMap.Values)

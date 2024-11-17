@@ -15,7 +15,7 @@ namespace cfUnityEngine.GameState.Bootstrap
         {
             var ui = UI.Instance;
 
-            ui.Register("Panel/InventoryPanel", new InventoryPanel());
+            ui.Register("Panel/InventoryPanel", new InventoryPopupPanel());
             
             StateMachine.ForceGoToState(GameStateId.BootstrapEnd);
         }
