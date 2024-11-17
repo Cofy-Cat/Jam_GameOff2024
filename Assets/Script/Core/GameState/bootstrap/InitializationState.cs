@@ -7,7 +7,7 @@ namespace cfUnityEngine.GameState.Bootstrap
 {
     public class InitializationState : GameState
     {
-        public override HashSet<GameStateId> Whitelist { get; } = new() { GameStateId.BootstrapEnd };
+        public override HashSet<GameStateId> Whitelist { get; } = new() { GameStateId.UILoad };
         public override GameStateId Id => GameStateId.Initialization;
 
         protected internal override void StartContext(StateParam stateParam)
@@ -16,7 +16,7 @@ namespace cfUnityEngine.GameState.Bootstrap
             {
                 if (t.IsCompletedSuccessfully)
                 {
-                    StateMachine.TryGoToState(GameStateId.BootstrapEnd);
+                    StateMachine.TryGoToState(GameStateId.UILoad);
                 }
                 else
                 {

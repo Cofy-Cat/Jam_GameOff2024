@@ -77,8 +77,11 @@ public class UI: MonoInstance<UI>, IDisposable
                 }
 
                 var template = t.Result.Instantiate();
+#if UNITY_EDITOR
+                template.name = $"EditorName-{type}";
+#endif
                 loadTaskSource.SetResult(template);
-            }, Game.TaskToken);
+            }, Game.TaskToken, TaskContinuationOptions.None, TaskScheduler.FromCurrentSynchronizationContext());
 
         return loadTaskSource.Task;
     }
@@ -87,6 +90,25 @@ public class UI: MonoInstance<UI>, IDisposable
     {
         template.enabledSelf = false;
         uiRootDocument.rootVisualElement.Add(template);
+        template.StretchToParentSize();
+    }
+    
+    public T GetPanel<T>() where T : IUIPanel
+    {
+        var type = typeof(T);
+        if (!_registeredPanelMap.TryGetValue(type, out var config))
+        {
+            Log.LogException(new KeyNotFoundException($"UI.GetPanel: panel type not registered: {type}"));
+            return default;
+        }
+
+        if (config.panel is T panel)
+        {
+            return panel;
+        }
+        
+        Log.LogException(new InvalidCastException($"UI.GetPanel: panel type mismatch: {type}"));
+        return default;
     }
 
     public void Dispose()
