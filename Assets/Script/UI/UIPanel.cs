@@ -2,17 +2,21 @@ using System;
 using cfEngine.Logging;
 using UnityEngine.UIElements;
 
-public abstract class UIPanel: IDisposable
+public interface IUIPanel: IDisposable
+{
+    void ShowPanel();
+    void Init(TemplateContainer template);
+}
+
+public abstract class UIPanel<TPanel>: IUIPanel where TPanel : IUIPanel
 {
     protected TemplateContainer template;
-    
-    protected abstract string Key { get; }
-    
+
     public void ShowPanel()
     {
         if (template == null)
         {
-            UI.Instance.LoadTemplate(Key)
+            UI.Instance.LoadTemplate<TPanel>()
                 .ContinueWith(task =>
                 {
                     if (task.IsFaulted)
@@ -21,28 +25,33 @@ public abstract class UIPanel: IDisposable
                         return;
                     }
                     
-                    template = task.Result;
-
-                    Init(template);
-                    ShowPanel(template);
+                    Init(task.Result);
+                    _ShowPanel();
                 });
         }
         else
         {
-            ShowPanel(template);
+            _ShowPanel();
         }
     }
 
-    public virtual void Init(TemplateContainer template)
+    public virtual void Init(TemplateContainer loadedTemplate)
     {
-        template.dataSource = this;
+        template = loadedTemplate;
+        
         UI.Instance.AttachTemplate(template);
+        template.dataSource = this;
     }
 
-    public virtual void ShowPanel(TemplateContainer template)
+    public virtual void _ShowPanel()
     {
-        template.enabledSelf = true;
+        if(template == null)
+        {
+            Log.LogException(new InvalidOperationException("UIPanel._ShowPanel: template is null, call UIPanel.Init first"));
+            return;
+        }
         
+        template.enabledSelf = true;
         OnPanelShown();
     }
 

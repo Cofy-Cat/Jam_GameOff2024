@@ -1,9 +1,5 @@
-public class InventoryUIPanel: UIPanel
+public class InventoryUIPanel: UIPanel<InventoryUIPanel>
 {
-    protected override string Key => nameof(InventoryUIPanel);
-    
-    
-    
     public override void Dispose()
     {
     }

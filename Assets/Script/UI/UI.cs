@@ -11,7 +11,7 @@ public class UI: MonoInstance<UI>, IDisposable
     public class PanelConfig
     {
         public string path;
-        public UIPanel panel;
+        public IUIPanel panel;
     }
     
     public new static Func<UI> createMethod => () => Game.Asset.Load<UI>("UIRoot");
@@ -20,8 +20,8 @@ public class UI: MonoInstance<UI>, IDisposable
     
     [SerializeField] private UIDocument uiRootDocument;
     
-    private Dictionary<string, PanelConfig> _registeredPanelMap = new();
-    private Dictionary<string, Task<TemplateContainer>> _panelLoadMap = new();
+    private Dictionary<Type, PanelConfig> _registeredPanelMap = new();
+    private Dictionary<Type, Task<TemplateContainer>> _panelLoadMap = new();
 
 #if UNITY_EDITOR
     private void OnValidate()
@@ -33,37 +33,39 @@ public class UI: MonoInstance<UI>, IDisposable
     }
 #endif
     
-    public void Register<T>(string key, string panelPath, T panel) where T : UIPanel
+    public void Register<T>(string panelPath, T panel) where T : IUIPanel
     {
         var type = typeof(T);
-        if (_registeredPanelMap.ContainsKey(key))
+        if (_registeredPanelMap.ContainsKey(type))
         {
-            Log.LogException(new ArgumentException($"UI.Register: panel key already registered: {key}"));
+            Log.LogException(new ArgumentException($"UI.Register: panel type already registered: {type}"));
             return;
         }
         
-        _registeredPanelMap.Add(key, new PanelConfig
+        _registeredPanelMap.Add(type, new PanelConfig
         {
             path = panelPath,
             panel = panel
         });
     }
 
-    public Task<TemplateContainer> LoadTemplate(string key)
+    public Task<TemplateContainer> LoadTemplate<T>() where T: IUIPanel
     {
-        if (!_registeredPanelMap.TryGetValue(key, out var config))
+        var type = typeof(T);
+        if (!_registeredPanelMap.TryGetValue(type, out var config))
         {
-            var ex = new KeyNotFoundException($"UI.LoadPanel: panel key not registered: {key}");
+            var ex = new KeyNotFoundException($"UI.LoadPanel: panel type not registered: {type}");
             Log.LogException(ex);
             return Task.FromException<TemplateContainer>(ex);
         }
         
-        if (_panelLoadMap.TryGetValue(key, out var loadTask))
+        if (_panelLoadMap.TryGetValue(type, out var loadTask) && loadTask.IsCompletedSuccessfully)
         {
-            return Task.FromResult(loadTask.Result);
+            return loadTask;
         }
         
         TaskCompletionSource<TemplateContainer> loadTaskSource = new();
+        _panelLoadMap[type] = loadTaskSource.Task;
 
         Game.Asset.LoadAsync<VisualTreeAsset>(config.path, Game.TaskToken)
             .ContinueWith(t =>
@@ -75,10 +77,6 @@ public class UI: MonoInstance<UI>, IDisposable
                 }
 
                 var template = t.Result.Instantiate();
-                template.enabledSelf = false;
-                
-                _panelLoadMap[key] = loadTaskSource.Task;
-                
                 loadTaskSource.SetResult(template);
             }, Game.TaskToken);
 
@@ -87,12 +85,13 @@ public class UI: MonoInstance<UI>, IDisposable
 
     public void AttachTemplate(TemplateContainer template)
     {
+        template.enabledSelf = false;
         uiRootDocument.rootVisualElement.Add(template);
     }
 
     public void Dispose()
     {
-        foreach (var (type, config) in _registeredPanelMap)
+        foreach (var config in _registeredPanelMap.Values)
         {
             config.panel.Dispose();
         }
