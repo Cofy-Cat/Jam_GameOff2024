@@ -5,6 +5,7 @@ namespace cfUnityEngine.GameState
 {
     public enum GameStateId
     {
+        LocalLoad,
         InfoLoad,
         Login,
         UserDataLoad,
