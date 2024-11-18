@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 public class MoveState : CharacterState
 {
-    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Dash, CharacterStateId.Interact, CharacterStateId.Activate };
+    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Interact, CharacterStateId.Activate };
 
     public class Param : StateParam
     {

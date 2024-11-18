@@ -6,7 +6,6 @@ public enum CharacterStateId
     Move,
     Interact,
     Emo,
-    Dash,
     Activate
 
 }

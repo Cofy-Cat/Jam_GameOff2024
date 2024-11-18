@@ -38,9 +38,9 @@ public class Interactable : MonoBehaviour
 
     public virtual void Update()
     {
-        if (inRange && Input.GetKeyDown(KeyCode.E))
-        {
-            Interact(collider);
-        }
+        // if (inRange && Input.GetKeyDown(KeyCode.E))
+        // {
+        //     Interact(collider);
+        // }
     }
 }

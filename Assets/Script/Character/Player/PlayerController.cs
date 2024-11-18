@@ -84,11 +84,24 @@ public class PlayerController : Controller
     private void OnInteract(InputAction.CallbackContext context)
     {
         _sm.TryGoToState(CharacterStateId.Interact, new StateParam());
+        // Physics Get overlapped interactable object
+        // Then call the interactable object's interact method
+
+        var interactable = Physics2D.OverlapBox(transform.position, new Vector2(1, 1), 0, LayerMask.GetMask("Interactable"));
+        // Check if the returned object is interactable object 
+        if (interactable != null)
+        {
+            var interactableComponent = interactable.GetComponent<Interactable>();
+            if (interactableComponent != null)
+            {
+                interactableComponent.Interact(GetComponent<Collider2D>());
+            }
+        }
     }
 
     private void OnAbility(InputAction.CallbackContext context)
     {
-        _sm.TryGoToState(CharacterStateId.Activate, new DashState.Param
+        _sm.TryGoToState(CharacterStateId.Activate, new ActivateState.Param
         {
             direction = _lastMoveInput
         });
