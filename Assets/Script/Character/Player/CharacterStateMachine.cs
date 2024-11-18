@@ -5,7 +5,10 @@ public enum CharacterStateId
     Idle,
     Move,
     Interact,
-    Emo
+    Emo,
+    Dash,
+    Activate
+
 }
 
 

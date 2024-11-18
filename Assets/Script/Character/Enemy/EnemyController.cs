@@ -57,4 +57,14 @@ public class EnemyController : MonoBehaviour
     {
         return Vector2.Distance(player.transform.position, transform.position) < chaseRange;
     }
+
+    public void changePlayerMoveSpeed()
+    {
+        if (ifPlayerIsNear())
+            playerController.SetMoveSpeed(new Vector2(2, 0));
+        else
+            playerController.SetMoveSpeed(new Vector2(5, 0));
+
+        Debug.Log("Player Move Speed: " + playerController.GetMoveSpeed());
+    }
 }

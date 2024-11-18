@@ -1,16 +1,16 @@
 using cfEngine.Util;
 using UnityEngine;
 using System.Collections.Generic;
-public class MoveState : CharacterState
+public class DashState : CharacterState
 {
-    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Dash, CharacterStateId.Interact, CharacterStateId.Activate };
+    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Dash, CharacterStateId.Interact };
 
     public class Param : StateParam
     {
         public Vector2 direction;
     }
 
-    public override CharacterStateId Id => CharacterStateId.Move;
+    public override CharacterStateId Id => CharacterStateId.Dash;
 
     protected internal override void StartContext(StateParam param)
     {
@@ -29,17 +29,11 @@ public class MoveState : CharacterState
         }
 
         string animationName;
-        animationName = AnimationName.GetDirectional(AnimationName.Move, faceDirection);
-        StateMachine.Controller.SetVelocity(direction * StateMachine.Controller.GetMoveSpeed());
+        animationName = AnimationName.GetDirectional(AnimationName.Dash, faceDirection);
+        StateMachine.Controller.SetVelocity(direction * StateMachine.Controller.GetDashSpeed());
         StateMachine.Controller.Animation.Play(animationName, true, onPlayFrame: frame =>
         {
             Debug.Log($"Current Playing Animation: {animationName}");
         });
-    }
-
-    public override void _Update()
-    {
-        // As the MoveSpeed is keep updating in the game, we need to update the velocity every frame
-        StateMachine.Controller.SetVelocity(StateMachine.Controller.LastMoveDirection * StateMachine.Controller.GetMoveSpeed());
     }
 }

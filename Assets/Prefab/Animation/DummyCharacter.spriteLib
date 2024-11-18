@@ -435,6 +435,48 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 10
+  - m_Name: ActivateLeft
+    m_Hash: 734601266
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template Left_40
+      m_Hash: 676595026
+      m_Sprite: {fileID: -1214559054, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1214559054, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_39
+      m_Hash: 516500273
+      m_Sprite: {fileID: -1104847920, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1104847920, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_38
+      m_Hash: 701373351
+      m_Sprite: {fileID: -773283821, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -773283821, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
+  - m_Name: ActivateRight
+    m_Hash: 1063609145
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template_39
+      m_Hash: 861724188
+      m_Sprite: {fileID: 1297267215, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1297267215, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_40
+      m_Hash: 96596095
+      m_Sprite: {fileID: 954867169, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 954867169, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_41
+      m_Hash: 851886313
+      m_Sprite: {fileID: 62564146, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 62564146, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 3
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638673260188120279
+  m_ModificationHash: 638675346674234082
   m_Version: 1

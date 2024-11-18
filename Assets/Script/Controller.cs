@@ -18,6 +18,7 @@ public partial class AnimationName
     public const string Chase = nameof(Chase);
     public const string Attack = nameof(Attack);
     public const string Emo = nameof(Emo);
+    public const string Activate = nameof(Activate);
 
     public static string GetDirectional(string animationName, float horizontalDirection)
     {
@@ -186,9 +187,30 @@ public abstract class Controller : MonoBehaviour
         return moveSpeed;
     }
 
+    public Vector2 SetMoveSpeed(Vector2 value)
+    {
+        return moveSpeed = value;
+    }
+
+    public Vector2 GetDashSpeed()
+    {
+        return dashSpeed;
+    }
+
+    public Vector2 SetDashSpeed(Vector2 value)
+    {
+        return dashSpeed = value;
+    }
+
     // Add a public method to set the isEmo property
     public void SetEmo(bool value)
     {
         isEmo = value;
     }
+
+    // Write a funciton to change the opacity of the sprite renderer, that is in SpriteAnimation
+    public void setOpacity(float value)
+    {
+        _anim.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, value);
+    }   
 }

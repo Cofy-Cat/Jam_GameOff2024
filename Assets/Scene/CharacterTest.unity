@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 441624941}
   - component: {fileID: 441624942}
   - component: {fileID: 441624943}
+  - component: {fileID: 441624944}
   m_Layer: 0
   m_Name: FlyingEye
   m_TagString: Untagged
@@ -313,6 +314,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4e2bd6ecc33f6419ac203644fd4a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &441624944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441624933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61905a772a890646811796587ed1730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &565877323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2267017462991343604, guid: e645dc0922a7bee448bce5d3dbbdafd6, type: 3}
@@ -478,7 +491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6404119820370551054, guid: 5e3a6696e09a84232bc31dfda99b0c6e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7826024
+      value: -1.7503943
       objectReference: {fileID: 0}
     - target: {fileID: 6404119820370551054, guid: 5e3a6696e09a84232bc31dfda99b0c6e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -611,7 +624,7 @@ Transform:
   m_GameObject: {fileID: 933269793}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7826024, y: 0.6634016, z: -10}
+  m_LocalPosition: {x: -1.7503943, y: 0.6634016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1745,6 +1758,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 663095971025096286, guid: e645dc0922a7bee448bce5d3dbbdafd6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5390031616048241886}
+    - targetCorrespondingSourceObject: {fileID: 663095971025096286, guid: e645dc0922a7bee448bce5d3dbbdafd6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5390031616048241888}
+    - targetCorrespondingSourceObject: {fileID: 663095971025096286, guid: e645dc0922a7bee448bce5d3dbbdafd6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5390031616048241889}
   m_SourcePrefab: {fileID: 100100000, guid: e645dc0922a7bee448bce5d3dbbdafd6, type: 3}
 --- !u!50 &5390031616048241874 stripped
 Rigidbody2D:
@@ -1825,6 +1844,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ee939dd0bc85d344be77cb879417042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5390031616048241888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485841292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e5f523ba37d8c543b3f5d5c7eece427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5390031616048241889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1485841292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88aec746c12b42b4393ab197cc3adf5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class IdleState : CharacterState
 {
-    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Interact};
+    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Interact, CharacterStateId.Activate};
     public override CharacterStateId Id => CharacterStateId.Idle;
     private float _startTime;
     private const float IdleDuration = 10f;

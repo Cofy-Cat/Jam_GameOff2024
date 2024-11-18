@@ -51,6 +51,9 @@ public class PlayerController : Controller
             case "Interact": 
                 OnInteract(context);
                 break;
+            case "Ability":
+                OnAbility(context);
+                break;
         }
     }
 
@@ -81,6 +84,14 @@ public class PlayerController : Controller
     private void OnInteract(InputAction.CallbackContext context)
     {
         _sm.TryGoToState(CharacterStateId.Interact, new StateParam());
+    }
+
+    private void OnAbility(InputAction.CallbackContext context)
+    {
+        _sm.TryGoToState(CharacterStateId.Activate, new DashState.Param
+        {
+            direction = _lastMoveInput
+        });
     }
 
     private void OnStateChanged(StateChangeRecord<CharacterStateId> stateChange)

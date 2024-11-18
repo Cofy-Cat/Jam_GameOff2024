@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class InteractState : CharacterState
 {
-    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move };
+    public override HashSet<CharacterStateId> Whitelist { get; } = new() { CharacterStateId.Idle, CharacterStateId.Move, CharacterStateId.Interact };
 
     public override CharacterStateId Id => CharacterStateId.Interact;
     
