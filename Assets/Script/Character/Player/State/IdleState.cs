@@ -24,9 +24,15 @@ public class IdleState : CharacterState
         // Check if the elapsed time exceeds the idle duration
         if (Time.time - _startTime > IdleDuration)
         {
-            // set the controller isEMo to true
+            // set the controller isEmo to true
             StateMachine.Controller.SetEmo(true);
             StateMachine.ForceGoToState(CharacterStateId.Emo);
         }
+    }
+
+    protected internal override void OnEndContext()
+    {
+        StateMachine.Controller.SetIsActivating(false);
+        StateMachine.Controller.setSpriteOpacity(1f);
     }
 } 

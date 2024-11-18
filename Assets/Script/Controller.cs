@@ -92,12 +92,12 @@ public abstract class Controller : MonoBehaviour
     public bool isDead => _health.current <= 0;
 
     protected bool isEmo = false;
+    protected bool isActivating { get; set; } = false;
+    public bool Interacting { get; set; } = false;
 
-    public bool Interacting = false;
+    public bool isTriggered { get; set; } = false;
 
-    public bool isTriggered = false;
-
-    protected bool IsEmo { get => isEmo; set => isEmo = value; }
+    protected bool IsEmo { get; set; } = false;
 
     #endregion
 
@@ -208,9 +208,33 @@ public abstract class Controller : MonoBehaviour
         isEmo = value;
     }
 
-    // Write a funciton to change the opacity of the sprite renderer, that is in SpriteAnimation
-    public void setOpacity(float value)
+    public void setSpriteOpacity(float value)
     {
-        _anim.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, value);
-    }   
+        // Traverse the hierarchy to find the SpriteRenderer component
+        // PlayerObject (Current script)
+        // └── ChildGameObject(has SpriteAnimation script)
+        //     ├── SpriteLibrary
+        //     ├── SpriteResolver
+        //     └── SpriteRenderer
+
+        // Get the GameObject (child of the current GameObject), and then get the SpriteRenderer component
+        SpriteRenderer spriteRenderer = _anim.GetComponentInChildren<SpriteRenderer>();
+
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = new Color(1, 1, 1, value);
+        }
+    }
+
+    // Add public method to get & set the isActivating property
+    public bool GetIsActivating()
+    {
+        return isActivating;
+    }
+
+    public void SetIsActivating(bool value)
+    {
+        isActivating = value;
+    }
+
 }

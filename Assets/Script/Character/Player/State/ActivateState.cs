@@ -19,13 +19,13 @@ public class ActivateState : CharacterState
         animationName = AnimationName.GetDirectional(AnimationName.Activate, StateMachine.Controller.LastFaceDirection);
         StateMachine.Controller.Animation.Play(animationName, false, onAnimationEnd: () =>
         {
-            StateMachine.Controller.setOpacity(0.5f);
             StateMachine.ForceGoToState(CharacterStateId.Idle);
         });
     }
 
     protected internal override void OnEndContext()
     {
-        StateMachine.Controller.setOpacity(0.5f);
+        StateMachine.Controller.setSpriteOpacity(0.5f);
+        StateMachine.Controller.SetIsActivating(true);
     }
 }

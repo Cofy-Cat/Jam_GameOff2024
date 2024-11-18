@@ -12,8 +12,6 @@ public class EmoState : CharacterState
 
     public override CharacterStateId Id => CharacterStateId.Emo;
 
-    // private float emoMoveSpeed = 3f;
-
     protected internal override void StartContext(StateParam param)
     {
         StateMachine.Controller.SetVelocity(Vector2.zero);
