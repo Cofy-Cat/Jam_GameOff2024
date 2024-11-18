@@ -5,8 +5,6 @@ using cfEngine.Util;
 public class PlayerController : Controller
 {
     [SerializeField] private PlayerInput _input;
-    // [SerializeField] private float maxDashClickGap = 0.3f;
-    // [SerializeField] private float maxComboAttackGap = 0.2f;
     public AudioClip moveClip;
 
     private Vector2 _lastMoveInput = Vector2.zero;
@@ -44,10 +42,10 @@ public class PlayerController : Controller
 
     private void OnActionTriggered(InputAction.CallbackContext context)
     {
+        if (Interacting) return;
         switch (context.action.name)
         {
             case "Move":
-                if(Interacting) return;     
                 OnMove(context);
                 break;
             case "Interact": 

@@ -323,6 +323,118 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -660207813, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 6
+  - m_Name: EmoLeft
+    m_Hash: 524742386
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template Left_21
+      m_Hash: 151622210
+      m_Sprite: {fileID: 945862356, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 945862356, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20
+      m_Hash: 1041146580
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20_0
+      m_Hash: 128966425
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20_1
+      m_Hash: 816377743
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20_2
+      m_Hash: 698465845
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20_3
+      m_Hash: 514231971
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20_4
+      m_Hash: 12720896
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20_5
+      m_Hash: 935668630
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20_6
+      m_Hash: 785152556
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    - m_Name: 12 Animated Character Template Left_20_7
+      m_Hash: 432753338
+      m_Sprite: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -374980260, guid: 75c97c5eb4e69834681a2d3d084ba7a1, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
+  - m_Name: EmoRight
+    m_Hash: 615853639
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: 12 Animated Character Template_16
+      m_Hash: 299213071
+      m_Sprite: {fileID: 1125191547, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 1125191547, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17
+      m_Hash: 651334041
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17_0
+      m_Hash: 1034426267
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17_1
+      m_Hash: 179250957
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17_2
+      m_Hash: 329676471
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17_3
+      m_Hash: 614549025
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17_4
+      m_Hash: 986043266
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17_5
+      m_Hash: 230875924
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17_6
+      m_Hash: 348893870
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    - m_Name: 12 Animated Character Template_17_7
+      m_Hash: 600605240
+      m_Sprite: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -788219549, guid: ab21fdfefce32f441895a2c00aa84e06, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 10
   m_PrimaryLibraryGUID: 
-  m_ModificationHash: 638668903086513853
+  m_ModificationHash: 638673260188120279
   m_Version: 1

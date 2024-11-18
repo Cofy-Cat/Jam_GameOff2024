@@ -17,6 +17,7 @@ public partial class AnimationName
     public const string TriggerOff = nameof(TriggerOff);
     public const string Chase = nameof(Chase);
     public const string Attack = nameof(Attack);
+    public const string Emo = nameof(Emo);
 
     public static string GetDirectional(string animationName, float horizontalDirection)
     {
@@ -89,10 +90,13 @@ public abstract class Controller : MonoBehaviour
 
     public bool isDead => _health.current <= 0;
 
+    protected bool isEmo = false;
+
     public bool Interacting = false;
 
     public bool isTriggered = false;
 
+    protected bool IsEmo { get => isEmo; set => isEmo = value; }
 
     #endregion
 
@@ -180,5 +184,11 @@ public abstract class Controller : MonoBehaviour
     public Vector2 GetMoveSpeed()
     {
         return moveSpeed;
+    }
+
+    // Add a public method to set the isEmo property
+    public void SetEmo(bool value)
+    {
+        isEmo = value;
     }
 }
