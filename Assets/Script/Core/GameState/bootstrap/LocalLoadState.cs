@@ -10,12 +10,15 @@ namespace cfUnityEngine.GameState.Bootstrap
         {
             var uiPrefab = Game.Asset.Load<GameObject>("Local/UIRoot");
             var ui = Object.Instantiate(uiPrefab).GetComponent<UI>();
+
+            var loadingPanel = new LoadingPanel();
+            ui.Register("Local/LoadingPanel", loadingPanel);
+            loadingPanel.Init().ContinueWithSynchronized(t =>
+            {
+                loadingPanel.ShowPanel();
+                StateMachine.ForceGoToState(GameStateId.InfoLoad);
+            }, Game.TaskToken);
             
-            ui.Register("Local/LoadingPanel", new LoadingPanel());
-            
-            UI.GetPanel<LoadingPanel>().ShowPanel(); 
-            
-            StateMachine.ForceGoToState(GameStateId.InfoLoad);
         }
     }
 }

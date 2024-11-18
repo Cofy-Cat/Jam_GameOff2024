@@ -102,4 +102,9 @@ public class GameEntry : MonoBehaviour
             action?.Invoke();
         }
     }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public interface IUIPanel: IDisposable
 {
     void ShowPanel();
-    void Init(TemplateContainer template);
+    void AssignTemplate(TemplateContainer template);
 }
 
 public abstract class UIPanel<TPanel>: IUIPanel where TPanel : IUIPanel
@@ -17,18 +17,8 @@ public abstract class UIPanel<TPanel>: IUIPanel where TPanel : IUIPanel
     {
         if (template == null)
         {
-            UI.Instance.LoadTemplate<TPanel>()
-                .ContinueWith(task =>
-                {
-                    if (task.IsFaulted)
-                    {
-                        Log.LogException(task.Exception);
-                        return;
-                    }
-                    
-                    Init(task.Result);
-                    _ShowPanel();
-                }, Game.TaskToken, TaskContinuationOptions.None, TaskScheduler.FromCurrentSynchronizationContext());
+            Log.LogWarning("UIPanel.ShowPanel: template is null, calling Init first, dont rely on auto init.");
+            Init().ContinueWithSynchronized(t => _ShowPanel(), Game.TaskToken);
         }
         else
         {
@@ -36,7 +26,22 @@ public abstract class UIPanel<TPanel>: IUIPanel where TPanel : IUIPanel
         }
     }
 
-    public virtual void Init(TemplateContainer loadedTemplate)
+    public virtual Task Init()
+    {
+        return UI.Instance.LoadTemplate<TPanel>()
+            .ContinueWithSynchronized(task =>
+            {
+                if (task.IsFaulted)
+                {
+                    Log.LogException(task.Exception);
+                    return;
+                }
+                
+                AssignTemplate(task.Result);
+            }, Game.TaskToken);
+    }
+
+    public virtual void AssignTemplate(TemplateContainer loadedTemplate)
     {
         template = loadedTemplate;
         
@@ -44,7 +49,7 @@ public abstract class UIPanel<TPanel>: IUIPanel where TPanel : IUIPanel
         template.dataSource = this;
     }
 
-    public virtual void _ShowPanel()
+    protected virtual void _ShowPanel()
     {
         if(template == null)
         {
