@@ -5,11 +5,13 @@ namespace cfUnityEngine.GameState
 {
     public enum GameStateId
     {
+        LocalLoad,
         InfoLoad,
         Login,
         UserDataLoad,
         Initialization,
-        BootstrapEnd
+        UILoad,
+        BootstrapEnd,
     }
 
     public abstract class GameState : State<GameStateId, GameState, GameStateMachine>
@@ -20,10 +22,12 @@ namespace cfUnityEngine.GameState
     {
         public GameStateMachine() : base()
         {
+            RegisterState(new LocalLoadState());
             RegisterState(new InfoLoadState());
             RegisterState(new LoginState());
             RegisterState(new UserDataLoadState());
             RegisterState(new InitializationState());
+            RegisterState(new UILoadState());
             RegisterState(new BootstrapEndState());
         }
     }

@@ -30,7 +30,7 @@ public class GameEntry : MonoBehaviour
         }
     }
     
-    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     public static void Init()
     {
         Log.SetLogger(new UnityLogger());
@@ -69,7 +69,7 @@ public class GameEntry : MonoBehaviour
             Game.Dispose();
         }
         
-        Game.Gsm.TryGoToState(GameStateId.InfoLoad);
+        Game.Gsm.TryGoToState(GameStateId.LocalLoad);
     }
 
     private static void OnStateChanged(StateChangeRecord<GameStateId> record)
@@ -101,5 +101,10 @@ public class GameEntry : MonoBehaviour
             
             action?.Invoke();
         }
+    }
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
     }
 }
