@@ -38,7 +38,13 @@ public abstract class UIPanel<TPanel>: IUIPanel where TPanel : IUIPanel
                 }
                 
                 AssignTemplate(task.Result);
+                Init(task.Result);
             }, Game.TaskToken);
+    }
+
+    public virtual void Init(TemplateContainer template)
+    {
+        
     }
 
     public virtual void AssignTemplate(TemplateContainer loadedTemplate)
