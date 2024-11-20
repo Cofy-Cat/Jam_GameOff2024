@@ -17,7 +17,7 @@ namespace cfUnityEngine.GameState.Bootstrap
         {
             var ui = UI.Instance;
 
-            ui.Register<InventoryPopupPanel>("Panel/InventoryPanel");
+            ui.Register<InventoryPopupPanel>("Panel/InventoryPopupPanel");
 
             var loadTaskList = new List<Task>
             {

@@ -30,8 +30,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e973eb6df034bfb4fb4bd987cce013ff
-    m_Address: Panel/InventoryPanel
+  - m_GUID: ceb31f7dbfdc4a2459cfc1981ab41ccf
+    m_Address: Panel/InventoryPopupPanel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -1,0 +1,8 @@
+.grid-view__item {
+    flex-grow: 0;
+    width: 25%;
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+}
