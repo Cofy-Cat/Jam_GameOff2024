@@ -12,9 +12,8 @@ public class TriggerOnState : EnemyState
         animationName = AnimationName.GetDirectional(AnimationName.TriggerOn, StateMachine.Controller.LastFaceDirection);
         StateMachine.Controller.Animation.Play(animationName, false, onAnimationEnd: () =>
         {
-            Debug.Log("FlyingEye TriggerOn Animation ends. Force Go To Chase State");
+            Debug.Log("FlyingEye TriggerOff Animation ends. Force Go To Chase State");
             StateMachine.ForceGoToState(EnemyStateId.Chase);
-            Debug.Log("This line should not be printed");
         });
     }
 }

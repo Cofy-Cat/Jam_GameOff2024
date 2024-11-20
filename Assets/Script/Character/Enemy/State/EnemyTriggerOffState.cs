@@ -14,7 +14,6 @@ public class TriggerOffState : EnemyState
         {
             Debug.Log("FlyingEye TriggerOn Animation ends. Force Go To Chase State");
             StateMachine.ForceGoToState(EnemyStateId.EnemyIdle);
-            Debug.Log("This line should not be printed");
         });
     }
 }

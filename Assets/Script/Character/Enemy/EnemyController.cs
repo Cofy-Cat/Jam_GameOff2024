@@ -10,13 +10,19 @@ public class EnemyController : MonoBehaviour
     private Controller playerController;
     [SerializeField] public SpriteAnimation Animation;
 
+    [Header("Player Detection")]
+    [SerializeField] private float raycastOffset = 5f;
+    [SerializeField] private float raycastDistance = 45f;
+    private Vector2 _rayCastOrigin;
+
+
     public float LastFaceDirection => _lastFaceDirection;
     private float _lastFaceDirection = 0f;
     public Vector2 LastMoveDirection => _lastMoveDirection;
     private Vector2 _lastMoveDirection = Vector2.zero;
     private Vector3 direction;
     private Vector2 input;
-    [SerializeField] float chaseRange = 5f;
+    [SerializeField] float chaseRange = 7f;
 
     protected void Awake()
     {
@@ -55,7 +61,25 @@ public class EnemyController : MonoBehaviour
 
     public bool ifPlayerIsNear()
     {
-        return Vector2.Distance(player.transform.position, transform.position) < chaseRange;
+        // return Vector2.Distance(player.transform.position, transform.position) < chaseRange;
+
+        var _rayCastOrigin = transform.position;
+        var direction = Vector2.left;
+
+        RaycastHit2D hit = Physics2D.Raycast(_rayCastOrigin, direction, chaseRange, LayerMask.GetMask("Player"));
+        Debug.DrawRay(_rayCastOrigin, direction * chaseRange, Color.green);
+
+        if (hit.collider != null)
+        {
+            Debug.Log("Hit: " + hit.collider.name);
+            if (hit.collider.CompareTag("Player"))
+            {
+                Debug.Log("Player is near");
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public void changePlayerMoveSpeed()
