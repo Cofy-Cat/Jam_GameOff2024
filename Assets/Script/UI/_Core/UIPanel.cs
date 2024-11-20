@@ -9,7 +9,7 @@ public abstract class UIPanel
     public UIPanel(TemplateContainer template)
     {
         Template = template;
-        Template.dataSource = this;
+        template.dataSource = this;
     }
     
     public void ShowPanel()
