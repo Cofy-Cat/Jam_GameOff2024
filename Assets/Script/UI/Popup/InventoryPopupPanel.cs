@@ -1,23 +1,25 @@
-using System;
-using System.Collections.Generic;
-using UnityEngine;
+using cfEngine.Rt;
+using UnityEngine.UIElements;
 
-public class InventoryPopupPanel: UIPanel<InventoryPopupPanel>
+public class InventoryPopupPanel: UIPanel
 {
-    private List<InventoryItemUI> _inventoryItemList = new();
-    public IReadOnlyList<InventoryItemUI> InventoryItemList => _inventoryItemList;
+    private RtReadOnlyList<InventoryPopupPanel_Item> _inventoryItemList;
 
-    public InventoryPopupPanel()
+    public InventoryPopupPanel(TemplateContainer template) : base(template)
     {
-        
+        var inventory = Game.Meta.Inventory;
+        _inventoryItemList = inventory.StackMap.RtValues.Select(item => new InventoryPopupPanel_Item(item));
     }
     
     public override void Dispose()
     {
     }
-}
 
-public class InventoryItemUI
-{
-    
+    public class InventoryPopupPanel_Item
+    {
+        public InventoryPopupPanel_Item(in InventoryItem item)
+        {
+            
+        }
+    }
 }

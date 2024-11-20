@@ -13,13 +13,13 @@ public class UI: MonoBehaviour, IDisposable
     public class PanelConfig
     {
         public string path;
-        public IUIPanel panel;
     }
 
     [SerializeField] private UIDocument uiRootDocument;
     
     private Dictionary<Type, PanelConfig> _registeredPanelMap = new();
-    private Dictionary<Type, Task<TemplateContainer>> _panelLoadMap = new();
+    private Dictionary<Type, Task<TemplateContainer>> _templateLoadMap = new();
+    private Dictionary<Type, UIPanel> _panelMap = new();
 
 #if UNITY_EDITOR
     private void OnValidate()
@@ -37,7 +37,7 @@ public class UI: MonoBehaviour, IDisposable
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Register<T>(string panelPath, T panel) where T : IUIPanel
+    public void Register<T>(string panelPath) where T : UIPanel
     {
         var type = typeof(T);
         if (_registeredPanelMap.ContainsKey(type))
@@ -49,11 +49,10 @@ public class UI: MonoBehaviour, IDisposable
         _registeredPanelMap.Add(type, new PanelConfig
         {
             path = panelPath,
-            panel = panel
         });
     }
 
-    public Task<TemplateContainer> LoadTemplate<T>() where T: IUIPanel
+    public Task<TemplateContainer> LoadTemplate<T>() where T: UIPanel
     {
         var type = typeof(T);
         if (!_registeredPanelMap.TryGetValue(type, out var config))
@@ -63,13 +62,13 @@ public class UI: MonoBehaviour, IDisposable
             return Task.FromException<TemplateContainer>(ex);
         }
         
-        if (_panelLoadMap.TryGetValue(type, out var loadTask) && loadTask.IsCompletedSuccessfully)
+        if (_templateLoadMap.TryGetValue(type, out var templateLoadTask) && templateLoadTask.IsCompletedSuccessfully)
         {
-            return loadTask;
+            return templateLoadTask;
         }
         
         TaskCompletionSource<TemplateContainer> loadTaskSource = new();
-        _panelLoadMap[type] = loadTaskSource.Task;
+        _templateLoadMap[type] = loadTaskSource.Task;
 
         Game.Asset.LoadAsync<VisualTreeAsset>(config.path, Game.TaskToken)
             .ContinueWith(t =>
@@ -90,45 +89,67 @@ public class UI: MonoBehaviour, IDisposable
         return loadTaskSource.Task;
     }
 
-    public void AttachTemplate(TemplateContainer template)
+    public async Task<T> LoadPanel<T>() where T : UIPanel
     {
+        var template = await LoadTemplate<T>();
+        var panel = (T)Activator.CreateInstance(typeof(T), template);
+        _panelMap.Add(typeof(T), panel);
+        
+        AttachTemplateToRoot(template);
+        return panel;
+    }
+
+    public void AttachTemplateToRoot(TemplateContainer template)
+    {
+        if (template == null)
+        {
+            Log.LogException(new ArgumentNullException(nameof(template)));
+            return;
+        }
+        
         uiRootDocument.rootVisualElement.Add(template);
         template.StretchToParentSize();
     }
     
-    public static T GetPanel<T>() where T : IUIPanel
+    public static T GetPanel<T>() where T : UIPanel
     {
         var type = typeof(T);
-        if (!Instance._registeredPanelMap.TryGetValue(type, out var config))
+        if (!Instance._registeredPanelMap.ContainsKey(type))
         {
-            Log.LogException(new KeyNotFoundException($"UI.GetPanel: panel type not registered: {type}"));
-            return default;
+            Log.LogException(new KeyNotFoundException($"UI.GetPanel: panel type not registered: {type}, call {nameof(Register)} first"));
+            return null;
         }
 
-        if (config.panel is T panel)
+        if (!Instance._panelMap.TryGetValue(type, out var panel))
         {
-            return panel;
+            Log.LogException(new KeyNotFoundException($"UI.GetPanel: panel type not loaded: {type}, call {nameof(LoadPanel)} first"));
+            return null;
+        }
+
+        if (panel is not T t)
+        {
+            Log.LogException(new InvalidCastException($"UI.GetPanel: panel type mismatch: load: {panel.GetType()}, Request: {type}"));
+            return null;
         }
         
-        Log.LogException(new InvalidCastException($"UI.GetPanel: panel type mismatch: {type}"));
-        return default;
+        return t;
     }
     
     public void Dispose()
     {
-        foreach (var config in _registeredPanelMap.Values)
-        {
-            config.panel.Dispose();
-        }
-        
         _registeredPanelMap.Clear();
         
-        foreach (var task in _panelLoadMap.Values)
+        foreach (var task in _templateLoadMap.Values)
         {
             task.Dispose();
         }
         
-        _panelLoadMap.Clear();
+        _templateLoadMap.Clear();
+        
+        foreach (var panel in _panelMap.Values)
+        {
+            panel.Dispose();
+        }
         
         uiRootDocument.rootVisualElement.Clear();
     }
