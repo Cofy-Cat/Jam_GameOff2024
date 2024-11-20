@@ -8,6 +8,10 @@ using UnityEngine.UIElements;
 [RequireComponent(typeof(UIDocument))]
 public class UI: MonoBehaviour, IDisposable
 {
+#if UNITY_EDITOR
+    private const string EditorName = "{0} (EditorName)";
+#endif
+    
     public static UI Instance { get; private set; }
     
     public class PanelConfig
@@ -81,7 +85,7 @@ public class UI: MonoBehaviour, IDisposable
 
                 var template = t.Result.Instantiate();
 #if UNITY_EDITOR
-                template.name = $"EditorName-{type}";
+                template.name = string.Format(EditorName, type);
 #endif
                 loadTaskSource.SetResult(template);
             }, Game.TaskToken, TaskContinuationOptions.None, TaskScheduler.FromCurrentSynchronizationContext());
@@ -96,6 +100,7 @@ public class UI: MonoBehaviour, IDisposable
         _panelMap.Add(typeof(T), panel);
         
         AttachTemplateToRoot(template);
+        panel.HidePanel();
         return panel;
     }
 

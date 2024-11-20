@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using cfEngine.Logging;
 using cfEngine.Util;
 
 namespace cfUnityEngine.GameState.Bootstrap
@@ -16,8 +18,22 @@ namespace cfUnityEngine.GameState.Bootstrap
             var ui = UI.Instance;
 
             ui.Register<InventoryPopupPanel>("Panel/InventoryPanel");
-            
-            StateMachine.ForceGoToState(GameStateId.BootstrapEnd);
+
+            var loadTaskList = new List<Task>
+            {
+                ui.LoadPanel<InventoryPopupPanel>()
+            };
+
+            Task.WhenAll(loadTaskList)
+                .ContinueWithSynchronized(t =>
+                {
+                    if (t.IsFaulted)
+                    {
+                        Log.LogException(t.Exception);
+                        return;
+                    }
+                    StateMachine.ForceGoToState(GameStateId.BootstrapEnd);
+                });
         }
     }
 }
