@@ -1,12 +1,34 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="InventoryPopupPanel_Item" src="project://database/Assets/Prefab/UI/Panel/InventoryPopupPanel/InventoryPopupPanel_Item.uxml?fileID=9197481963319205126&amp;guid=ea7d95abbe16a3e40bf9f224f2a0e34c&amp;type=3#InventoryPopupPanel_Item" />
     <Style src="project://database/Assets/Prefab/UI/CommonStyle.uss?fileID=7433441132597879392&amp;guid=3a07ea27fb6d2a44bb2e70002296d853&amp;type=3#CommonStyle" />
     <Style src="project://database/Assets/InventoryPopupPanel_Style.uss?fileID=7433441132597879392&amp;guid=a4011c790ae4b654d9ec04f884b9bdfb&amp;type=3#InventoryPopupPanel_Style" />
-    <engine:VisualElement name="book" class="margin-auto" style="width: 60%; height: 80%; background-color: rgba(176, 83, 4, 0.58); flex-direction: row;">
-        <engine:VisualElement name="left" style="flex-grow: 1; width: 50%;">
-            <engine:VisualElement name="view-container" style="flex-grow: 1; padding-top: 18px; padding-right: 18px; padding-bottom: 18px; padding-left: 18px; width: 100%;">
-                <engine:ListView name="grid-view" item-template="project://database/Assets/Prefab/UI/Panel/InventoryPopupPanel/InventoryPopupPanel_Item.uxml?fileID=9197481963319205126&amp;guid=ea7d95abbe16a3e40bf9f224f2a0e34c&amp;type=3#InventoryPopupPanel_Item" binding-source-selection-mode="AutoAssign" data-source-type="InventoryPopupPanel, Assembly-CSharp" style="background-color: rgb(224, 212, 192); height: 100%;" />
+    <AspectRatioFitterElement aspect-ratio="1.615625" aspect-mode="FitInContainer" class="wh-full" style="flex-grow: 1;">
+        <engine:VisualElement name="book" class="margin-auto" style="flex-direction: row; width: 80%; height: 80%; background-image: url(&quot;project://database/Assets/Art/UI/Inventory/paper-static.png?fileID=-1513349679&amp;guid=6b735173966fa094eb08b02e9eaff7e8&amp;type=3#paper-static_0&quot;);">
+            <engine:VisualElement name="left" style="flex-grow: 1; width: 50%;">
+                <engine:VisualElement name="view-container" style="flex-grow: 1; padding-top: 20%; padding-right: 12%; padding-bottom: 20%; padding-left: 12%; width: 100%; align-items: center; flex-direction: row; flex-wrap: wrap; justify-content: space-between;">
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
+                </engine:VisualElement>
             </engine:VisualElement>
+            <engine:VisualElement name="right" style="flex-grow: 1; width: 50%;" />
         </engine:VisualElement>
-        <engine:VisualElement name="right" style="flex-grow: 1; width: 50%;" />
-    </engine:VisualElement>
+    </AspectRatioFitterElement>
 </engine:UXML>
