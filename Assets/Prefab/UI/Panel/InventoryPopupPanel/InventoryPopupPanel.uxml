@@ -22,10 +22,6 @@
                     <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
                     <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
                     <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
-                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
-                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
-                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
-                    <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
                 </engine:VisualElement>
             </engine:VisualElement>
             <engine:VisualElement name="right" style="flex-grow: 1; width: 50%;" />
