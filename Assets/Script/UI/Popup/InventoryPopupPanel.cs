@@ -15,35 +15,47 @@ public class InventoryPopupPanel: UIPanel
 
     public InventoryPopupPanel(TemplateContainer template) : base(template)
     {
-        var inventory = Game.Meta.Inventory;
-        _items = inventory.GetPage(0).Select(stackId => new InventoryPopupPanel_Item(stackId));
-
         var itemUIListElement = template.Q(nameof(itemElements));
         itemElements.AddRange(itemUIListElement.Children());
-
-        if (itemElements.Count < _items.Count)
+        
+        var inventory = Game.Meta.Inventory;
+        _items = inventory.GetPage(0).Select(stackId => new InventoryPopupPanel_Item(stackId));
+        _items.Events.Subscribe(onUpdate: OnItemUpdate);
+        
+        for (int i = 0; i < itemElements.Count; i++)
         {
-            Log.LogException(new InvalidOperationException($"Not enough item visual element for 1 page in the template. ve: {itemElements.Count}, page: {_items.Count}"));
-        }
-        else
-        {
-            for (var i = 0; i < _items.Count; i++)
-            {
-                itemElements[i].dataSource = _items[i];
-            }
+            itemElements[i].dataSource = _items[i];
         }
     }
-    
+
+    private void OnItemUpdate((int index, InventoryPopupPanel_Item item) oldItem, (int index, InventoryPopupPanel_Item item) newItem)
+    {
+        itemElements[newItem.index].dataSource = newItem.item;
+    }
+
     public override void Dispose()
     {
+        _items.Events.Unsubscribe(onUpdate: OnItemUpdate);
+        
         itemElements.Clear();
         _items.Dispose();
     }
 
     public class InventoryPopupPanel_Item
     {
+        public string itemId;
+        public readonly int count;
+        public readonly string countText;
+        
         public InventoryPopupPanel_Item(StackId stackId)
         {
+            if(stackId == Guid.Empty) return;
+            
+            var item = Game.Meta.Inventory.StackMap[stackId];
+
+            itemId = item.Id;
+            count = item.ItemCount;
+            countText = $"x{count}";
         }
     }
     
@@ -60,5 +72,11 @@ public class InventoryPopupPanel: UIPanel
             ItemId = itemId,
             Count = count
         });
+    }
+    
+    [MenuItem("Test/Show Inventory Panel")]
+    public static void Show()
+    {
+        UI.GetPanel<InventoryPopupPanel>().ShowPanel();
     }
 }
