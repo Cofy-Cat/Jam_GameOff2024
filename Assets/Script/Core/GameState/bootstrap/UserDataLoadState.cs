@@ -23,10 +23,15 @@ namespace cfUnityEngine.GameState.Bootstrap
         
         protected internal override void StartContext(StateParam stateParam)
         {
-            Game.UserData.LoadInitializeAsync(Game.TaskToken).ContinueWith(t =>
+            RegisterSavables();
+            
+            Game.UserData.LoadDataMap(Game.TaskToken).ContinueWith(t =>
             {
                 if (t.IsCompletedSuccessfully)
                 {
+                    var dataMap = t.Result;
+                    Game.UserData.InitializeSavables(dataMap);
+                    
                     StateMachine.TryGoToState(GameStateId.Initialization);
                 }
             });
