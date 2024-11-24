@@ -7,7 +7,7 @@ namespace cfEngine.Core.Layer
     {
         public static readonly InfoManager[] infos =
         {
-            new InventoryConfigInfoManager()
+            new InventoryInfoManager()
         };
     }
 }

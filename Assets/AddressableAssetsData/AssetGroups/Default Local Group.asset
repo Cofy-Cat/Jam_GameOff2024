@@ -26,12 +26,12 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 672e6e1f6331fac48a84a94dfa3ed6f0
-    m_Address: Local/LoadingPanel
+    m_Address: Local/LoadingUI
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ceb31f7dbfdc4a2459cfc1981ab41ccf
-    m_Address: Panel/InventoryPopupPanel
+    m_Address: Panel/InventoryUI
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

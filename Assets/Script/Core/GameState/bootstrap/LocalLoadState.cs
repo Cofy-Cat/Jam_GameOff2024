@@ -9,10 +9,10 @@ namespace cfUnityEngine.GameState.Bootstrap
         protected internal override void StartContext(StateParam param)
         {
             var uiPrefab = Game.Asset.Load<GameObject>("Local/UIRoot");
-            var ui = Object.Instantiate(uiPrefab).GetComponent<UI>();
+            var ui = Object.Instantiate(uiPrefab).GetComponent<UIRoot>();
 
-            ui.Register<LoadingPanel>("Local/LoadingPanel");
-            ui.LoadPanel<LoadingPanel>().ContinueWithSynchronized(t =>
+            ui.Register<LoadingUI>("Local/LoadingUI");
+            ui.LoadPanel<LoadingUI>().ContinueWithSynchronized(t =>
             {
                 t.Result.ShowPanel();
                 StateMachine.ForceGoToState(GameStateId.InfoLoad);

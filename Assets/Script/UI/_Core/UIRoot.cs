@@ -6,13 +6,13 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UIDocument))]
-public class UI: MonoBehaviour, IDisposable
+public class UIRoot: MonoBehaviour, IDisposable
 {
 #if UNITY_EDITOR
     private const string EditorName = "{0} (EditorName)";
 #endif
     
-    public static UI Instance { get; private set; }
+    public static UIRoot Instance { get; private set; }
     
     public class PanelConfig
     {

@@ -1,25 +1,25 @@
 using System;
 using System.Collections.Generic;
-using cfEngine.Logging;
 using cfEngine.Meta;
+using cfEngine.Meta.Inventory;
 using cfEngine.Rt;
 using UnityEditor;
 using UnityEngine.UIElements;
 using StackId = System.Guid;
 
-public class InventoryPopupPanel: UIPanel
+public class InventoryUI: UIPanel
 {
-    private RtReadOnlyList<InventoryPopupPanel_Item> _items;
+    private RtReadOnlyList<InventoryUI_Item> _items;
     
     private List<VisualElement> itemElements = new();
 
-    public InventoryPopupPanel(TemplateContainer template) : base(template)
+    public InventoryUI(TemplateContainer template) : base(template)
     {
         var itemUIListElement = template.Q(nameof(itemElements));
         itemElements.AddRange(itemUIListElement.Children());
         
         var inventory = Game.Meta.Inventory;
-        _items = inventory.GetPage(0).Select(stackId => new InventoryPopupPanel_Item(stackId));
+        _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
         _items.Events.Subscribe(onUpdate: OnItemUpdate);
         
         for (int i = 0; i < itemElements.Count; i++)
@@ -28,7 +28,7 @@ public class InventoryPopupPanel: UIPanel
         }
     }
 
-    private void OnItemUpdate((int index, InventoryPopupPanel_Item item) oldItem, (int index, InventoryPopupPanel_Item item) newItem)
+    private void OnItemUpdate((int index, InventoryUI_Item item) oldItem, (int index, InventoryUI_Item item) newItem)
     {
         itemElements[newItem.index].dataSource = newItem.item;
     }
@@ -41,13 +41,13 @@ public class InventoryPopupPanel: UIPanel
         _items.Dispose();
     }
 
-    public class InventoryPopupPanel_Item
+    public class InventoryUI_Item
     {
         public string itemId;
         public readonly int count;
         public readonly string countText;
         
-        public InventoryPopupPanel_Item(StackId stackId)
+        public InventoryUI_Item(StackId stackId)
         {
             if(stackId == Guid.Empty) return;
             
@@ -77,6 +77,6 @@ public class InventoryPopupPanel: UIPanel
     [MenuItem("Test/Show Inventory Panel")]
     public static void Show()
     {
-        UI.GetPanel<InventoryPopupPanel>().ShowPanel();
+        UIRoot.GetPanel<InventoryUI>().ShowPanel();
     }
 }

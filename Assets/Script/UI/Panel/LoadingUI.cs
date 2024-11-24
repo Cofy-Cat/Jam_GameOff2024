@@ -1,10 +1,10 @@
 using UnityEngine.UIElements;
 
-public class LoadingPanel: UIPanel
+public class LoadingUI: UIPanel
 {
     public string message = "Loading...";
     
-    public LoadingPanel(TemplateContainer template) : base(template)
+    public LoadingUI(TemplateContainer template) : base(template)
     {
     }
     

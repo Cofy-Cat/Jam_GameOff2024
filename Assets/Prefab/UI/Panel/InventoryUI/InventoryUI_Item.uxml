@@ -1,7 +1,7 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Prefab/UI/CommonStyle.uss?fileID=7433441132597879392&amp;guid=3a07ea27fb6d2a44bb2e70002296d853&amp;type=3#CommonStyle" />
     <Style src="project://database/Assets/InventoryPopupPanel_Style.uss?fileID=7433441132597879392&amp;guid=a4011c790ae4b654d9ec04f884b9bdfb&amp;type=3#InventoryPopupPanel_Style" />
-    <AspectRatioFitterElement aspect-mode="FitInContainer" aspect-ratio="1" data-source-type="InventoryPopupPanel+InventoryPopupPanel_Item, Assembly-CSharp" class="wh-full grid-view__item" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;">
+    <AspectRatioFitterElement aspect-mode="FitInContainer" aspect-ratio="1" data-source-type="InventoryUI+InventoryUI_Item, Assembly-CSharp" class="wh-full grid-view__item" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-grow: 1;">
         <engine:VisualElement name="VisualElement" style="flex-grow: 0; width: 100%; height: 100%; background-color: rgb(242, 201, 171);">
             <engine:Label text="Label" name="itemId" style="position: absolute; left: 15%; width: 70%; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; top: 0; height: 20%; font-size: 30%; -unity-text-align: middle-center; right: 15%; translate: 0 0;">
                 <Bindings>

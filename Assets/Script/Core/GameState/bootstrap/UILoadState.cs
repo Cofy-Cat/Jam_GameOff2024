@@ -15,13 +15,13 @@ namespace cfUnityEngine.GameState.Bootstrap
         public override GameStateId Id => GameStateId.UILoad;
         protected internal override void StartContext(StateParam param)
         {
-            var ui = UI.Instance;
+            var ui = UIRoot.Instance;
 
-            ui.Register<InventoryPopupPanel>("Panel/InventoryPopupPanel");
+            ui.Register<InventoryUI>("Panel/InventoryUI");
 
             var loadTaskList = new List<Task>
             {
-                ui.LoadPanel<InventoryPopupPanel>()
+                ui.LoadPanel<InventoryUI>()
             };
 
             Task.WhenAll(loadTaskList)
