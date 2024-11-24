@@ -1,15 +1,19 @@
-.grid-view__item {
-    flex-grow: 0;
-    width: 100%;
-    padding-top: 2px;
-    padding-right: 2px;
-    padding-bottom: 2px;
-    padding-left: 2px;
-}
-
 .view-container__item {
     width: 25%;
     height: 20%;
     margin-bottom: 2%;
     margin-top: 2%;
+}
+
+.item-list-view {
+    flex-grow: 1;
+    padding-top: 20%;
+    padding-right: 12%;
+    padding-bottom: 20%;
+    padding-left: 12%;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using cfEngine.Meta.Inventory;
 using cfEngine.Rt;
 using UnityEditor;
@@ -8,34 +7,21 @@ using StackId = System.Guid;
 
 public class InventoryUI: UIPanel
 {
-    private RtReadOnlyList<InventoryUI_Item> _items;
+    private RtSelectList<Guid, InventoryUI_Item> _items;
+    private ReadOnlyListView itemListView;
     
-    private List<VisualElement> itemElements = new();
-
-    SubscriptionHandle _itemUpdateHandle;
     public InventoryUI(TemplateContainer template) : base(template)
     {
-        var itemUIListElement = template.Q(nameof(itemElements));
-        itemElements.AddRange(itemUIListElement.Children());
-        
         var inventory = Game.Meta.Inventory;
         _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
-        _itemUpdateHandle = _items.Events.Subscribe(onUpdate: (_, newItem) =>
-        {
-            itemElements[newItem.index].dataSource = newItem.item;
-        });
         
-        for (int i = 0; i < itemElements.Count; i++)
-        {
-            itemElements[i].dataSource = _items[i];
-        }
+        var itemUIListElement = template.Q<ReadOnlyListView>();
+        itemUIListElement.rtItemsSource = _items;
     }
 
     public override void Dispose()
     {
-        _itemUpdateHandle.Unsubscribe();
-        
-        itemElements.Clear();
+        itemListView._Clear();
         _items.Dispose();
     }
 
