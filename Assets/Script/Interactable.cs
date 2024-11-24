@@ -2,45 +2,19 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    private bool inRange = false;
-    private Collider2D collider;
-    public virtual void Interact(Collider2D other)
-    {
-        Debug.Log("Interacting with " + other.name);
-    }
+    public delegate void InteractAction(Collider2D other);
+    public event InteractAction OnInteract;
 
-    public virtual void OnTriggerEnter2D(Collider2D other)
+    public void Interact(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (OnInteract != null)
         {
-            inRange = true;
-            collider = other;
+            Debug.Log("Interacting with " + gameObject.name);
+            OnInteract(other);
         }
-    }
-
-    public virtual void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
+        else
         {
-            inRange = false;
-            collider = null;
+            Debug.Log("No interact event added.");
         }
-    }
-
-    public virtual void OnTriggerStay2D(Collider2D other)
-    {
-        if (inRange && Input.GetKeyDown(KeyCode.E))
-        {
-            collider = other;
-            Interact(other);
-        }
-    }
-
-    public virtual void Update()
-    {
-        // if (inRange && Input.GetKeyDown(KeyCode.E))
-        // {
-        //     Interact(collider);
-        // }
     }
 }

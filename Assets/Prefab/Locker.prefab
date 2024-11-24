@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5685508582395268122}
   - component: {fileID: 9071332349426749620}
   - component: {fileID: 5681277955465452527}
-  m_Layer: 0
+  - component: {fileID: 6272613178950962684}
+  m_Layer: 3
   m_Name: Locker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a670f048dcefd2643a111208fb2a1b73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactable: {fileID: 6272613178950962684}
 --- !u!61 &5681277955465452527
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +149,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6272613178950962684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5228404261230209417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea969cb9ecb620c479c106c53bfdd33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

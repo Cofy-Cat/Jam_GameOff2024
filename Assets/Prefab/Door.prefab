@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2088346617274014384}
   - component: {fileID: 1266409454685882902}
   - component: {fileID: 3522706452255437420}
-  m_Layer: 0
+  - component: {fileID: 8807475896727772277}
+  m_Layer: 3
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,3 +151,16 @@ MonoBehaviour:
   connectedDoor: {fileID: 0}
   isLocked: 0
   offset: 1.5
+  interactable: {fileID: 8807475896727772277}
+--- !u!114 &8807475896727772277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4115328913435634081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea969cb9ecb620c479c106c53bfdd33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

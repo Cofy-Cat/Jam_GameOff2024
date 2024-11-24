@@ -1,11 +1,21 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Locker : Interactable
+public class Locker : MonoBehaviour
 {
     private GameObject player = null;
     private bool isInLocker = false;
-    public override void Interact(Collider2D other)
+    [SerializeField] private Interactable interactable;
+    public void Awake()
+    {
+        interactable = GetComponent<Interactable>();
+        if (interactable != null)
+        {
+            Debug.Log("Locker Interactable found");
+            interactable.OnInteract += Interact;
+        }
+    }
+    public void Interact(Collider2D other)
     {
         Debug.Log("Interacting with locker");
         player = other.gameObject;
@@ -18,7 +28,7 @@ public class Locker : Interactable
         isInLocker = true;
     }
 
-    public override void Update()
+    public void Update()
     {
         if (isInLocker && Input.GetKeyDown(KeyCode.E))
         {
@@ -26,10 +36,6 @@ public class Locker : Interactable
             player.GetComponent<BoxCollider2D>().enabled = true;
             player.GetComponent<PlayerInput>().enabled = true;
             isInLocker = false;
-        }
-        else
-        {
-            base.Update();
         }
     }
 }

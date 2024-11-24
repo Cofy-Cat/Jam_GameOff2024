@@ -48,7 +48,7 @@ public class PlayerController : Controller
             case "Move":
                 OnMove(context);
                 break;
-            case "Interact": 
+            case "Interact":
                 OnInteract(context);
                 break;
             case "Ability":
@@ -91,9 +91,11 @@ public class PlayerController : Controller
         // Check if the returned object is interactable object 
         if (interactable != null)
         {
+            Debug.Log("Interacting with " + interactable.name);
             var interactableComponent = interactable.GetComponent<Interactable>();
             if (interactableComponent != null)
             {
+                Debug.Log(interactable.name + " is interactable");
                 interactableComponent.Interact(GetComponent<Collider2D>());
             }
         }
