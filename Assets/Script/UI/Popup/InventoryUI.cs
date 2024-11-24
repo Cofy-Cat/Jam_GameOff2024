@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using cfEngine.Meta;
 using cfEngine.Meta.Inventory;
 using cfEngine.Rt;
 using UnityEditor;
@@ -13,6 +12,7 @@ public class InventoryUI: UIPanel
     
     private List<VisualElement> itemElements = new();
 
+    SubscriptionHandle _itemUpdateHandle;
     public InventoryUI(TemplateContainer template) : base(template)
     {
         var itemUIListElement = template.Q(nameof(itemElements));
@@ -20,7 +20,10 @@ public class InventoryUI: UIPanel
         
         var inventory = Game.Meta.Inventory;
         _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
-        _items.Events.Subscribe(onUpdate: OnItemUpdate);
+        _itemUpdateHandle = _items.Events.Subscribe(onUpdate: (_, newItem) =>
+        {
+            itemElements[newItem.index].dataSource = newItem.item;
+        });
         
         for (int i = 0; i < itemElements.Count; i++)
         {
@@ -28,14 +31,9 @@ public class InventoryUI: UIPanel
         }
     }
 
-    private void OnItemUpdate((int index, InventoryUI_Item item) oldItem, (int index, InventoryUI_Item item) newItem)
-    {
-        itemElements[newItem.index].dataSource = newItem.item;
-    }
-
     public override void Dispose()
     {
-        _items.Events.Unsubscribe(onUpdate: OnItemUpdate);
+        _itemUpdateHandle.Unsubscribe();
         
         itemElements.Clear();
         _items.Dispose();
