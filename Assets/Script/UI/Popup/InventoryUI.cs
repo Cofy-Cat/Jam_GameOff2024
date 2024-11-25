@@ -1,7 +1,10 @@
 using System;
+using cfEngine.Logging;
+using cfEngine.Meta;
 using cfEngine.Meta.Inventory;
 using cfEngine.Rt;
 using UnityEditor;
+using UnityEngine;
 using UnityEngine.UIElements;
 using StackId = System.Guid;
 
@@ -30,6 +33,7 @@ public class InventoryUI: UIPanel
         public string itemId;
         public readonly int count;
         public readonly string countText;
+        public Sprite iconSprite;
         
         public InventoryUI_Item(StackId stackId)
         {
@@ -40,6 +44,22 @@ public class InventoryUI: UIPanel
             itemId = item.Id;
             count = item.ItemCount;
             countText = $"x{count}";
+            
+            var info = Game.Info.Get<InventoryInfoManager>().GetOrDefault(itemId);
+            if (!string.IsNullOrEmpty(info.iconKey))
+            {
+                Game.Asset.LoadAsync<Sprite>(info.iconKey)
+                    .ContinueWithSynchronized(t =>
+                    {
+                        if (!t.IsCompletedSuccessfully)
+                        {
+                            Log.LogException(t.Exception);
+                            return;
+                        }
+                        
+                        iconSprite = t.Result;
+                    });
+            }
         }
     }
     
@@ -48,9 +68,8 @@ public class InventoryUI: UIPanel
     {
         var inventory = Game.Meta.Inventory;
         var random = new System.Random();
-        var itemIds = new[] {"item1", "item2", "item3"};
-        var itemId = itemIds[random.Next(itemIds.Length)];
-        var count = random.Next(1, 10);
+        var itemId = $"item{random.Next(1, 10)}";
+        var count = random.Next(1, 30);
         inventory.AddItem(new InventoryController.UpdateInventoryRequest
         {
             ItemId = itemId,
