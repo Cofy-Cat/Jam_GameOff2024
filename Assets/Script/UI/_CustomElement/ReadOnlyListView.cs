@@ -40,9 +40,9 @@ public partial class ReadOnlyListView: VisualElement
             Init();
         }}
     
-    private IReadOnlyList<object> _itemsSource;
+    private IReadOnlyList<UIElement> _itemsSource;
 
-    public IReadOnlyList<object> itemsSource
+    public IReadOnlyList<UIElement> itemsSource
     {
         get => _itemsSource;
         set
@@ -53,8 +53,8 @@ public partial class ReadOnlyListView: VisualElement
     }
 
 #if CF_REACTIVE
-    private RtReadOnlyList<object> _rtItemsSource;
-    public RtReadOnlyList<object> rtItemsSource
+    private RtReadOnlyList<UIElement> _rtItemsSource;
+    public RtReadOnlyList<UIElement> rtItemsSource
     {
         get => _rtItemsSource;
         set
@@ -110,7 +110,7 @@ public partial class ReadOnlyListView: VisualElement
                 onUpdate: (_, newItem) =>
                 {
                     var itemElement = _itemElements[newItem.index];
-                    itemElement.dataSource = newItem.item;
+                    newItem.item.AssignVisualElement(itemElement);
                 }
             );
         }

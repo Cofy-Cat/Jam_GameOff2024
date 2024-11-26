@@ -5,7 +5,7 @@
     <AspectRatioFitterElement aspect-ratio="1.615625" aspect-mode="FitInContainer" data-source-type="InventoryUI, Assembly-CSharp" class="wh-full" style="flex-grow: 1;">
         <engine:VisualElement name="book" class="margin-auto" style="flex-direction: row; width: 80%; height: 80%; background-image: url(&quot;project://database/Assets/Art/UI/Inventory/paper-static.png?fileID=-1513349679&amp;guid=6b735173966fa094eb08b02e9eaff7e8&amp;type=3#paper-static_0&quot;);">
             <engine:VisualElement name="left" style="flex-grow: 1; width: 50%;">
-                <ReadOnlyListView item-template="project://database/Assets/Prefab/UI/Panel/InventoryUI/InventoryUI_Item.uxml?fileID=9197481963319205126&amp;guid=ea7d95abbe16a3e40bf9f224f2a0e34c&amp;type=3#InventoryUI_Item" class="item-list-view">
+                <ReadOnlyListView item-template="project://database/Assets/Prefab/UI/Panel/InventoryUI/InventoryUI_Item.uxml?fileID=9197481963319205126&amp;guid=ea7d95abbe16a3e40bf9f224f2a0e34c&amp;type=3#InventoryUI_Item" name="item-list" class="item-list-view">
                     <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
                     <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
                     <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />

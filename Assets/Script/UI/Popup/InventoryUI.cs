@@ -11,24 +11,33 @@ using StackId = System.Guid;
 public class InventoryUI: UIPanel
 {
     private RtSelectList<Guid, InventoryUI_Item> _items;
-    private ReadOnlyListView itemListView;
+    private ReadOnlyListView itemList;
+    private ReadOnlyListView paginationButtonList;
     
     public InventoryUI(TemplateContainer template) : base(template)
     {
         var inventory = Game.Meta.Inventory;
         _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
         
-        var itemUIListElement = template.Q<ReadOnlyListView>();
-        itemUIListElement.rtItemsSource = _items;
+        itemList = template.Q<ReadOnlyListView>("item-list");
+        if (itemList != null)
+        {
+            itemList.rtItemsSource = _items.ToUISource();
+        }
+        
+        paginationButtonList = template.Q<ReadOnlyListView>("pagination-button-list");
+        if (paginationButtonList != null)
+        {
+        }
     }
 
     public override void Dispose()
     {
-        itemListView._Clear();
+        itemList._Clear();
         _items.Dispose();
     }
 
-    public class InventoryUI_Item
+    public class InventoryUI_Item: UIElement
     {
         public string itemId;
         public readonly int count;
@@ -63,6 +72,16 @@ public class InventoryUI: UIPanel
         }
     }
     
+    public class InventoryUI_PaginationButton: UIElement
+    {
+        public readonly int page;
+        
+        public InventoryUI_PaginationButton(int page)
+        {
+            this.page = page;
+        }
+    }
+
     [MenuItem("Test/Add Random Item")]
     public static void AddRandomItem()
     {
