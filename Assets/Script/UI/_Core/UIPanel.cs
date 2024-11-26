@@ -2,14 +2,14 @@ using System;
 using cfEngine.Logging;
 using UnityEngine.UIElements;
 
-public abstract class UIPanel
+public abstract class UIPanel: UIElement
 {
     protected readonly TemplateContainer Template;
 
     public UIPanel(TemplateContainer template)
     {
         Template = template;
-        template.dataSource = this;
+        AssignVisualElement(template.contentContainer);
     }
     
     public void ShowPanel()

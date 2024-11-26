@@ -1,11 +1,12 @@
+using System;
 using cfEngine.Rt;
 using UnityEngine.UIElements;
 
-public class UIElement
+public class UIElement: IDisposable
 {
     protected VisualElement VisualElement { get; private set; }
     
-    public virtual void AssignVisualElement(VisualElement visualElement)
+    public void AssignVisualElement(VisualElement visualElement)
     {
         if (VisualElement != null)
         {
@@ -15,6 +16,21 @@ public class UIElement
         VisualElement = visualElement;
         visualElement.dataSource = this;
     }
+
+    public void Dispose()
+    {
+        if (VisualElement != null)
+        {
+            VisualElement.dataSource = null;
+        }
+
+        VisualElement = null;
+    }
+}
+
+public class ListElement<T> : UIElement where T : UIElement
+{
+    
 }
 
 public static class UIElementExtension
