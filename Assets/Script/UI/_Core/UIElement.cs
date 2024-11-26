@@ -2,11 +2,16 @@ using System;
 using cfEngine.Rt;
 using UnityEngine.UIElements;
 
-public class UIElement: IDisposable
+public abstract class UIElementBase: IDisposable
 {
-    protected VisualElement VisualElement { get; private set; }
+    public abstract void Dispose();
+}
+
+public class UIElement<TVisualType>: UIElementBase, IDisposable where TVisualType: VisualElement
+{
+    protected TVisualType VisualElement { get; private set; }
     
-    public void AssignVisualElement(VisualElement visualElement)
+    public void AssignVisualElement(TVisualType visualElement)
     {
         if (VisualElement != null)
         {
@@ -17,7 +22,7 @@ public class UIElement: IDisposable
         visualElement.dataSource = this;
     }
 
-    public void Dispose()
+    public override void Dispose()
     {
         if (VisualElement != null)
         {
@@ -28,7 +33,12 @@ public class UIElement: IDisposable
     }
 }
 
-public class ListElement<T> : UIElement where T : UIElement
+public class UIElement : UIElement<VisualElement>
+{
+    
+}
+
+public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElementBase
 {
     
 }
