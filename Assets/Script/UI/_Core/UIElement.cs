@@ -38,11 +38,6 @@ public class UIElement : UIElement<VisualElement>
     
 }
 
-public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElementBase
-{
-    
-}
-
 public static class UIElementExtension
 {
     public static RtReadOnlyList<UIElement> ToUISource<T>(this RtReadOnlyList<T> source) where T : UIElement

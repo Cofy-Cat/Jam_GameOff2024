@@ -1,7 +1,5 @@
-namespace Script.UI._Elements
+public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElementBase
 {
-    public class ListElement
-    {
-        
-    }
+    
 }
+
