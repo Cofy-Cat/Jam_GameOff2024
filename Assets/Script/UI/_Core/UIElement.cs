@@ -1,18 +1,35 @@
 using System;
+using cfEngine.Logging;
 using cfEngine.Rt;
 using UnityEngine.UIElements;
 
 public abstract class UIElementBase: IDisposable
 {
+    public abstract void AttachFromRoot(VisualElement root, string visualElementName = null);
     public abstract void Dispose();
 }
 
-public class UIElement<TVisualType>: UIElementBase, IDisposable where TVisualType: VisualElement
+public abstract class UIElement<TVisualType>: UIElementBase, IDisposable where TVisualType: VisualElement
 {
     protected TVisualType VisualElement { get; private set; }
-    
-    public void AssignVisualElement(TVisualType visualElement)
+    public void AttachChild<T>(T uiElement, string childVisualElementName = null) where T: UIElementBase
     {
+        if (VisualElement == null)
+        {
+            Log.LogException(new ArgumentNullException(nameof(VisualElement), "VisualElement is null"));
+            return;
+        }
+
+        var element = uiElement;
+        element.AttachFromRoot(VisualElement, childVisualElementName);
+    }
+    
+    public void AttachVisual(TVisualType visualElement)
+    {
+        if (visualElement == null)
+        {
+            return;
+        }
         if (VisualElement != null)
         {
             VisualElement.dataSource = null;
@@ -20,7 +37,11 @@ public class UIElement<TVisualType>: UIElementBase, IDisposable where TVisualTyp
         
         VisualElement = visualElement;
         visualElement.dataSource = this;
+        
+        OnVisualAttached();
     }
+    
+    protected virtual void OnVisualAttached() { }
 
     public override void Dispose()
     {
@@ -35,7 +56,10 @@ public class UIElement<TVisualType>: UIElementBase, IDisposable where TVisualTyp
 
 public class UIElement : UIElement<VisualElement>
 {
-    
+    public override void AttachFromRoot(VisualElement root, string visualElementName = null)
+    {
+        AttachVisual(root.Q(visualElementName));
+    }
 }
 
 public static class UIElementExtension

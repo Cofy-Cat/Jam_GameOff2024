@@ -96,7 +96,8 @@ public class UIRoot: MonoBehaviour, IDisposable
     public async Task<T> LoadPanel<T>() where T : UIPanel
     {
         var template = await LoadTemplate<T>();
-        var panel = (T)Activator.CreateInstance(typeof(T), template);
+        var panel = (T)Activator.CreateInstance(typeof(T));
+        panel.AttachVisual(template);
         _panelMap.Add(typeof(T), panel);
         
         AttachTemplateToRoot(template);

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using cfEngine.Rt;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -40,9 +41,9 @@ public partial class ReadOnlyListView: VisualElement
             Init();
         }}
     
-    private IReadOnlyList<UIElement> _itemsSource;
+    private IEnumerable<UIElement> _itemsSource;
 
-    public IReadOnlyList<UIElement> itemsSource
+    public IEnumerable<UIElement> itemsSource
     {
         get => _itemsSource;
         set
@@ -51,21 +52,6 @@ public partial class ReadOnlyListView: VisualElement
             Init();
         }
     }
-
-#if CF_REACTIVE
-    private RtReadOnlyList<UIElement> _rtItemsSource;
-    public RtReadOnlyList<UIElement> rtItemsSource
-    {
-        get => _rtItemsSource;
-        set
-        {
-            _rtItemsSource = value;
-            _itemsSource = value;
-            
-            Init();
-        }
-    }
-#endif
 
     private readonly List<VisualElement> _itemElements = new();
 
@@ -90,13 +76,13 @@ public partial class ReadOnlyListView: VisualElement
         _itemElements.Clear();
         
         _itemElements.AddRange(_contentContainer.Children());
-        for (var i = 0; i < _itemsSource.Count; i++)
+        for (var i = 0; i < _itemsSource.Count(); i++)
         {
             SetDataSourceAtIndex(i);
         }
 
 #if CF_REACTIVE
-        if (rtItemsSource != null)
+        if (itemsSource is RtReadOnlyList<UIElement> rtItemsSource)
         {
             _handle = rtItemsSource.Events.Subscribe(
                 onAdd: (indexedItem) => SetDataSourceAtIndex(indexedItem.index),
@@ -110,7 +96,7 @@ public partial class ReadOnlyListView: VisualElement
                 onUpdate: (_, newItem) =>
                 {
                     var itemElement = _itemElements[newItem.index];
-                    newItem.item.AssignVisualElement(itemElement);
+                    newItem.item.AttachVisual(itemElement);
                 }
             );
         }
@@ -119,7 +105,7 @@ public partial class ReadOnlyListView: VisualElement
     
     private void SetDataSourceAtIndex(int index)
     {
-        var itemSource = _itemsSource[index];
+        var itemSource = _itemsSource.ElementAt(index);
         
         VisualElement itemElement;
         

@@ -1,15 +1,21 @@
+using System;
+using cfEngine.Logging;
+using UnityEngine.Scripting;
 using UnityEngine.UIElements;
 
 public abstract class UIPanel: UIElement<TemplateContainer>
 {
-    protected readonly TemplateContainer Template;
 
-    public UIPanel(TemplateContainer template)
+    [Preserve]
+    protected UIPanel()
     {
-        Template = template;
-        AssignVisualElement(template);
     }
-    
+
+    public override void AttachFromRoot(VisualElement root, string visualElementName = null)
+    {
+        Log.LogException(new InvalidOperationException("UIPanel cannot be attached from root. UIPanel is created from template, use constructor to create UIPanel."));
+    }
+
     public void ShowPanel()
     {
         _ShowPanel();
@@ -17,9 +23,9 @@ public abstract class UIPanel: UIElement<TemplateContainer>
 
     protected virtual void _ShowPanel()
     {
-        Template.enabledSelf = true;
-        Template.RemoveFromClassList("hide");
-        Template.AddToClassList("show");
+        VisualElement.enabledSelf = true;
+        VisualElement.RemoveFromClassList("hide");
+        VisualElement.AddToClassList("show");
         OnPanelShown();
     }
 
@@ -27,9 +33,9 @@ public abstract class UIPanel: UIElement<TemplateContainer>
 
     public virtual void HidePanel()
     {
-        Template.RemoveFromClassList("show");
-        Template.AddToClassList("hide");
-        Template.enabledSelf = false;
+        VisualElement.RemoveFromClassList("show");
+        VisualElement.AddToClassList("hide");
+        VisualElement.enabledSelf = false;
     }
     
     public abstract void Dispose();

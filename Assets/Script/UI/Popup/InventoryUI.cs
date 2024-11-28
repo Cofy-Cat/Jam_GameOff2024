@@ -5,35 +5,34 @@ using cfEngine.Meta.Inventory;
 using cfEngine.Rt;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.UIElements;
 using StackId = System.Guid;
 
 public class InventoryUI: UIPanel
 {
-    private RtSelectList<Guid, InventoryUI_Item> _items;
-    private ReadOnlyListView itemList;
-    private ReadOnlyListView paginationButtonList;
+    RtSelectList<Guid, InventoryUI_Item> _items;
+    ListElement<InventoryUI_Item> itemList = new();
+    ListElement<InventoryUI_PaginationButton> paginationButtonList = new();
     
-    public InventoryUI(TemplateContainer template) : base(template)
+    public InventoryUI(): base()
     {
         var inventory = Game.Meta.Inventory;
+        
         _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
+        itemList.SetItemsSource(_items);
+
+        paginationButtonList = new ListElement<InventoryUI_PaginationButton>();
+    }
+
+    protected override void OnVisualAttached()
+    {
+        base.OnVisualAttached();
         
-        itemList = template.Q<ReadOnlyListView>("item-list");
-        if (itemList != null)
-        {
-            itemList.rtItemsSource = _items.ToUISource();
-        }
-        
-        paginationButtonList = template.Q<ReadOnlyListView>("pagination-button-list");
-        if (paginationButtonList != null)
-        {
-        }
+        AttachChild(itemList, "item-list");
     }
 
     public override void Dispose()
     {
-        itemList._Clear();
+        itemList.Dispose();
         _items.Dispose();
     }
 
