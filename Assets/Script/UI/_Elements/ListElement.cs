@@ -5,7 +5,9 @@ using UnityEngine.UIElements;
 
 public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElement
 {
-    private IEnumerable<UIElement> _itemsSource;
+    private Rt<IEnumerable<UIElement>> _itemsSource = new();
+    
+    private SubscriptionHandle _onUpdateHandle;
     
     public override void AttachFromRoot(VisualElement root, string visualElementName = null)
     {
@@ -15,23 +17,31 @@ public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElement
     protected override void OnVisualAttached()
     {
         base.OnVisualAttached();
-        VisualElement.itemsSource = _itemsSource;
+
+        _onUpdateHandle.UnsubscribeIfNotNull();
+        VisualElement.itemsSource = _itemsSource.Value;
+        _onUpdateHandle = _itemsSource.Events.Subscribe(onUpdate: (_, newSource) =>
+        {
+            VisualElement.itemsSource = newSource;
+        });
     }
 
     public void SetItemsSource(RtReadOnlyList<T> items)
     {
-        _itemsSource = items.ToUISource();
+        _itemsSource.Set(items.ToUISource());
     }
 
     public void SetItemsSource(IReadOnlyList<T> items)
     {
-        _itemsSource = items.Select(t => (UIElement)t);
+        _itemsSource.Set(items.Select(t => (UIElement)t));
     }
 
     public override void Dispose()
     {
         base.Dispose();
-        
+
+        _onUpdateHandle.UnsubscribeIfNotNull();
+        _itemsSource.Dispose();
         VisualElement.itemsSource = null;
         VisualElement._Clear();
     }
