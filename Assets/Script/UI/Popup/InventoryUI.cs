@@ -3,16 +3,17 @@ using cfEngine.Logging;
 using cfEngine.Meta;
 using cfEngine.Meta.Inventory;
 using cfEngine.Rt;
-using UnityEditor;
-using UnityEngine;
 using StackId = System.Guid;
 
 public class InventoryUI: UIPanel
 {
     RtSelectList<Guid, InventoryUI_Item> _items;
     ListElement<InventoryUI_Item> itemList = new();
-    ListElement<InventoryUI_PaginationButton> paginationButtonList = new();
     
+    RtCount<InventoryController.PageRecord> _pageCount;
+
+    SubscriptionHandle _pageCountSub;
+
     protected override void OnVisualAttached()
     {
         base.OnVisualAttached();
@@ -27,7 +28,11 @@ public class InventoryUI: UIPanel
         _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
         itemList.SetItemsSource(_items);
 
-        paginationButtonList = new ListElement<InventoryUI_PaginationButton>();
+        _pageCount = inventory.Pages.Count();
+        _pageCountSub = _pageCount.Events.Subscribe(onUpdate: (_, _) =>
+        {
+            Log.LogInfo($"Page: {_pageCount.Value}");
+        });
     }
 
     public override void Dispose()
@@ -73,35 +78,5 @@ public class InventoryUI: UIPanel
             countLabel.Dispose();
             countLabel = null;
         }
-    }
-    
-    public class InventoryUI_PaginationButton: UIElement
-    {
-        public readonly int page;
-        
-        public InventoryUI_PaginationButton(int page)
-        {
-            this.page = page;
-        }
-    }
-
-    [MenuItem("Test/Add Random Item")]
-    public static void AddRandomItem()
-    {
-        var inventory = Game.Meta.Inventory;
-        var random = new System.Random();
-        var itemId = $"item{random.Next(1, 10)}";
-        var count = random.Next(1, 30);
-        inventory.AddItem(new InventoryController.UpdateInventoryRequest
-        {
-            ItemId = itemId,
-            Count = count
-        });
-    }
-    
-    [MenuItem("Test/Show Inventory Panel")]
-    public static void Show()
-    {
-        UIRoot.GetPanel<InventoryUI>().ShowPanel();
     }
 }
