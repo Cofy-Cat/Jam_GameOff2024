@@ -1,5 +1,4 @@
 using System;
-using cfEngine.Logging;
 using cfEngine.Meta;
 using cfEngine.Meta.Inventory;
 using cfEngine.Rt;
@@ -9,7 +8,8 @@ public class InventoryUI: UIPanel
 {
     RtSelectList<Guid, InventoryUI_Item> _items;
     ListElement<InventoryUI_Item> itemList = new();
-    
+    LabelElement totalPage = new();
+
     RtCount<InventoryController.PageRecord> _pageCount;
 
     SubscriptionHandle _pageCountSub;
@@ -19,6 +19,7 @@ public class InventoryUI: UIPanel
         base.OnVisualAttached();
         
         AttachChild(itemList, "item-list");
+        AttachChild(totalPage, "total-page");
     }
     
     public InventoryUI(): base()
@@ -28,11 +29,7 @@ public class InventoryUI: UIPanel
         _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
         itemList.SetItemsSource(_items);
 
-        _pageCount = inventory.Pages.Count();
-        _pageCountSub = _pageCount.Events.Subscribe(onUpdate: (_, _) =>
-        {
-            Log.LogInfo($"Page: {_pageCount.Value}");
-        });
+        totalPage.SetText(inventory.Pages.Count().SelectLocal(count => count.ToString()));
     }
 
     public override void Dispose()

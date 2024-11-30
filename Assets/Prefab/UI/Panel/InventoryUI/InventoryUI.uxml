@@ -23,6 +23,11 @@
                     <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
                     <engine:Instance template="InventoryPopupPanel_Item" name="TemplateContainer" class="view-container__item" />
                 </ReadOnlyListView>
+                <engine:VisualElement style="flex-grow: 1; position: absolute; top: 80%; bottom: 10%; left: 15%; right: 15%; flex-direction: row;">
+                    <engine:Button text="Prev" name="prevous-page-button" style="width: 30%;" />
+                    <engine:VisualElement name="page-text-container" style="flex-grow: 1; background-size: 40% 100%;" />
+                    <engine:Button text="Next" name="next-page-button" style="width: 30%;" />
+                </engine:VisualElement>
             </engine:VisualElement>
             <engine:VisualElement name="right" style="flex-grow: 1; width: 50%;" />
         </engine:VisualElement>
