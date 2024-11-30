@@ -8,18 +8,21 @@ public class InventoryUI: UIPanel
 {
     RtSelectList<Guid, InventoryUI_Item> _items;
     ListElement<InventoryUI_Item> itemList = new();
-    LabelElement totalPage = new();
+    LabelElement pageLabel = new();
 
     RtCount<InventoryController.PageRecord> _pageCount;
 
     SubscriptionHandle _pageCountSub;
+    
+    private const string CURRENT_PAGE = "current";
+    private const string TOTAL_PAGE = "total";
 
     protected override void OnVisualAttached()
     {
         base.OnVisualAttached();
         
         AttachChild(itemList, "item-list");
-        AttachChild(totalPage, "total-page");
+        AttachChild(pageLabel, "page-label");
     }
     
     public InventoryUI(): base()
@@ -29,7 +32,7 @@ public class InventoryUI: UIPanel
         _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
         itemList.SetItemsSource(_items);
 
-        totalPage.SetText(inventory.Pages.Count().SelectLocal(count => count.ToString()));
+        pageLabel.SetTemplate(TOTAL_PAGE, inventory.Pages.Count().SelectLocal(count => count.ToString()));
     }
 
     public override void Dispose()

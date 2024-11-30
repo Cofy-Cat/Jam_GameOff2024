@@ -25,7 +25,7 @@
                 </ReadOnlyListView>
                 <engine:VisualElement style="flex-grow: 1; position: absolute; top: 80%; bottom: 10%; left: 15%; right: 15%; flex-direction: row;">
                     <engine:Button text="Prev" name="prevous-page-button" style="width: 30%;" />
-                    <engine:VisualElement name="page-text-container" style="flex-grow: 1; background-size: 40% 100%;" />
+                    <engine:Label text="{current}/{total}" emoji-fallback-support="false" name="page-label" style="width: 40%; -unity-text-align: middle-center; font-size: 33%;" />
                     <engine:Button text="Next" name="next-page-button" style="width: 30%;" />
                 </engine:VisualElement>
             </engine:VisualElement>

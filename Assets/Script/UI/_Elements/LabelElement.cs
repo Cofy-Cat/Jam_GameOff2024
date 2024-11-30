@@ -5,6 +5,7 @@ using cfEngine.Logging;
 using cfEngine.Rt;
 using UnityEngine.UIElements;
 
+//TODO: need optimized for string template & string builder
 public class LabelElement: UIElement<Label>
 {
     private RtDictionary<string, string> _templateTextMap = new();
@@ -69,6 +70,8 @@ public class LabelElement: UIElement<Label>
                 
                 sb.Replace($"{{{template}}}", text);
             }
+
+            VisualElement.text = sb.ToString();
         }
     }
 
@@ -91,6 +94,7 @@ public class LabelElement: UIElement<Label>
     public void SetText(RtReadOnlyList<string> text)
     {
         _textSub.UnsubscribeIfNotNull();
+        SetText(string.Concat(text));
         _textSub = text.Events.OnChange(() => SetText(string.Concat(text)));
     }
 
@@ -102,6 +106,7 @@ public class LabelElement: UIElement<Label>
             handle.UnsubscribeIfNotNull();
         }
 
+        SetTemplate(templateKey, string.Concat(text));
         _templateTextSub[templateKey] = text.Events
             .OnChange(() => { SetTemplate(templateKey, string.Concat(text)); });
     }
