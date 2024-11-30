@@ -33,16 +33,16 @@ public class SpriteElement: UIElement<VisualElement>
 
         _spritePathSub.UnsubscribeIfNotNull();
         SetSprite(spritePath);
-        _spritePathSub = spritePath.Events.Subscribe(onUpdate: (_, newSpritePath) =>
+        _spritePathSub = spritePath.Events.Subscribe(onUpdate: (_, newListItem) =>
         {
-            SetSprite(newSpritePath);
+            SetSprite(newListItem.item);
         });
         
         _spriteSub.UnsubscribeIfNotNull();
         VisualElement.style.backgroundImage = new StyleBackground(sprite);
-        _spriteSub = sprite.Events.Subscribe(onUpdate: (_, newSprite) =>
+        _spriteSub = sprite.Events.Subscribe(onUpdate: (_, newListItem) =>
         {
-            VisualElement.style.backgroundImage = new StyleBackground(newSprite);
+            VisualElement.style.backgroundImage = new StyleBackground(newListItem.item);
         });
     }
 

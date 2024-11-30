@@ -10,9 +10,11 @@ public class InventoryUI: UIPanel
     ListElement<InventoryUI_Item> itemList = new();
     LabelElement pageLabel = new();
 
-    RtCount<InventoryController.PageRecord> _pageCount;
+    RtCount<InventoryController.PageRecord> totalPage;
+    Rt<int> currentPage = new(0);
 
     SubscriptionHandle _pageCountSub;
+    SubscriptionHandle _currentPageSub;
     
     private const string CURRENT_PAGE = "current";
     private const string TOTAL_PAGE = "total";
@@ -28,11 +30,19 @@ public class InventoryUI: UIPanel
     public InventoryUI(): base()
     {
         var inventory = Game.Meta.Inventory;
+       
+        UpdateItems();
+        _currentPageSub = currentPage.Events.OnChange(UpdateItems);
         
-        _items = inventory.GetPage(0).Select(stackId => new InventoryUI_Item(stackId));
-        itemList.SetItemsSource(_items);
+        void UpdateItems()
+        {
+            _items?.Dispose();
+            _items = inventory.GetPage(currentPage.Value).SelectNew(stackId => new InventoryUI_Item(stackId));
+            itemList.SetItemsSource(_items);
+        }
 
-        pageLabel.SetTemplate(TOTAL_PAGE, inventory.Pages.Count().SelectLocal(count => count.ToString()));
+        pageLabel.SetTemplate(CURRENT_PAGE, currentPage.Select(count => (++count).ToString()));
+        pageLabel.SetTemplate(TOTAL_PAGE, inventory.Pages.Count().Select(count => count.ToString()));
     }
 
     public override void Dispose()

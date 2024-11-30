@@ -30,9 +30,9 @@ public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElement
 
         _onUpdateHandle.UnsubscribeIfNotNull();
         VisualElement.itemsSource = _itemsSource.Value;
-        _onUpdateHandle = _itemsSource.Events.Subscribe(onUpdate: (_, newSource) =>
+        _onUpdateHandle = _itemsSource.Events.Subscribe(onUpdate: (_, newItem) =>
         {
-            VisualElement.itemsSource = newSource;
+            VisualElement.itemsSource = newItem.item;
         });
     }
 
