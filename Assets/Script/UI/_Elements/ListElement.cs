@@ -17,11 +17,6 @@ public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElement
         _itemsSource.Dispose();
     }
     
-    public override void AttachFromRoot(VisualElement root, string visualElementName = null)
-    {
-        AttachVisual(root.Q<ReadOnlyListView>(visualElementName));
-    }
-
     protected override void OnVisualAttached()
     {
         base.OnVisualAttached();

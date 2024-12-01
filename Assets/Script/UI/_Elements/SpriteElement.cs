@@ -22,11 +22,6 @@ public class SpriteElement: UIElement<VisualElement>
         sprite.Dispose();
     }
 
-    public override void AttachFromRoot(VisualElement root, string visualElementName = null)
-    {
-        AttachVisual(root.Q(visualElementName));
-    }
-    
     protected override void OnVisualAttached()
     {
         base.OnVisualAttached();

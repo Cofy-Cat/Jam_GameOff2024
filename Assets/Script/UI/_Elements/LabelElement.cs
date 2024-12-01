@@ -45,11 +45,6 @@ public class LabelElement: UIElement<Label>
         }
     }
     
-    public override void AttachFromRoot(VisualElement root, string visualElementName = null)
-    {
-        AttachVisual(root.Q<Label>(visualElementName));
-    }
-    
     protected override void OnVisualAttached()
     {
         base.OnVisualAttached();

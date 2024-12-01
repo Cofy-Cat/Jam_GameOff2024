@@ -1,19 +1,11 @@
-using System;
-using cfEngine.Logging;
 using UnityEngine.Scripting;
 using UnityEngine.UIElements;
 
 public abstract class UIPanel: UIElement<TemplateContainer>
 {
-
     [Preserve]
     protected UIPanel()
     {
-    }
-
-    public override void AttachFromRoot(VisualElement root, string visualElementName = null)
-    {
-        Log.LogException(new InvalidOperationException("UIPanel cannot be attached from root. UIPanel is created from template, use constructor to create UIPanel."));
     }
 
     public void ShowPanel()

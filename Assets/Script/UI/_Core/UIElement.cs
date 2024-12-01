@@ -23,7 +23,12 @@ public abstract class UIElement<TVisualType>: UIElementBase, IDisposable where T
         var element = uiElement;
         element.AttachFromRoot(VisualElement, childVisualElementName);
     }
-    
+
+    public override void AttachFromRoot(VisualElement root, string visualElementName = null)
+    {
+        AttachVisual(root.Q<TVisualType>(visualElementName));
+    }
+
     public void AttachVisual(TVisualType visualElement)
     {
         if (visualElement == null)
@@ -56,10 +61,6 @@ public abstract class UIElement<TVisualType>: UIElementBase, IDisposable where T
 
 public class UIElement : UIElement<VisualElement>
 {
-    public override void AttachFromRoot(VisualElement root, string visualElementName = null)
-    {
-        AttachVisual(root.Q(visualElementName));
-    }
 }
 
 public static class UIElementExtension
