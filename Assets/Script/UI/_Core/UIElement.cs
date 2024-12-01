@@ -49,8 +49,6 @@ public abstract class UIElement<TVisualType>: UIElementBase, IDisposable where T
         {
             VisualElement.dataSource = null;
         }
-
-        VisualElement = null;
     }
 }
 
