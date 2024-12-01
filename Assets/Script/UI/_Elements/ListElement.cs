@@ -19,8 +19,6 @@ public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElement
     
     protected override void OnVisualAttached()
     {
-        base.OnVisualAttached();
-
         _onUpdateHandle.UnsubscribeIfNotNull();
         VisualElement.itemsSource = _itemsSource.Value;
         _onUpdateHandle = _itemsSource.Events.Subscribe(onUpdate: (_, newItem) =>

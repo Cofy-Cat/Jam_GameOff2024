@@ -41,11 +41,6 @@ public class UIRoot: MonoBehaviour, IDisposable
         DontDestroyOnLoad(gameObject);
     }
 
-    private void OnDestroy()
-    {
-        Dispose();
-    }
-
     public void Register<T>(string panelPath) where T : UIPanel
     {
         var type = typeof(T);

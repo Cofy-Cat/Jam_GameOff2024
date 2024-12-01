@@ -24,8 +24,6 @@ public class SpriteElement: UIElement<VisualElement>
 
     protected override void OnVisualAttached()
     {
-        base.OnVisualAttached();
-
         _spritePathSub.UnsubscribeIfNotNull();
         SetSprite(spritePath);
         _spritePathSub = spritePath.Events.Subscribe(onUpdate: (_, newListItem) =>

@@ -66,6 +66,7 @@ public class GameEntry : MonoBehaviour
             Application.quitting -= OnApplicationQuit;
             
             cts.Cancel();
+            UIRoot.Instance.Dispose();
             Game.Dispose();
             
             GC.Collect();

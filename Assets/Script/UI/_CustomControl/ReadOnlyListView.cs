@@ -120,6 +120,7 @@ public partial class ReadOnlyListView: VisualElement
         }
         
         itemElement.dataSource = itemSource;
+        itemSource.AttachVisual(itemElement);
     }
     
     public void _Clear()

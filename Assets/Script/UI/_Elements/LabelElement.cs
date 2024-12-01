@@ -47,8 +47,6 @@ public class LabelElement: UIElement<Label>
     
     protected override void OnVisualAttached()
     {
-        base.OnVisualAttached();
-
         templateString = VisualElement.text;
         
         UpdateFromTemplate();

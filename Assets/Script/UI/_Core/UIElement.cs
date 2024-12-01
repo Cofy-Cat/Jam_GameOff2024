@@ -45,8 +45,8 @@ public abstract class UIElement<TVisualType>: UIElementBase, IDisposable where T
         
         OnVisualAttached();
     }
-    
-    protected virtual void OnVisualAttached() { }
+
+    protected abstract void OnVisualAttached();
 
     public override void Dispose()
     {
@@ -59,6 +59,9 @@ public abstract class UIElement<TVisualType>: UIElementBase, IDisposable where T
 
 public class UIElement : UIElement<VisualElement>
 {
+    protected override void OnVisualAttached()
+    {
+    }
 }
 
 public static class UIElementExtension

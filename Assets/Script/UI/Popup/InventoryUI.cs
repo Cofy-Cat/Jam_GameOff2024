@@ -7,6 +7,8 @@ public class InventoryUI: UIPanel
 {
     ListElement<InventoryUI_Item> itemList = new();
     LabelElement pageLabel = new();
+    ButtonElement previousPageButton = new();
+    ButtonElement nextPageButton = new();
 
     RtSelectList<Guid, InventoryUI_Item> _items;
     Rt<int> currentPage = new(0);
@@ -19,10 +21,10 @@ public class InventoryUI: UIPanel
 
     protected override void OnVisualAttached()
     {
-        base.OnVisualAttached();
-        
         AttachChild(itemList, "item-list");
         AttachChild(pageLabel, "page-label");
+        AttachChild(previousPageButton, "previous-page-button");
+        AttachChild(nextPageButton, "next-page-button");
     }
     
     public InventoryUI()
@@ -40,6 +42,17 @@ public class InventoryUI: UIPanel
 
         pageLabel.SetTemplate(CURRENT_PAGE, currentPage.Select(count => (++count).ToString()));
         pageLabel.SetTemplate(TOTAL_PAGE, inventory.Pages.Count().Select(count => count.ToString()));
+        
+        previousPageButton.SetOnClick(() =>
+        {
+            if(currentPage.Value > 0)
+                currentPage.Set(currentPage.Value - 1);
+        });
+        nextPageButton.SetOnClick(() =>
+        {
+            if(currentPage.Value < inventory.Pages.Count - 1)
+                currentPage.Set(currentPage.Value + 1);
+        });
     }
 
     public override void Dispose()
@@ -54,6 +67,9 @@ public class InventoryUI: UIPanel
         _items.Dispose();
         
         currentPage.Dispose();
+        
+        previousPageButton.Dispose();
+        nextPageButton.Dispose();
     }
 
     public class InventoryUI_Item: UIElement
@@ -64,8 +80,6 @@ public class InventoryUI: UIPanel
 
         protected override void OnVisualAttached()
         {
-            base.OnVisualAttached();
-            
             AttachChild(titleLabel, "title-label");
             AttachChild(countLabel, "count-label");
             AttachChild(iconSprite, "icon-sprite");
