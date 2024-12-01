@@ -51,11 +51,6 @@ public class InventoryUI: UIPanel
         
         itemList.Dispose();
         pageLabel.Dispose();
-        
-        foreach (var item in _items)
-        {
-            item.Dispose();
-        }
         _items.Dispose();
         
         currentPage.Dispose();
