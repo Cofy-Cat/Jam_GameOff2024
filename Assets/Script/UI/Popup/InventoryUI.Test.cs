@@ -20,6 +20,6 @@ public class InventoryUI_Test
     [MenuItem("Test/Show Inventory Panel")]
     public static void Show()
     {
-        UIRoot.GetPanel<InventoryUI>().ShowPanel();
+        UIRoot.GetPanel<InventoryUI>().ShowPanel() ;
     }
 }

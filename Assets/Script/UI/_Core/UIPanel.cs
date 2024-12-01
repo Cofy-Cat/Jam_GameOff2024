@@ -37,6 +37,4 @@ public abstract class UIPanel: UIElement<TemplateContainer>
         VisualElement.AddToClassList("hide");
         VisualElement.enabledSelf = false;
     }
-    
-    public abstract void Dispose();
 }

@@ -6,5 +6,6 @@ public class LoadingUI: UIPanel
     
     public override void Dispose()
     {
+        base.Dispose();
     }
 }

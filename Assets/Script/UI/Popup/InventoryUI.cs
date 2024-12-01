@@ -1,16 +1,14 @@
 using System;
 using cfEngine.Meta;
-using cfEngine.Meta.Inventory;
 using cfEngine.Rt;
 using StackId = System.Guid;
 
 public class InventoryUI: UIPanel
 {
-    RtSelectList<Guid, InventoryUI_Item> _items;
     ListElement<InventoryUI_Item> itemList = new();
     LabelElement pageLabel = new();
 
-    RtCount<InventoryController.PageRecord> totalPage;
+    RtSelectList<Guid, InventoryUI_Item> _items;
     Rt<int> currentPage = new(0);
 
     SubscriptionHandle _pageCountSub;
@@ -27,13 +25,12 @@ public class InventoryUI: UIPanel
         AttachChild(pageLabel, "page-label");
     }
     
-    public InventoryUI(): base()
+    public InventoryUI()
     {
         var inventory = Game.Meta.Inventory;
        
         UpdateItems();
         _currentPageSub = currentPage.Events.OnChange(UpdateItems);
-        
         void UpdateItems()
         {
             _items?.Dispose();
@@ -47,8 +44,21 @@ public class InventoryUI: UIPanel
 
     public override void Dispose()
     {
+        base.Dispose();
+        
+        _pageCountSub.UnsubscribeIfNotNull();
+        _currentPageSub.UnsubscribeIfNotNull();
+        
         itemList.Dispose();
+        pageLabel.Dispose();
+        
+        foreach (var item in _items)
+        {
+            item.Dispose();
+        }
         _items.Dispose();
+        
+        currentPage.Dispose();
     }
 
     public class InventoryUI_Item: UIElement
@@ -84,9 +94,8 @@ public class InventoryUI: UIPanel
             base.Dispose();
             
             titleLabel.Dispose();
-            titleLabel = null;
             countLabel.Dispose();
-            countLabel = null;
+            iconSprite.Dispose();
         }
     }
 }

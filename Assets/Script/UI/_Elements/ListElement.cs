@@ -12,11 +12,9 @@ public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElement
     public override void Dispose()
     {
         base.Dispose();
-
+        
         _onUpdateHandle.UnsubscribeIfNotNull();
         _itemsSource.Dispose();
-        VisualElement.itemsSource = null;
-        VisualElement._Clear();
     }
     
     public override void AttachFromRoot(VisualElement root, string visualElementName = null)

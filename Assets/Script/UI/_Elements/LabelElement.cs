@@ -31,15 +31,18 @@ public class LabelElement: UIElement<Label>
         _templateTextMap.Dispose();
 
         templateString = string.Empty;
-        VisualElement.text = string.Empty;
 
         _textSub.UnsubscribeIfNotNull();
-        foreach (var subscriptionHandle in _templateTextSub.Values)
-        {
-            subscriptionHandle.UnsubscribeIfNotNull();
-        }
         
-        _templateTextSub.Clear();
+        if (_templateTextSub != null)
+        {
+            foreach (var subscriptionHandle in _templateTextSub.Values)
+            {
+                subscriptionHandle.UnsubscribeIfNotNull();
+            }
+            
+            _templateTextSub.Clear();
+        }
     }
     
     public override void AttachFromRoot(VisualElement root, string visualElementName = null)
