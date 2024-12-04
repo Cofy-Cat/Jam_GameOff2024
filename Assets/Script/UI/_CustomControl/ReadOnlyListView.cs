@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using cfEngine.Rt;
+using cfEngine.Util;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -56,7 +57,7 @@ public partial class ReadOnlyListView: VisualElement
     private readonly List<VisualElement> _itemElements = new();
 
 #if CF_REACTIVE
-    private SubscriptionHandle _handle;
+    private Subscription _handle;
 #endif
 
     public ReadOnlyListView()

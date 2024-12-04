@@ -149,9 +149,8 @@ public class UIRoot: MonoBehaviour, IDisposable
         {
             task.Dispose();
         }
-        
         _templateLoadMap.Clear();
-        
+
         foreach (var panel in _panelMap.Values)
         {
             panel.Dispose();

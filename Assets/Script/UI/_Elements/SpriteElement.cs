@@ -1,5 +1,6 @@
 using cfEngine.Logging;
 using cfEngine.Rt;
+using cfEngine.Util;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,8 +9,8 @@ public class SpriteElement: UIElement<VisualElement>
     public readonly Rt<string> spritePath = new();
     public readonly Rt<Sprite> sprite = new();
     
-    private SubscriptionHandle _spritePathSub;
-    private SubscriptionHandle _spriteSub;
+    private Subscription _spritePathSub;
+    private Subscription _spriteSub;
 
     public override void Dispose()
     {

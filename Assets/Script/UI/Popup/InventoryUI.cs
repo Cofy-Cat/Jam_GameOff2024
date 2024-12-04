@@ -1,6 +1,7 @@
 using System;
 using cfEngine.Meta;
 using cfEngine.Rt;
+using cfEngine.Util;
 using StackId = System.Guid;
 
 public class InventoryUI: UIPanel
@@ -13,8 +14,8 @@ public class InventoryUI: UIPanel
     RtSelectList<Guid, InventoryUI_Item> _items;
     Rt<int> currentPage = new(0);
 
-    SubscriptionHandle _pageCountSub;
-    SubscriptionHandle _currentPageSub;
+    Subscription _pageCountSub;
+    Subscription _currentPageSub;
     
     private const string CURRENT_PAGE = "current";
     private const string TOTAL_PAGE = "total";

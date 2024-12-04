@@ -1,13 +1,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using cfEngine.Rt;
+using cfEngine.Util;
 using UnityEngine.UIElements;
 
 public class ListElement<T> : UIElement<ReadOnlyListView> where T : UIElement
 {
     private Rt<IEnumerable<UIElement>> _itemsSource = new();
     
-    private SubscriptionHandle _onUpdateHandle;
+    private Subscription _onUpdateHandle;
     
     public override void Dispose()
     {

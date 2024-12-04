@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using cfEngine.Logging;
 using cfEngine.Rt;
+using cfEngine.Util;
 using UnityEngine.UIElements;
 
 //TODO: need optimized for string template & string builder
@@ -11,9 +12,9 @@ public class LabelElement: UIElement<Label>
     private RtDictionary<string, string> _templateTextMap = new();
     private string templateString;
 
-    private SubscriptionHandle _templateMapSub;
-    private SubscriptionHandle _textSub;
-    private Dictionary<string, SubscriptionHandle> _templateTextSub;
+    private Subscription _templateMapSub;
+    private Subscription _textSub;
+    private Dictionary<string, Subscription> _templateTextSub;
 
     public LabelElement(string defaultValue = ""): base()
     {
