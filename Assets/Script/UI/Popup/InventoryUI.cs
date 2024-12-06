@@ -37,12 +37,12 @@ public class InventoryUI: UIPanel
         void UpdateItems()
         {
             _items?.Dispose();
-            _items = inventory.GetPage(currentPage.Value).SelectNew(stackId => new InventoryUI_Item(stackId));
+            _items = inventory.GetPage(currentPage.Value).selectNew(stackId => new InventoryUI_Item(stackId));
             itemList.SetItemsSource(_items);
         }
 
-        pageLabel.SetTemplate(CURRENT_PAGE, currentPage.Select(count => (++count).ToString()));
-        pageLabel.SetTemplate(TOTAL_PAGE, inventory.Pages.Count().Select(count => count.ToString()));
+        pageLabel.SetTemplate(CURRENT_PAGE, currentPage.select(count => (++count).ToString()));
+        pageLabel.SetTemplate(TOTAL_PAGE, inventory.Pages.count().select(count => count.ToString()));
         
         previousPageButton.SetOnClick(() =>
         {

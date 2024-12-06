@@ -68,6 +68,6 @@ public static class UIElementExtension
 {
     public static RtReadOnlyList<UIElement> ToUISource<T>(this RtReadOnlyList<T> source) where T : UIElement
     {
-        return source.Select(t => (UIElement)t);
+        return source.select(t => (UIElement)t);
     }
 }
