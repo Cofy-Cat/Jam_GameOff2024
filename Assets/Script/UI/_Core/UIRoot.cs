@@ -147,10 +147,7 @@ public class UIRoot: MonoBehaviour, IDisposable
         
         foreach (var task in _templateLoadMap.Values)
         {
-            if (task.IsCompleted)
-            {
-                task.Dispose();
-            }
+            task.DisposeIfCompleted();
         }
         _templateLoadMap.Clear();
 
