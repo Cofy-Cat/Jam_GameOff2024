@@ -1,7 +1,6 @@
 using System;
 using cfEngine.Meta;
 using cfEngine.Rt;
-using cfEngine.Util;
 using StackId = System.Guid;
 
 public class InventoryUI: UIPanel
@@ -36,7 +35,15 @@ public class InventoryUI: UIPanel
         _currentPageSub = currentPage.Events.OnChange(UpdateItems);
         void UpdateItems()
         {
-            _items?.Dispose();
+            if (_items != null)
+            {
+                foreach (var inventoryUIItem in _items)
+                {
+                    inventoryUIItem.Dispose();
+                }
+                
+                _items.Dispose();
+            }
             _items = inventory.GetPage(currentPage.Value).selectNew(stackId => new InventoryUI_Item(stackId));
             itemList.SetItemsSource(_items);
         }
@@ -65,7 +72,15 @@ public class InventoryUI: UIPanel
         
         itemList.Dispose();
         pageLabel.Dispose();
-        _items.Dispose();
+
+        if (_items != null)
+        {
+            foreach (var inventoryUIItem in _items)
+            {
+                inventoryUIItem.Dispose();
+            }
+            _items.Dispose();
+        }
         
         currentPage.Dispose();
         
