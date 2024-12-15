@@ -18,4 +18,12 @@ public static class TaskExtension
    {
        return t.ContinueWith(action, token, TaskContinuationOptions.None, TaskScheduler.FromCurrentSynchronizationContext());
    }
+   
+   public static void DisposeIfCompleted(this Task t)
+   {
+       if (t.IsCompleted)
+       {
+           t.Dispose();
+       }
+   }
 }
