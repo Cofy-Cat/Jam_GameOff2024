@@ -21,7 +21,7 @@ namespace cfUnityEngine.GameState.Bootstrap
 
             var loadTaskList = new List<Task>
             {
-                ui.LoadPanel<InventoryUI>()
+                // ui.LoadPanel<InventoryUI>()
             };
 
             Task.WhenAll(loadTaskList)
