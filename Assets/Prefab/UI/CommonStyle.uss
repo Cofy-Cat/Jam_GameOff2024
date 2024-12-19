@@ -36,3 +36,8 @@
 .show {
     opacity: 1;
 }
+
+TabView, .unity-tab-view__content-container, Tab, .unity-tab__content-container {
+    width: 100%;
+    flex-grow: 1;
+}
