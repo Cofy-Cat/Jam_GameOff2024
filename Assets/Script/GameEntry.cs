@@ -68,8 +68,6 @@ public class GameEntry : MonoBehaviour
             cts.Cancel();
             UIRoot.Instance.Dispose();
             Game.Dispose();
-            
-            GC.Collect();
         }
         
         Game.Gsm.TryGoToState(GameStateId.LocalLoad);
