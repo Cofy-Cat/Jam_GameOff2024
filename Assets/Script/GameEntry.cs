@@ -66,8 +66,25 @@ public class GameEntry : MonoBehaviour
             Application.quitting -= OnApplicationQuit;
             
             cts.Cancel();
-            UIRoot.Instance.Dispose();
+            if (UIRoot.Instance != null)
+            {
+                UIRoot.Instance.Dispose();
+            }
             Game.Dispose();
+
+#if CF_REACTIVE_DEBUG
+            var notDisposed = cfEngine.Rt._RtDebug.Instance.Collections;
+            if (notDisposed.Count > 0)
+            {
+                foreach (var collectionRef in notDisposed.Values)
+                {
+                    if (collectionRef.TryGetTarget(out var collectionDebug))
+                    {
+                        Log.LogWarning("Not disposed collection: " + collectionDebug.__GetDebugTitle());
+                    }
+                }
+            }
+#endif
         }
         
         Game.Gsm.TryGoToState(GameStateId.LocalLoad);
