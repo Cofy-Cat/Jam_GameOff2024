@@ -89,15 +89,17 @@ public partial class ReadOnlyListView: VisualElement
                 onAdd: (indexedItem) => SetDataSourceAtIndex(indexedItem.index),
                 onRemove: (indexedItem) =>
                 {
+                    indexedItem.item.Dispose();
                     var itemElement = _itemElements[indexedItem.index];
                     itemElement.dataSource = null;
                     _itemElements.RemoveAt(indexedItem.index);
                     itemElement.RemoveFromHierarchy();
                 },
-                onUpdate: (_, newItem) =>
+                onUpdate: (oldIndexed, newIndexed) =>
                 {
-                    var itemElement = _itemElements[newItem.index];
-                    newItem.item.AttachVisual(itemElement);
+                    oldIndexed.item.Dispose();
+                    var itemElement = _itemElements[newIndexed.index];
+                    newIndexed.item.AttachVisual(itemElement);
                 }
             );
         }
