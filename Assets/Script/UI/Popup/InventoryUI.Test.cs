@@ -1,4 +1,5 @@
 using cfEngine.Meta.Inventory;
+using cfUnityEngine.UI;
 using UnityEditor;
 
 public class InventoryUI_Test

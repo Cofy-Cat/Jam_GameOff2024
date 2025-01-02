@@ -11,6 +11,7 @@ using cfEngine.Pooling;
 using cfEngine.Serialize;
 using cfEngine.Util;
 using cfUnityEngine.GameState;
+using cfUnityEngine.UI;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 

@@ -1,6 +1,7 @@
 using System;
 using cfEngine.Meta;
 using cfEngine.Rt;
+using cfUnityEngine.UI;
 using StackId = System.Guid;
 
 public class InventoryUI: UIPanel
